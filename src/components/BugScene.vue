@@ -12,6 +12,23 @@ const hoveredObs = ref<Observation | null>(null)
 const focusedObs = ref<Observation | null>(null)
 const mousePos = reactive({ x: 0, y: 0 })
 
+// Atlas-level label opacity: 1.0 at overview distance, fades to 0 as the
+// camera zooms in. This is the foundation for Phase 3 semantic zoom — the
+// renderer already tracks zoom depth; the threshold logic moves here later.
+const labelOpacity = ref(1)
+
+// ─── Group label definitions (derived from observation data) ──────────────────
+
+// Common names for order-level Atlas labels. These are what the user sees
+// at the outermost zoom level. Scientific order names are used as the key.
+const ORDER_DISPLAY_NAMES: Record<string, string> = {
+  Coleoptera:   'Beetles',
+  Lepidoptera:  'Butterflies & Moths',
+  Hymenoptera:  'Bees & Wasps',
+  Odonata:      'Dragonflies & Damselflies',
+  Hemiptera:    'True Bugs',
+}
+
 interface GroupLabel {
   id: string
   name: string
@@ -20,13 +37,27 @@ interface GroupLabel {
   sy: number
 }
 
-const groupLabels = ref<GroupLabel[]>([
-  { id: 'beetles',      name: 'Beetles',              world: new THREE.Vector3(-12,   7,   0), sx: 0, sy: 0 },
-  { id: 'lepidoptera',  name: 'Butterflies & Moths',  world: new THREE.Vector3( 10,  12,   0), sx: 0, sy: 0 },
-  { id: 'hymenoptera',  name: 'Bees & Wasps',         world: new THREE.Vector3( 12,  -3,   0), sx: 0, sy: 0 },
-  { id: 'odonata',      name: 'Dragonflies',          world: new THREE.Vector3( -8,  -5,   0), sx: 0, sy: 0 },
-  { id: 'hemiptera',    name: 'True Bugs',            world: new THREE.Vector3(  2,   3.5, 0), sx: 0, sy: 0 },
-])
+// Build one label per order (or 'Unidentified') from the observation data.
+// Label world position is placed above the topmost observation in each group,
+// so it stays clear of the image planes regardless of cluster size.
+function buildGroupLabels(): GroupLabel[] {
+  const groups = new Map<string, { xs: number[]; ys: number[] }>()
+  for (const obs of observations) {
+    const key = obs.order ?? 'Unidentified'
+    if (!groups.has(key)) groups.set(key, { xs: [], ys: [] })
+    const g = groups.get(key)!
+    g.xs.push(obs.x)
+    g.ys.push(obs.y)
+  }
+  return [...groups.entries()].map(([key, g]) => {
+    const cx = g.xs.reduce((a, b) => a + b, 0) / g.xs.length
+    const maxY = Math.max(...g.ys)
+    const name = ORDER_DISPLAY_NAMES[key] ?? key
+    return { id: key, name, world: new THREE.Vector3(cx, maxY + 1.8, 0), sx: 0, sy: 0 }
+  })
+}
+
+const groupLabels = ref<GroupLabel[]>(buildGroupLabels())
 
 // ─── Three.js objects (not reactive) ──────────────────────────────────────────
 
@@ -276,6 +307,13 @@ function animate() {
 
   controls.update()
   updateGroupLabelPositions()
+
+  // Atlas labels fade as the camera zooms toward a group.
+  // Overview z=35; labels are fully visible above z=26, fully gone below z=16.
+  // This gives a 10-unit fade window that matches the natural approach distance.
+  const z = camera.position.z
+  labelOpacity.value = Math.max(0, Math.min(1, (z - 16) / 10))
+
   renderer.render(scene, camera)
 }
 
@@ -305,6 +343,9 @@ onUnmounted(() => {
     <canvas ref="canvasRef" />
 
     <!-- Hover label -->
+    <!-- Shows the finest taxonomy rank available for this observation.
+         For species-level IDs: scientific name. For family-level: "Family X".
+         For unidentified: no second line. -->
     <Transition name="fade">
       <div
         v-if="hoveredObs"
@@ -315,17 +356,28 @@ onUnmounted(() => {
         <div v-if="hoveredObs.scientificName" class="hover-label__sci">
           {{ hoveredObs.scientificName }}
         </div>
+        <div v-else-if="hoveredObs.genus" class="hover-label__sci">
+          Genus {{ hoveredObs.genus }}
+        </div>
+        <div v-else-if="hoveredObs.family" class="hover-label__sci">
+          Family {{ hoveredObs.family }}
+        </div>
+        <div v-else-if="hoveredObs.order" class="hover-label__sci">
+          Order {{ hoveredObs.order }}
+        </div>
       </div>
     </Transition>
 
-    <!-- Group labels — hidden when focused on a specimen -->
+    <!-- Group labels — Atlas-level order labels.
+         Hidden when focused on a specimen. Fade as camera zooms in toward
+         a group (labelOpacity driven by camera.position.z in the render loop). -->
     <Transition name="fade">
       <div v-if="!focusedObs" class="group-labels">
         <div
           v-for="label in groupLabels"
           :key="label.id"
           class="group-label"
-          :style="{ left: label.sx + 'px', top: label.sy + 'px' }"
+          :style="{ left: label.sx + 'px', top: label.sy + 'px', opacity: labelOpacity }"
         >
           {{ label.name }}
         </div>
