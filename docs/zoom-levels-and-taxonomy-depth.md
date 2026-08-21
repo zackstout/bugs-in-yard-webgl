@@ -12,13 +12,40 @@ The goal is a zoom experience that feels continuous and proportionate regardless
 
 ## The Core Insight
 
-The three zoom levels are **semantic positions**, not fixed camera distances. What changes between groups is not the number of levels — it is always Atlas → Group → Specimen — but what each level *reveals*.
+The three zoom levels — **Atlas**, **Group**, and **Specimen** — are **semantic positions**, not fixed camera distances. What changes between groups is not the number of levels but what each level *reveals*.
+
+However, not every group traverses all three levels. A single-observation order has nothing to navigate inside — the Group level is skipped and the camera goes straight to Specimen. A dense order with multiple families and genera produces multiple nested Group levels before Specimen is reached.
 
 The camera distance that triggers a level transition should scale with the footprint of the group being entered. A group with one beetle has a small footprint. The camera reaches Specimen depth much sooner. A group with 150 beetles spanning multiple families has a large footprint. The Group level contains several layers of meaningful content before Specimen becomes relevant.
 
 This means:
-- The zoom levels themselves do not change.
+- The zoom levels are not always all present.
 - What is visible at each level adapts to the density and depth of the active group.
+
+---
+
+## Navigation Stack
+
+Navigation is **stack-based**. Each entry on the stack represents a zoom level into a finer sub-cluster. The stack drives both what the camera targets and what labels are shown.
+
+```
+[]                                   → Atlas
+[Coleoptera]                         → inside the Beetles order cluster
+[Coleoptera, Coccinellidae]          → inside the Ladybug family sub-cluster
+[Coleoptera, Coccinellidae, b1]      → Specimen
+```
+
+**Rules:**
+
+1. **Always enter via order first.** From Atlas, clicking any observation always pushes the order level, regardless of current camera position. The renderer never infers depth from camera distance and skips intermediate levels.
+
+2. **Skip any node with exactly one observation (fast path).** If a node in the effective rank tree has only one observation, that node is not a meaningful navigation stop. Push past it to the next level.
+   - An order with 1 observation → skip order level, go straight to Specimen. *(Odonata example: `[] → [od1]`)*
+   - A family with 1 observation within its order → skip family level, go straight to Specimen. *(Elateridae within Coleoptera: `[Coleoptera] → [b7]`)*
+
+3. **Escape pops one level.** From Specimen, Escape returns to the enclosing group. From a group, Escape returns to the next coarser level (or Atlas if the stack is empty).
+
+4. **Stack depth is bounded by the effective rank tree.** A group with effective depth 1 produces a maximum stack depth of 2 (order + specimen). A group with effective depth 3 produces a maximum stack depth of 4.
 
 ---
 
@@ -63,13 +90,13 @@ interface TaxonNode {
 
 Effective tree depth: 0 (just the observation itself).
 
-- **Atlas:** The group appears as a single point or thumbnail in the overall collection. It is labeled by its order or the finest rank available.
-- **Group:** Clicking or zooming into the group immediately reveals the single photo. There is no subgroup layer because none exists.
-- **Specimen:** Selecting the photo loads full metadata.
+- **Atlas:** The observation appears as a single point or thumbnail in the overall collection. It is labeled by the finest rank available.
+- **Group:** Skipped. There is no cluster to navigate — only one observation exists in this order.
+- **Specimen:** Clicking from Atlas goes directly to Specimen. The navigation stack is `[] → [obs]`.
 
-The Group level collapses into a very brief transition. The camera moves from the Atlas cluster directly toward the photo. The user does not experience a "missing" level — they experience a fast path.
+The user does not experience a "missing" level — the camera animates smoothly from the Atlas position directly toward the photo. There is no empty intermediate stop.
 
-**Implementation note:** If the group's effective tree depth is 0 or 1, skip the subgroup layer in the Group level. Do not display an empty intermediate state.
+**Implementation note:** Apply the fast-path rule at the order level. If the order contains exactly one observation, do not push an order group state. Push Specimen directly.
 
 ---
 
@@ -167,12 +194,12 @@ Place it in a dedicated "Unidentified" cluster at the Atlas level. It is accessi
 
 ## Summary Table
 
-| Group type | Effective depth | Atlas | Group behavior | Specimen |
-|---|---|---|---|---|
-| 1 observation | 0 | Single point, finest known rank label | Fast path, no subgroup layer | Immediate |
-| Few obs, 1 rank | 1 | Cluster, order label | Family/subgroup labels, photos visible | Normal |
-| Many obs, 2+ ranks | 2–3 | Cluster, order label | Layered: family → genus, progressive labels | Normal |
-| Unidentified | — | Separate cluster | Photos only, no taxonomy labels | Normal |
+| Group type | Effective depth | Stack | Atlas | Group behavior | Specimen |
+|---|---|---|---|---|---|
+| 1 observation | 0 | `[] → [obs]` | Single point, finest known rank label | **Skipped** | Direct from Atlas |
+| Few obs, 1 rank | 1 | `[] → [order] → [obs]` | Cluster, order label | Family/subgroup labels, photos visible | Normal |
+| Many obs, 2+ ranks | 2–3 | `[] → [order] → [family] → [obs]` | Cluster, order label | Layered: family → genus, progressive labels | Normal |
+| Unidentified | — | `[] → [obs]` | Separate cluster | **Skipped** | Direct from Atlas |
 
 ---
 
