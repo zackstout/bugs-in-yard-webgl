@@ -134,7 +134,7 @@ function deriveMediumUrl(squareUrl: string): string {
 // These values come from the image-layout-physics.md spec. The physics
 // simulation (Phase 5) will refine XY but leave Z assignment unchanged.
 
-const ORDER_RING_RADIUS = 20   // world units; fills the Atlas view at z=35
+const ORDER_RING_RADIUS = 40   // world units; sized for MESH_HEIGHT=6, 19 orders
 const JITTER_RADIUS     = 1.5  // initial scatter within each order cluster
 
 const RANK_Z: Record<TaxonRank, number> = {

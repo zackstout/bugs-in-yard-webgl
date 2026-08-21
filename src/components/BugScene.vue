@@ -101,6 +101,8 @@ const orderLabels = ref<ScreenLabel[]>(buildOrderLabels())
 const familyLabels = ref<ScreenLabel[]>([])
 
 watch(navStack, (stack) => {
+  updateVisibility()
+
   const top = stack[stack.length - 1] ?? null
   if (top?.type !== 'order') {
     familyLabels.value = []
@@ -132,6 +134,49 @@ function obsForFamily(order: string, family: string): Observation[] {
   return observations.filter(o => o.order === order && o.family === family)
 }
 
+// ─── Atlas representatives ────────────────────────────────────────────────────
+//
+// One observation per family, chosen deterministically by hashing the family
+// name into the group. Shown at Atlas level instead of all 430 observations.
+
+function computeAtlasRepresentatives(): Set<string> {
+  const groups = new Map<string, Observation[]>()
+  for (const obs of observations) {
+    const key = `${obs.order ?? ''}|${obs.family ?? ''}`
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key)!.push(obs)
+  }
+  const reps = new Set<string>()
+  for (const [key, group] of groups) {
+    let hash = 0
+    for (let i = 0; i < key.length; i++) hash = (Math.imul(hash, 31) + key.charCodeAt(i)) | 0
+    reps.add(group[Math.abs(hash) % group.length].id)
+  }
+  return reps
+}
+
+const atlasRepresentatives = computeAtlasRepresentatives()
+
+// ─── Visibility management ────────────────────────────────────────────────────
+
+function updateVisibility() {
+  const top = stackTop()
+  for (const obs of observations) {
+    const mesh = meshes.get(obs.id)
+    if (!mesh) continue
+    if (!top) {
+      mesh.visible = atlasRepresentatives.has(obs.id)
+    } else if (top.type === 'order') {
+      mesh.visible = obs.order === top.key
+    } else if (top.type === 'family') {
+      mesh.visible = obs.order === top.order && obs.family === top.key
+    } else {
+      // Specimen: keep family siblings visible as context
+      mesh.visible = obs.order === top.obs.order && obs.family === top.obs.family
+    }
+  }
+}
+
 function centroidOf(obs: Observation[]): THREE.Vector3 {
   return new THREE.Vector3(
     obs.reduce((s, o) => s + o.x, 0) / obs.length,
@@ -154,7 +199,7 @@ const pointer   = new THREE.Vector2()
 
 // ─── Camera animation ─────────────────────────────────────────────────────────
 
-const OVERVIEW_POS    = new THREE.Vector3(0, 0, 35)
+const OVERVIEW_POS    = new THREE.Vector3(0, 0, 70)
 const OVERVIEW_TARGET = new THREE.Vector3(0, 0,  0)
 
 // Z offsets from each cluster's centroid. Chosen so each level transition
@@ -236,8 +281,10 @@ function makeFallbackTexture(name: string): THREE.Texture {
 
 // ─── Mesh creation ────────────────────────────────────────────────────────────
 
+const MESH_HEIGHT = 6  // world units; adjust to taste
+
 function createMesh(obs: Observation): THREE.Mesh {
-  const geo = new THREE.PlaneGeometry(3, 2)
+  const geo = new THREE.PlaneGeometry(MESH_HEIGHT * 1.5, MESH_HEIGHT)
   const mat = new THREE.MeshBasicMaterial({
     map:  makeFallbackTexture(obs.commonName),
     side: THREE.FrontSide,
@@ -252,7 +299,7 @@ function createMesh(obs: Observation): THREE.Mesh {
       tex.colorSpace = THREE.SRGBColorSpace
       const aspect = tex.image.width / tex.image.height
       mesh.geometry.dispose()
-      mesh.geometry = new THREE.PlaneGeometry(2 * aspect, 2)
+      mesh.geometry = new THREE.PlaneGeometry(MESH_HEIGHT * aspect, MESH_HEIGHT)
       mat.map = tex
       mat.needsUpdate = true
     },
@@ -280,7 +327,7 @@ function setHover(obs: Observation | null) {
 // from clicking observations that belong to a different branch.
 function eligibleObs(): Observation[] {
   const top = stackTop()
-  if (!top)                 return observations           // Atlas: all pickable
+  if (!top)                 return observations.filter(o => atlasRepresentatives.has(o.id))
   if (top.type === 'order') return obsForOrder(top.key)
   if (top.type === 'family') return obsForFamily(top.order, top.key)
   return []                                               // specimen: nothing pickable
@@ -440,6 +487,8 @@ function init() {
     scene.add(mesh)
     meshes.set(obs.id, mesh)
   }
+
+  updateVisibility()
 
   canvas.addEventListener('mousedown', onMouseDown)
   canvas.addEventListener('mousemove', onMouseMove)

@@ -13,8 +13,8 @@
       "lng": -93.2415375982
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693598076/medium.jpg",
-    "x": -15.12,
-    "y": 1.57,
+    "x": -5.1,
+    "y": -2.88,
     "z": 0,
     "xSeed": 0.33,
     "ySeed": 0.12
@@ -33,8 +33,8 @@
       "lng": -122.3380625065
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724784/medium.jpg",
-    "x": -16.56,
-    "y": 6.1,
+    "x": -11.81,
+    "y": 0.51,
     "z": 0,
     "xSeed": -0.83,
     "ySeed": 0.05
@@ -54,11 +54,11 @@
       "lng": -93.2422712174
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690337821/medium.jpg",
-    "x": -7.27,
-    "y": -29.68,
+    "x": -1.28,
+    "y": -44.43,
     "z": 0,
     "xSeed": 0.94,
-    "ySeed": -20.27
+    "ySeed": -40.27
   },
   {
     "id": "376695981",
@@ -75,11 +75,11 @@
       "lng": -93.2355467973
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688774065/medium.jpg",
-    "x": -0.53,
-    "y": -44.71,
+    "x": 6.92,
+    "y": -60.89,
     "z": 0,
     "xSeed": 1.34,
-    "ySeed": -21.15
+    "ySeed": -41.15
   },
   {
     "id": "392534906",
@@ -96,11 +96,11 @@
       "lng": -93.2415112668
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719383350/medium.jpg",
-    "x": -7.02,
-    "y": -10.11,
+    "x": 0.67,
+    "y": -20.85,
     "z": 0,
     "xSeed": 0.61,
-    "ySeed": -18.75
+    "ySeed": -38.75
   },
   {
     "id": "377504732",
@@ -119,11 +119,11 @@
       "lng": -93.2460380749
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690337877/medium.jpg",
-    "x": 0.63,
-    "y": -38.71,
+    "x": 7.05,
+    "y": -54.48,
     "z": 1,
     "xSeed": 1.25,
-    "ySeed": -20.77
+    "ySeed": -40.77
   },
   {
     "id": "377772814",
@@ -142,11 +142,11 @@
       "lng": -93.0254342611
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690856973/medium.jpg",
-    "x": -9.48,
-    "y": -41.74,
+    "x": -3.87,
+    "y": -61.98,
     "z": 1,
     "xSeed": 0.36,
-    "ySeed": -21.37
+    "ySeed": -41.37
   },
   {
     "id": "378822575",
@@ -165,11 +165,11 @@
       "lng": -93.2337394392
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874275/medium.jpg",
-    "x": -15.94,
-    "y": -28.14,
+    "x": -12.3,
+    "y": -47.84,
     "z": 1,
     "xSeed": -0.72,
-    "ySeed": -20.35
+    "ySeed": -40.35
   },
   {
     "id": "377584138",
@@ -187,11 +187,11 @@
       "lng": -93.2502211552
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690494717/medium.jpg",
-    "x": -9.02,
-    "y": -23.02,
+    "x": -7.23,
+    "y": -38.98,
     "z": 0.5,
     "xSeed": -0.15,
-    "ySeed": -19.96
+    "ySeed": -39.96
   },
   {
     "id": "388908880",
@@ -211,11 +211,11 @@
       "lng": -122.6147622054
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724292/medium.jpg",
-    "x": -9.43,
-    "y": -32.72,
+    "x": -5.99,
+    "y": -51.9,
     "z": 1.5,
     "xSeed": 0.42,
-    "ySeed": -20.72
+    "ySeed": -40.72
   },
   {
     "id": "389773995",
@@ -235,11 +235,11 @@
       "lng": -122.5943251976
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995946/medium.jpg",
-    "x": -9.59,
-    "y": -13.41,
+    "x": 2.04,
+    "y": -26.73,
     "z": 1.5,
     "xSeed": 1.35,
-    "ySeed": -19.51
+    "ySeed": -39.51
   },
   {
     "id": "377580577",
@@ -258,11 +258,11 @@
       "lng": -93.2477564998
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690487577/medium.jpg",
-    "x": -16.42,
-    "y": -32.17,
+    "x": -17.47,
+    "y": -51.88,
     "z": 1,
     "xSeed": -0.83,
-    "ySeed": -20.41
+    "ySeed": -40.41
   },
   {
     "id": "393084538",
@@ -281,11 +281,11 @@
       "lng": -93.5733823411
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720457729/medium.jpg",
-    "x": -20.92,
-    "y": -27.42,
+    "x": -21.8,
+    "y": -45.56,
     "z": 1,
     "xSeed": -1.3,
-    "ySeed": -20.17
+    "ySeed": -40.17
   },
   {
     "id": "378116714",
@@ -305,11 +305,11 @@
       "lng": -93.2310948785
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691600038/medium.jpg",
-    "x": -10.79,
-    "y": -17.3,
+    "x": -8.64,
+    "y": -28.71,
     "z": 1.5,
     "xSeed": -0.36,
-    "ySeed": -19.04
+    "ySeed": -39.04
   },
   {
     "id": "378606070",
@@ -329,11 +329,11 @@
       "lng": -93.2405865937
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460571/medium.jpg",
-    "x": -2.87,
-    "y": -30.15,
+    "x": 3.44,
+    "y": -44.39,
     "z": 1.5,
     "xSeed": 1.25,
-    "ySeed": -20.13
+    "ySeed": -40.13
   },
   {
     "id": "310625533",
@@ -353,11 +353,11 @@
       "lng": -93.2413466125
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/560636551/medium.jpg",
-    "x": 4.51,
-    "y": -39.69,
+    "x": 8,
+    "y": -50.03,
     "z": 1.5,
     "xSeed": 1.32,
-    "ySeed": -20.7
+    "ySeed": -40.7
   },
   {
     "id": "379457141",
@@ -377,11 +377,11 @@
       "lng": -93.2506708374
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104766/medium.jpg",
-    "x": -12.2,
-    "y": -5.08,
+    "x": -6.28,
+    "y": -22.69,
     "z": 1.5,
     "xSeed": -0.18,
-    "ySeed": -18.67
+    "ySeed": -38.67
   },
   {
     "id": "376698096",
@@ -399,11 +399,11 @@
       "lng": -93.2416115027
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688778749/medium.jpg",
-    "x": -21.57,
-    "y": -32.22,
+    "x": -16.8,
+    "y": -46.39,
     "z": 0.5,
     "xSeed": -0.96,
-    "ySeed": -20.27
+    "ySeed": -40.27
   },
   {
     "id": "370717739",
@@ -422,11 +422,11 @@
       "lng": -93.4949242327
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677269134/medium.jpg",
-    "x": -4.77,
-    "y": -13.06,
+    "x": -0.25,
+    "y": -31.17,
     "z": 1,
     "xSeed": 1.07,
-    "ySeed": -19.64
+    "ySeed": -39.64
   },
   {
     "id": "378887140",
@@ -445,11 +445,11 @@
       "lng": -93.2312268547
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692999243/medium.jpg",
-    "x": -7.68,
-    "y": -19.44,
+    "x": -6.03,
+    "y": -34.29,
     "z": 1,
     "xSeed": -0.21,
-    "ySeed": -19.34
+    "ySeed": -39.34
   },
   {
     "id": "379512026",
@@ -469,11 +469,11 @@
       "lng": -93.2594335347
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210356/medium.jpg",
-    "x": 4.33,
-    "y": -44.57,
+    "x": 11.68,
+    "y": -59.73,
     "z": 1.5,
     "xSeed": 1.39,
-    "ySeed": -21.18
+    "ySeed": -41.18
   },
   {
     "id": "374457580",
@@ -492,11 +492,11 @@
       "lng": -93.2386733181
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684439725/medium.jpg",
-    "x": -5.77,
-    "y": -44.44,
+    "x": 1.62,
+    "y": -62.21,
     "z": 1,
     "xSeed": 0.86,
-    "ySeed": -21.13
+    "ySeed": -41.13
   },
   {
     "id": "377796262",
@@ -515,11 +515,11 @@
       "lng": -93.2407228838
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690902015/medium.jpg",
-    "x": -18.36,
-    "y": -36.73,
+    "x": -15.03,
+    "y": -57.07,
     "z": 1,
     "xSeed": -0.76,
-    "ySeed": -21.07
+    "ySeed": -41.07
   },
   {
     "id": "378200088",
@@ -538,11 +538,11 @@
       "lng": -93.2942975961
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691675036/medium.jpg",
-    "x": -13.57,
-    "y": -24.73,
+    "x": -11.3,
+    "y": -42.16,
     "z": 1,
     "xSeed": -0.65,
-    "ySeed": -20.11
+    "ySeed": -40.11
   },
   {
     "id": "379123984",
@@ -561,11 +561,11 @@
       "lng": -93.2442213004
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693462318/medium.jpg",
-    "x": -14.5,
-    "y": -16.93,
+    "x": -12.46,
+    "y": -31.51,
     "z": 1,
     "xSeed": -0.87,
-    "ySeed": -19.17
+    "ySeed": -39.17
   },
   {
     "id": "379457223",
@@ -584,11 +584,11 @@
       "lng": -93.2520921692
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104887/medium.jpg",
-    "x": -16.17,
-    "y": -20.7,
+    "x": -15.74,
+    "y": -36.56,
     "z": 1,
     "xSeed": -0.88,
-    "ySeed": -19.31
+    "ySeed": -39.31
   },
   {
     "id": "371047020",
@@ -608,11 +608,11 @@
       "lng": -93.0215969953
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677909326/medium.jpg",
-    "x": -2.98,
-    "y": -40.42,
+    "x": 2.58,
+    "y": -56.8,
     "z": 1.5,
     "xSeed": 1.12,
-    "ySeed": -21.03
+    "ySeed": -41.03
   },
   {
     "id": "371656970",
@@ -632,11 +632,11 @@
       "lng": -93.1536585088
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679061640/medium.jpg",
-    "x": 4.11,
-    "y": -30.9,
+    "x": 7.53,
+    "y": -45.43,
     "z": 1.5,
     "xSeed": 1.43,
-    "ySeed": -20.11
+    "ySeed": -40.11
   },
   {
     "id": "383388836",
@@ -656,11 +656,11 @@
       "lng": -93.2389190921
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701702094/medium.jpg",
-    "x": -4.2,
-    "y": -19.95,
+    "x": 3.99,
+    "y": -32.23,
     "z": 1.5,
     "xSeed": 1.37,
-    "ySeed": -19.66
+    "ySeed": -39.66
   },
   {
     "id": "392787433",
@@ -680,11 +680,11 @@
       "lng": -93.2401942368
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719872778/medium.jpg",
-    "x": -17.91,
-    "y": -24.24,
+    "x": -16.31,
+    "y": -41.24,
     "z": 1.5,
     "xSeed": -0.96,
-    "ySeed": -20.07
+    "ySeed": -40.07
   },
   {
     "id": "393261951",
@@ -704,11 +704,11 @@
       "lng": -93.2544968725
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801535/medium.jpg",
-    "x": -11.99,
-    "y": -29.65,
+    "x": -7.76,
+    "y": -47.48,
     "z": 1.5,
     "xSeed": -0.27,
-    "ySeed": -20.39
+    "ySeed": -40.39
   },
   {
     "id": "370929381",
@@ -728,11 +728,11 @@
       "lng": -93.155339979
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677682503/medium.jpg",
-    "x": 1.56,
-    "y": -23.25,
+    "x": 3.68,
+    "y": -36.67,
     "z": 1.5,
     "xSeed": 1.37,
-    "ySeed": -19.9
+    "ySeed": -39.9
   },
   {
     "id": "376709036",
@@ -752,11 +752,11 @@
       "lng": -93.2350948734
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688799106/medium.jpg",
-    "x": -8.32,
-    "y": -6.44,
+    "x": -3.86,
+    "y": -17.59,
     "z": 1.5,
     "xSeed": 0,
-    "ySeed": -18.6
+    "ySeed": -38.6
   },
   {
     "id": "377771963",
@@ -776,11 +776,11 @@
       "lng": -93.0973119346
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690855446/medium.jpg",
-    "x": -11.05,
-    "y": -9.72,
+    "x": -2.47,
+    "y": -25.38,
     "z": 1.5,
     "xSeed": 0.32,
-    "ySeed": -19.01
+    "ySeed": -39.01
   },
   {
     "id": "393262365",
@@ -800,11 +800,11 @@
       "lng": -93.2485711619
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720802145/medium.jpg",
-    "x": -5.1,
-    "y": -33.22,
+    "x": -2.21,
+    "y": -48.68,
     "z": 1.5,
     "xSeed": 0.7,
-    "ySeed": -20.71
+    "ySeed": -40.71
   },
   {
     "id": "376695567",
@@ -823,11 +823,11 @@
       "lng": -93.2388932666
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688773259/medium.jpg",
-    "x": -18.41,
-    "y": -16.91,
+    "x": -17.92,
+    "y": -31.82,
     "z": 1,
     "xSeed": -1.41,
-    "ySeed": -18.81
+    "ySeed": -38.81
   },
   {
     "id": "377505537",
@@ -846,11 +846,11 @@
       "lng": -93.240100571
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690339596/medium.jpg",
-    "x": -5.53,
-    "y": -37.22,
+    "x": 0.02,
+    "y": -53,
     "z": 1,
     "xSeed": 0.95,
-    "ySeed": -20.73
+    "ySeed": -40.73
   },
   {
     "id": "378822336",
@@ -869,11 +869,11 @@
       "lng": -93.2582632745
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873812/medium.jpg",
-    "x": -6.77,
-    "y": -15.95,
+    "x": -4.49,
+    "y": -29.98,
     "z": 1,
     "xSeed": 0.29,
-    "ySeed": -19.18
+    "ySeed": -39.18
   },
   {
     "id": "380036344",
@@ -892,11 +892,11 @@
       "lng": -93.2992540253
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227166/medium.jpg",
-    "x": -14.46,
-    "y": -40.72,
+    "x": -9.32,
+    "y": -59.78,
     "z": 1,
     "xSeed": -0.11,
-    "ySeed": -21.49
+    "ySeed": -41.49
   },
   {
     "id": "382652507",
@@ -915,11 +915,11 @@
       "lng": -93.2307576593
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700280486/medium.jpg",
-    "x": -13.52,
-    "y": -13.07,
+    "x": -10.93,
+    "y": -19.24,
     "z": 1,
     "xSeed": -0.48,
-    "ySeed": -18.75
+    "ySeed": -38.75
   },
   {
     "id": "384993088",
@@ -939,11 +939,11 @@
       "lng": -93.2487872449
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/704791223/medium.jpg",
-    "x": -3.03,
-    "y": -16.68,
+    "x": -1.17,
+    "y": -35.74,
     "z": 1.5,
     "xSeed": 0.77,
-    "ySeed": -19.74
+    "ySeed": -39.74
   },
   {
     "id": "372453485",
@@ -962,11 +962,11 @@
       "lng": -93.2400208742
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/680592869/medium.jpg",
-    "x": -5.61,
-    "y": -26.6,
+    "x": -2.67,
+    "y": -39.83,
     "z": 1,
     "xSeed": 0.74,
-    "ySeed": -20
+    "ySeed": -40
   },
   {
     "id": "374457410",
@@ -985,11 +985,11 @@
       "lng": -93.2366831303
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684439449/medium.jpg",
-    "x": -5.29,
-    "y": -23.22,
+    "x": 2.07,
+    "y": -40.49,
     "z": 1,
     "xSeed": 1.06,
-    "ySeed": -20.12
+    "ySeed": -40.12
   },
   {
     "id": "379458243",
@@ -1009,11 +1009,11 @@
       "lng": -93.2327949415
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694106844/medium.jpg",
-    "x": -9.73,
-    "y": -37.11,
+    "x": -4.07,
+    "y": -56.42,
     "z": 1.5,
     "xSeed": 0.06,
-    "ySeed": -21.24
+    "ySeed": -41.24
   },
   {
     "id": "378566086",
@@ -1031,11 +1031,11 @@
       "lng": -93.2492640177
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692381856/medium.jpg",
-    "x": -13.42,
-    "y": -35.2,
+    "x": -10.8,
+    "y": -53.44,
     "z": 0.5,
     "xSeed": -0.34,
-    "ySeed": -21.07
+    "ySeed": -41.07
   },
   {
     "id": "370717551",
@@ -1054,11 +1054,11 @@
       "lng": -93.2580404945
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677268689/medium.jpg",
-    "x": -12.07,
-    "y": -21,
+    "x": -10.77,
+    "y": -36.21,
     "z": 1,
     "xSeed": -0.5,
-    "ySeed": -19.36
+    "ySeed": -39.36
   },
   {
     "id": "377504751",
@@ -1077,11 +1077,11 @@
       "lng": -93.2375719017
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690337919/medium.jpg",
-    "x": -17.63,
-    "y": -12.39,
+    "x": -16.35,
+    "y": -25.86,
     "z": 1,
     "xSeed": -1.1,
-    "ySeed": -18.72
+    "ySeed": -38.72
   },
   {
     "id": "377772039",
@@ -1100,11 +1100,11 @@
       "lng": -93.2418951122
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690855592/medium.jpg",
-    "x": -1.45,
-    "y": -34.87,
+    "x": 2.99,
+    "y": -49.27,
     "z": 1,
     "xSeed": 0.95,
-    "ySeed": -20.62
+    "ySeed": -40.62
   },
   {
     "id": "378606156",
@@ -1123,11 +1123,11 @@
       "lng": -93.2435862619
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460705/medium.jpg",
-    "x": -10,
-    "y": -26.45,
+    "x": -5.99,
+    "y": -43.49,
     "z": 1,
     "xSeed": -0.18,
-    "ySeed": -20.01
+    "ySeed": -40.01
   },
   {
     "id": "378606211",
@@ -1147,11 +1147,11 @@
       "lng": -93.2401551945
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460832/medium.jpg",
-    "x": -15,
-    "y": -8.76,
+    "x": -11.41,
+    "y": -24.72,
     "z": 1.5,
     "xSeed": -0.78,
-    "ySeed": -18.75
+    "ySeed": -38.75
   },
   {
     "id": "393262274",
@@ -1171,11 +1171,11 @@
       "lng": -93.2419539259
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720802057/medium.jpg",
-    "x": 11.38,
-    "y": -45.09,
+    "x": 22.75,
+    "y": -58.4,
     "z": 1.5,
-    "xSeed": 6.97,
-    "ySeed": -20.12
+    "xSeed": 13.47,
+    "ySeed": -39.02
   },
   {
     "id": "378420488",
@@ -1195,11 +1195,11 @@
       "lng": -93.2397913132
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692101035/medium.jpg",
-    "x": 12.92,
-    "y": -31.95,
+    "x": 17.82,
+    "y": -39,
     "z": 1.5,
-    "xSeed": 7.89,
-    "ySeed": -18.09
+    "xSeed": 14.39,
+    "ySeed": -36.99
   },
   {
     "id": "370375607",
@@ -1219,11 +1219,11 @@
       "lng": -93.4952282007
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/676617994/medium.jpg",
-    "x": 6.59,
-    "y": -22.4,
+    "x": 15.64,
+    "y": -34.44,
     "z": 1.5,
-    "xSeed": 7.22,
-    "ySeed": -17.8
+    "xSeed": 13.72,
+    "ySeed": -36.7
   },
   {
     "id": "371657173",
@@ -1243,11 +1243,11 @@
       "lng": -93.4907447917
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679061928/medium.jpg",
-    "x": 3.23,
-    "y": -35.13,
+    "x": 15.29,
+    "y": -55.63,
     "z": 1.5,
-    "xSeed": 5.35,
-    "ySeed": -20.36
+    "xSeed": 11.85,
+    "ySeed": -39.26
   },
   {
     "id": "379457186",
@@ -1265,11 +1265,11 @@
       "lng": -93.2033466928
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104835/medium.jpg",
-    "x": 14,
-    "y": -38.16,
+    "x": 23.96,
+    "y": -49.31,
     "z": 0.5,
-    "xSeed": 7.12,
-    "ySeed": -18.98
+    "xSeed": 13.62,
+    "ySeed": -37.88
   },
   {
     "id": "384309701",
@@ -1289,11 +1289,11 @@
       "lng": -93.246242351
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472350/medium.jpg",
-    "x": 0.78,
-    "y": -31.7,
+    "x": 13.87,
+    "y": -46.45,
     "z": 1.5,
-    "xSeed": 5.97,
-    "ySeed": -19.01
+    "xSeed": 12.47,
+    "ySeed": -37.91
   },
   {
     "id": "376667057",
@@ -1313,11 +1313,11 @@
       "lng": -93.2432074826
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688715104/medium.jpg",
-    "x": 1.88,
-    "y": -27.64,
+    "x": 11.52,
+    "y": -42.23,
     "z": 1.5,
-    "xSeed": 5.6,
-    "ySeed": -19.12
+    "xSeed": 12.1,
+    "ySeed": -38.02
   },
   {
     "id": "381483170",
@@ -1337,11 +1337,11 @@
       "lng": -93.262624273
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698027123/medium.jpg",
-    "x": -1.63,
-    "y": -23.6,
+    "x": 8.92,
+    "y": -34.84,
     "z": 1.5,
-    "xSeed": 5.76,
-    "ySeed": -18.71
+    "xSeed": 12.26,
+    "ySeed": -37.61
   },
   {
     "id": "376668636",
@@ -1361,11 +1361,11 @@
       "lng": -93.2384158058
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688718536/medium.jpg",
-    "x": 4.31,
-    "y": -25.16,
+    "x": 12.81,
+    "y": -37.59,
     "z": 1.5,
-    "xSeed": 5.91,
-    "ySeed": -18.56
+    "xSeed": 12.41,
+    "ySeed": -37.46
   },
   {
     "id": "380037637",
@@ -1385,11 +1385,11 @@
       "lng": -93.2480038236
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695229198/medium.jpg",
-    "x": -1.45,
-    "y": -26.9,
+    "x": 8.11,
+    "y": -39.58,
     "z": 1.5,
-    "xSeed": 5.2,
-    "ySeed": -19.33
+    "xSeed": 11.7,
+    "ySeed": -38.23
   },
   {
     "id": "382011274",
@@ -1409,11 +1409,11 @@
       "lng": -93.2609491618
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699051827/medium.jpg",
-    "x": 16.24,
-    "y": -42.23,
+    "x": 27.08,
+    "y": -53.68,
     "z": 1.5,
-    "xSeed": 7.35,
-    "ySeed": -20.1
+    "xSeed": 13.85,
+    "ySeed": -39
   },
   {
     "id": "379540676",
@@ -1433,11 +1433,11 @@
       "lng": -93.257842184
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694265869/medium.jpg",
-    "x": 8.46,
-    "y": -37.39,
+    "x": 18.87,
+    "y": -49.23,
     "z": 1.5,
-    "xSeed": 6.58,
-    "ySeed": -19.56
+    "xSeed": 13.08,
+    "ySeed": -38.46
   },
   {
     "id": "371074439",
@@ -1457,11 +1457,11 @@
       "lng": -92.7739635715
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677961382/medium.jpg",
-    "x": 1.8,
-    "y": -18.24,
+    "x": 6.71,
+    "y": -24.64,
     "z": 1.5,
-    "xSeed": 6.24,
-    "ySeed": -17.75
+    "xSeed": 12.74,
+    "ySeed": -36.65
   },
   {
     "id": "376709258",
@@ -1481,11 +1481,11 @@
       "lng": -93.2426079667
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688799526/medium.jpg",
-    "x": 6.28,
-    "y": -28.19,
+    "x": 11.85,
+    "y": -31.46,
     "z": 1.5,
-    "xSeed": 6.1,
-    "ySeed": -18.2
+    "xSeed": 12.6,
+    "ySeed": -37.1
   },
   {
     "id": "376735141",
@@ -1503,11 +1503,11 @@
       "lng": -93.2399932832
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688852493/medium.jpg",
-    "x": -0.57,
-    "y": -20.07,
+    "x": 8.13,
+    "y": -29.17,
     "z": 0.5,
-    "xSeed": 6.1,
-    "ySeed": -18.14
+    "xSeed": 12.6,
+    "ySeed": -37.04
   },
   {
     "id": "374137233",
@@ -1526,11 +1526,11 @@
       "lng": -93.2269013531
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/683813984/medium.jpg",
-    "x": 6.88,
-    "y": -33.96,
+    "x": 13.8,
+    "y": -50.83,
     "z": 1,
-    "xSeed": 5.52,
-    "ySeed": -19.98
+    "xSeed": 12.02,
+    "ySeed": -38.88
   },
   {
     "id": "371029433",
@@ -1550,11 +1550,11 @@
       "lng": -93.3142173997
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677875291/medium.jpg",
-    "x": 9.8,
-    "y": -41.1,
+    "x": 20.11,
+    "y": -54.06,
     "z": 1.5,
-    "xSeed": 5.86,
-    "ySeed": -20.1
+    "xSeed": 12.36,
+    "ySeed": -39
   },
   {
     "id": "379195394",
@@ -1574,11 +1574,11 @@
       "lng": -93.2401778338
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693598117/medium.jpg",
-    "x": 8.81,
-    "y": -30.7,
+    "x": 15.91,
+    "y": -42.5,
     "z": 1.5,
-    "xSeed": 6.7,
-    "ySeed": -18.81
+    "xSeed": 13.2,
+    "ySeed": -37.71
   },
   {
     "id": "386002899",
@@ -1598,11 +1598,11 @@
       "lng": -93.2377182192
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714518/medium.jpg",
-    "x": 11.17,
-    "y": -34.84,
+    "x": 19.97,
+    "y": -44.64,
     "z": 1.5,
-    "xSeed": 7.65,
-    "ySeed": -18.5
+    "xSeed": 14.15,
+    "ySeed": -37.4
   },
   {
     "id": "391189978",
@@ -1622,11 +1622,11 @@
       "lng": -124.0549288504
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/716766440/medium.jpg",
-    "x": 10,
-    "y": -22.38,
+    "x": 21.88,
+    "y": -37.7,
     "z": 1.5,
-    "xSeed": 11.82,
-    "ySeed": -15.12
+    "xSeed": 24.12,
+    "ySeed": -30.92
   },
   {
     "id": "391240716",
@@ -1646,11 +1646,11 @@
       "lng": -124.0595269264
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/716864882/medium.jpg",
-    "x": 15.97,
-    "y": -34.18,
+    "x": 24.81,
+    "y": -43.55,
     "z": 1.5,
-    "xSeed": 12.81,
-    "ySeed": -15.71
+    "xSeed": 25.11,
+    "ySeed": -31.51
   },
   {
     "id": "386002829",
@@ -1667,11 +1667,11 @@
       "lng": -93.249241002
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714409/medium.jpg",
-    "x": 26.42,
-    "y": -21.17,
+    "x": 41.07,
+    "y": -26.56,
     "z": 0,
-    "xSeed": 17.18,
-    "ySeed": -11.05
+    "xSeed": 33.98,
+    "ySeed": -22.05
   },
   {
     "id": "377504781",
@@ -1688,11 +1688,11 @@
       "lng": -93.2462133892
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690337978/medium.jpg",
-    "x": 15.62,
-    "y": -27.37,
+    "x": 33.5,
+    "y": -30.57,
     "z": 0,
-    "xSeed": 16.2,
-    "ySeed": -11.24
+    "xSeed": 33,
+    "ySeed": -22.24
   },
   {
     "id": "379124185",
@@ -1709,11 +1709,11 @@
       "lng": -93.2417746151
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693462714/medium.jpg",
-    "x": -4.38,
-    "y": -4.98,
+    "x": 6.54,
+    "y": -13.67,
     "z": 0,
-    "xSeed": 15.23,
-    "ySeed": -10.07
+    "xSeed": 32.03,
+    "ySeed": -21.07
   },
   {
     "id": "380036529",
@@ -1730,11 +1730,11 @@
       "lng": -93.2312537915
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227556/medium.jpg",
-    "x": 22.98,
-    "y": -21.36,
+    "x": 37.79,
+    "y": -33.3,
     "z": 0,
-    "xSeed": 17.01,
-    "ySeed": -11.47
+    "xSeed": 33.81,
+    "ySeed": -22.47
   },
   {
     "id": "392112541",
@@ -1751,11 +1751,11 @@
       "lng": -93.2487138274
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718552969/medium.jpg",
-    "x": 11.89,
-    "y": -10.84,
+    "x": 23.6,
+    "y": -16.09,
     "z": 0,
-    "xSeed": 16.11,
-    "ySeed": -9.96
+    "xSeed": 32.91,
+    "ySeed": -20.96
   },
   {
     "id": "377252548",
@@ -1772,11 +1772,11 @@
       "lng": -93.2422284035
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689845407/medium.jpg",
-    "x": 45.34,
-    "y": -21.12,
+    "x": 62.57,
+    "y": -24.61,
     "z": 0,
-    "xSeed": 17.98,
-    "ySeed": -10.47
+    "xSeed": 34.78,
+    "ySeed": -21.47
   },
   {
     "id": "378505219",
@@ -1796,11 +1796,11 @@
       "lng": -93.242414472
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692262941/medium.jpg",
-    "x": 27.36,
-    "y": -32.53,
+    "x": 40.3,
+    "y": -43.52,
     "z": 1.5,
-    "xSeed": 16.85,
-    "ySeed": -11.99
+    "xSeed": 33.65,
+    "ySeed": -22.99
   },
   {
     "id": "389773882",
@@ -1820,11 +1820,11 @@
       "lng": -123.4379047169
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995702/medium.jpg",
-    "x": -3,
-    "y": -8.37,
+    "x": 12.29,
+    "y": -14.11,
     "z": 1.5,
-    "xSeed": 15.38,
-    "ySeed": -10.05
+    "xSeed": 32.18,
+    "ySeed": -21.05
   },
   {
     "id": "378587456",
@@ -1844,11 +1844,11 @@
       "lng": -93.2389453924
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692423079/medium.jpg",
-    "x": -0.25,
-    "y": -5.88,
+    "x": 14.06,
+    "y": -10.02,
     "z": 1.5,
-    "xSeed": 15.57,
-    "ySeed": -9.56
+    "xSeed": 32.37,
+    "ySeed": -20.56
   },
   {
     "id": "378606192",
@@ -1868,11 +1868,11 @@
       "lng": -93.2140981229
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460792/medium.jpg",
-    "x": 12.11,
-    "y": -16.66,
+    "x": 25.13,
+    "y": -24.98,
     "z": 1.5,
-    "xSeed": 15.99,
-    "ySeed": -10.78
+    "xSeed": 32.79,
+    "ySeed": -21.78
   },
   {
     "id": "379241970",
@@ -1892,11 +1892,11 @@
       "lng": -93.2445595709
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693690685/medium.jpg",
-    "x": 23.53,
-    "y": -30.75,
+    "x": 35.84,
+    "y": -38.4,
     "z": 1.5,
-    "xSeed": 16.73,
-    "ySeed": -11.78
+    "xSeed": 33.53,
+    "ySeed": -22.78
   },
   {
     "id": "379457111",
@@ -1916,11 +1916,11 @@
       "lng": -93.2330755301
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104727/medium.jpg",
-    "x": 25.12,
-    "y": -6.8,
+    "x": 39.65,
+    "y": -14.96,
     "z": 1.5,
-    "xSeed": 17.19,
-    "ySeed": -9.58
+    "xSeed": 33.99,
+    "ySeed": -20.58
   },
   {
     "id": "382652486",
@@ -1940,11 +1940,11 @@
       "lng": -93.2560672314
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700280420/medium.jpg",
-    "x": 23.21,
-    "y": -27.25,
+    "x": 39.76,
+    "y": -37.52,
     "z": 1.5,
-    "xSeed": 16.89,
-    "ySeed": -11.65
+    "xSeed": 33.69,
+    "ySeed": -22.65
   },
   {
     "id": "384309560",
@@ -1964,11 +1964,11 @@
       "lng": -93.2417679955
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472152/medium.jpg",
-    "x": 34.29,
-    "y": -25.37,
+    "x": 51.59,
+    "y": -32.36,
     "z": 1.5,
-    "xSeed": 17.62,
-    "ySeed": -11.21
+    "xSeed": 34.42,
+    "ySeed": -22.21
   },
   {
     "id": "393262108",
@@ -1988,11 +1988,11 @@
       "lng": -93.2403221882
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801898/medium.jpg",
-    "x": 41,
-    "y": -15.15,
+    "x": 59.38,
+    "y": -20.17,
     "z": 1.5,
-    "xSeed": 18.12,
-    "ySeed": -9.79
+    "xSeed": 34.92,
+    "ySeed": -20.79
   },
   {
     "id": "378886972",
@@ -2012,11 +2012,11 @@
       "lng": -93.2505537098
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692998886/medium.jpg",
-    "x": 35.75,
-    "y": -11.23,
+    "x": 47.57,
+    "y": -16.69,
     "z": 1.5,
-    "xSeed": 17.33,
-    "ySeed": -9.61
+    "xSeed": 34.13,
+    "ySeed": -20.61
   },
   {
     "id": "378464730",
@@ -2034,11 +2034,11 @@
       "lng": -93.2419228619
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186212/medium.jpg",
-    "x": 8.43,
-    "y": -25.37,
+    "x": 21.7,
+    "y": -27.23,
     "z": 0.5,
-    "xSeed": 15.97,
-    "ySeed": -10.84
+    "xSeed": 32.77,
+    "ySeed": -21.84
   },
   {
     "id": "370940325",
@@ -2058,11 +2058,11 @@
       "lng": -93.4424091844
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677703108/medium.jpg",
-    "x": 30.7,
-    "y": -27.05,
+    "x": 47.06,
+    "y": -37.15,
     "z": 1.5,
-    "xSeed": 17.41,
-    "ySeed": -11.7
+    "xSeed": 34.21,
+    "ySeed": -22.7
   },
   {
     "id": "371642060",
@@ -2081,11 +2081,11 @@
       "lng": -93.2651484738
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679033932/medium.jpg",
-    "x": 42.43,
-    "y": -24.62,
+    "x": 60.61,
+    "y": -31.2,
     "z": 1,
-    "xSeed": 18.07,
-    "ySeed": -10.97
+    "xSeed": 34.87,
+    "ySeed": -21.97
   },
   {
     "id": "378822412",
@@ -2104,11 +2104,11 @@
       "lng": -93.2665274382
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873975/medium.jpg",
-    "x": 21.69,
-    "y": -12.84,
+    "x": 38.98,
+    "y": -23.01,
     "z": 1,
-    "xSeed": 17.09,
-    "ySeed": -10.21
+    "xSeed": 33.89,
+    "ySeed": -21.21
   },
   {
     "id": "378822444",
@@ -2127,11 +2127,11 @@
       "lng": -93.2555728137
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874037/medium.jpg",
-    "x": 10.27,
-    "y": -13.93,
+    "x": 21.64,
+    "y": -22.47,
     "z": 1,
-    "xSeed": 15.93,
-    "ySeed": -10.71
+    "xSeed": 32.73,
+    "ySeed": -21.71
   },
   {
     "id": "381483108",
@@ -2151,11 +2151,11 @@
       "lng": -93.2461678413
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698027002/medium.jpg",
-    "x": 18.18,
-    "y": -18.33,
+    "x": 32.59,
+    "y": -22.73,
     "z": 1.5,
-    "xSeed": 16.39,
-    "ySeed": -10.51
+    "xSeed": 33.19,
+    "ySeed": -21.51
   },
   {
     "id": "393262333",
@@ -2174,11 +2174,11 @@
       "lng": -93.2361805606
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720802098/medium.jpg",
-    "x": 8.69,
-    "y": -11.09,
+    "x": 20.51,
+    "y": -18.45,
     "z": 1,
-    "xSeed": 15.84,
-    "ySeed": -10.51
+    "xSeed": 32.64,
+    "ySeed": -21.51
   },
   {
     "id": "375385322",
@@ -2198,11 +2198,11 @@
       "lng": -93.2418520321
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/686240109/medium.jpg",
-    "x": 15.24,
-    "y": -11.52,
+    "x": 29.05,
+    "y": -13.06,
     "z": 1.5,
-    "xSeed": 16.94,
-    "ySeed": -9.65
+    "xSeed": 33.74,
+    "ySeed": -20.65
   },
   {
     "id": "391914052",
@@ -2222,11 +2222,11 @@
       "lng": -93.6561327624
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718166731/medium.jpg",
-    "x": 22.17,
-    "y": -39.64,
+    "x": 36.91,
+    "y": -49.7,
     "z": 1.5,
-    "xSeed": 16.39,
-    "ySeed": -12.21
+    "xSeed": 33.19,
+    "ySeed": -23.21
   },
   {
     "id": "392693700",
@@ -2246,11 +2246,11 @@
       "lng": -93.2356188031
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719689439/medium.jpg",
-    "x": 17.74,
-    "y": -30.32,
+    "x": 31.75,
+    "y": -39.99,
     "z": 1.5,
-    "xSeed": 16.2,
-    "ySeed": -12.17
+    "xSeed": 33,
+    "ySeed": -23.17
   },
   {
     "id": "371030002",
@@ -2268,11 +2268,11 @@
       "lng": -92.736902239
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677876342/medium.jpg",
-    "x": 18.11,
-    "y": -12.52,
+    "x": 32.16,
+    "y": -17.79,
     "z": 0.5,
-    "xSeed": 16.94,
-    "ySeed": -10.02
+    "xSeed": 33.74,
+    "ySeed": -21.02
   },
   {
     "id": "371029045",
@@ -2292,11 +2292,11 @@
       "lng": -93.4750420304
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677874551/medium.jpg",
-    "x": 25.2,
-    "y": -24.52,
+    "x": 41.36,
+    "y": -30.79,
     "z": 1.5,
-    "xSeed": 17.09,
-    "ySeed": -11.35
+    "xSeed": 33.89,
+    "ySeed": -22.35
   },
   {
     "id": "378606048",
@@ -2316,11 +2316,11 @@
       "lng": -93.3317245075
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460527/medium.jpg",
-    "x": 44.34,
-    "y": -17.06,
+    "x": 55.03,
+    "y": -20.26,
     "z": 1.5,
-    "xSeed": 18.05,
-    "ySeed": -9.86
+    "xSeed": 34.85,
+    "ySeed": -20.86
   },
   {
     "id": "392126997",
@@ -2340,11 +2340,11 @@
       "lng": -93.2450115626
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718580128/medium.jpg",
-    "x": 5.18,
-    "y": -11.83,
+    "x": 16.84,
+    "y": -15.33,
     "z": 1.5,
-    "xSeed": 15.52,
-    "ySeed": -10.15
+    "xSeed": 32.32,
+    "ySeed": -21.15
   },
   {
     "id": "371029202",
@@ -2364,11 +2364,11 @@
       "lng": -93.5264824155
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677874866/medium.jpg",
-    "x": 9.3,
-    "y": -18.11,
+    "x": 18.18,
+    "y": -24.5,
     "z": 1.5,
-    "xSeed": 15.6,
-    "ySeed": -11.08
+    "xSeed": 32.4,
+    "ySeed": -22.08
   },
   {
     "id": "378606113",
@@ -2388,11 +2388,11 @@
       "lng": -93.2455435895
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460664/medium.jpg",
-    "x": 7.31,
-    "y": -14.51,
+    "x": 16.93,
+    "y": -20.34,
     "z": 1.5,
-    "xSeed": 15.53,
-    "ySeed": -10.38
+    "xSeed": 32.33,
+    "ySeed": -21.38
   },
   {
     "id": "374457086",
@@ -2411,11 +2411,11 @@
       "lng": -93.241296277
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684438853/medium.jpg",
-    "x": 16.4,
-    "y": -15.39,
+    "x": 29.24,
+    "y": -20.1,
     "z": 1,
-    "xSeed": 16.2,
-    "ySeed": -10.26
+    "xSeed": 33,
+    "ySeed": -21.26
   },
   {
     "id": "379457260",
@@ -2435,11 +2435,11 @@
       "lng": -93.2314418088
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104935/medium.jpg",
-    "x": 36.15,
-    "y": -20.54,
+    "x": 49.63,
+    "y": -28.06,
     "z": 1.5,
-    "xSeed": 17.56,
-    "ySeed": -10.78
+    "xSeed": 34.36,
+    "ySeed": -21.78
   },
   {
     "id": "378606028",
@@ -2457,11 +2457,11 @@
       "lng": -93.2401101602
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460482/medium.jpg",
-    "x": -1.37,
-    "y": -11.61,
+    "x": 13.19,
+    "y": -18.42,
     "z": 0.5,
-    "xSeed": 15.34,
-    "ySeed": -10.49
+    "xSeed": 32.14,
+    "ySeed": -21.49
   },
   {
     "id": "371707576",
@@ -2480,11 +2480,11 @@
       "lng": -93.331358646
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679153789/medium.jpg",
-    "x": 20.55,
-    "y": -10.1,
+    "x": 35.97,
+    "y": -15.94,
     "z": 1,
-    "xSeed": 17.13,
-    "ySeed": -9.69
+    "xSeed": 33.93,
+    "ySeed": -20.69
   },
   {
     "id": "378822379",
@@ -2503,11 +2503,11 @@
       "lng": -93.2555581959
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873888/medium.jpg",
-    "x": 32.89,
-    "y": -18.26,
+    "x": 49.74,
+    "y": -23.39,
     "z": 1,
-    "xSeed": 17.46,
-    "ySeed": -10.38
+    "xSeed": 34.26,
+    "ySeed": -21.38
   },
   {
     "id": "371029343",
@@ -2526,11 +2526,11 @@
       "lng": -93.3403156713
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677875098/medium.jpg",
-    "x": 39.81,
-    "y": -19.26,
+    "x": 57.75,
+    "y": -25.88,
     "z": 1,
-    "xSeed": 17.89,
-    "ySeed": -10.59
+    "xSeed": 34.69,
+    "ySeed": -21.59
   },
   {
     "id": "375992911",
@@ -2550,11 +2550,11 @@
       "lng": -93.2400616743
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687438012/medium.jpg",
-    "x": 39.74,
-    "y": -28.99,
+    "x": 57.38,
+    "y": -36.21,
     "z": 1.5,
-    "xSeed": 17.94,
-    "ySeed": -11.62
+    "xSeed": 34.74,
+    "ySeed": -22.62
   },
   {
     "id": "381787140",
@@ -2574,11 +2574,11 @@
       "lng": -93.2447974719
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698619486/medium.jpg",
-    "x": 27.01,
-    "y": -28.33,
+    "x": 43.41,
+    "y": -40.32,
     "z": 1.5,
-    "xSeed": 17,
-    "ySeed": -11.86
+    "xSeed": 33.8,
+    "ySeed": -22.86
   },
   {
     "id": "389773938",
@@ -2598,11 +2598,11 @@
       "lng": -122.6040425646
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995847/medium.jpg",
-    "x": 29.32,
-    "y": -13.2,
+    "x": 39.17,
+    "y": -18.97,
     "z": 1.5,
-    "xSeed": 17.11,
-    "ySeed": -9.86
+    "xSeed": 33.91,
+    "ySeed": -20.86
   },
   {
     "id": "393262081",
@@ -2622,11 +2622,11 @@
       "lng": -93.2512103816
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801851/medium.jpg",
-    "x": 6.5,
-    "y": -18.02,
+    "x": 18.31,
+    "y": -29.8,
     "z": 1.5,
-    "xSeed": 15.42,
-    "ySeed": -11.69
+    "xSeed": 32.22,
+    "ySeed": -22.69
   },
   {
     "id": "390696977",
@@ -2646,11 +2646,11 @@
       "lng": -124.0592535351
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/716871823/medium.jpg",
-    "x": 13.91,
-    "y": -23.49,
+    "x": 25.63,
+    "y": -33.94,
     "z": 1.5,
-    "xSeed": 15.53,
-    "ySeed": -12.02
+    "xSeed": 32.33,
+    "ySeed": -23.02
   },
   {
     "id": "392667373",
@@ -2670,11 +2670,11 @@
       "lng": -93.2390110945
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641250/medium.jpg",
-    "x": 35.03,
-    "y": -29.32,
+    "x": 52.1,
+    "y": -37.1,
     "z": 1.5,
-    "xSeed": 17.56,
-    "ySeed": -11.47
+    "xSeed": 34.36,
+    "ySeed": -22.47
   },
   {
     "id": "390662103",
@@ -2694,11 +2694,11 @@
       "lng": -124.0689793383
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715736641/medium.jpg",
-    "x": 21.32,
-    "y": -24.22,
+    "x": 33.78,
+    "y": -34.63,
     "z": 1.5,
-    "xSeed": 16.42,
-    "ySeed": -11.5
+    "xSeed": 33.22,
+    "ySeed": -22.5
   },
   {
     "id": "390655715",
@@ -2718,11 +2718,11 @@
       "lng": -122.5946854005
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724347/medium.jpg",
-    "x": 38.17,
-    "y": -24.22,
+    "x": 55.37,
+    "y": -30.2,
     "z": 1.5,
-    "xSeed": 17.89,
-    "ySeed": -10.84
+    "xSeed": 34.69,
+    "ySeed": -21.84
   },
   {
     "id": "390655194",
@@ -2742,11 +2742,11 @@
       "lng": -124.0652914814
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715723490/medium.jpg",
-    "x": 17.64,
-    "y": -24.59,
+    "x": 28.82,
+    "y": -27.95,
     "z": 1.5,
-    "xSeed": 16.18,
-    "ySeed": -10.98
+    "xSeed": 32.98,
+    "ySeed": -21.98
   },
   {
     "id": "392130338",
@@ -2766,11 +2766,11 @@
       "lng": -93.2554781201
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718586541/medium.jpg",
-    "x": 26.56,
-    "y": -15.37,
+    "x": 42.71,
+    "y": -22.07,
     "z": 1.5,
-    "xSeed": 17.21,
-    "ySeed": -10.25
+    "xSeed": 34.01,
+    "ySeed": -21.25
   },
   {
     "id": "392692307",
@@ -2790,11 +2790,11 @@
       "lng": -93.2347712834
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719686593/medium.jpg",
-    "x": 14.87,
-    "y": -18.41,
+    "x": 25.17,
+    "y": -20.47,
     "z": 1.5,
-    "xSeed": 16.16,
-    "ySeed": -10.4
+    "xSeed": 32.96,
+    "ySeed": -21.4
   },
   {
     "id": "391914036",
@@ -2814,11 +2814,11 @@
       "lng": -93.2425076829
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718166671/medium.jpg",
-    "x": 29.85,
-    "y": -20.74,
+    "x": 45.03,
+    "y": -28.85,
     "z": 1.5,
-    "xSeed": 17.36,
-    "ySeed": -10.57
+    "xSeed": 34.16,
+    "ySeed": -21.57
   },
   {
     "id": "377918506",
@@ -2838,11 +2838,11 @@
       "lng": -93.2414613336
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691143371/medium.jpg",
-    "x": 16.15,
-    "y": -21.33,
+    "x": 28.76,
+    "y": -23.9,
     "z": 1.5,
-    "xSeed": 16.2,
-    "ySeed": -10.71
+    "xSeed": 33,
+    "ySeed": -21.71
   },
   {
     "id": "378464929",
@@ -2862,11 +2862,11 @@
       "lng": -93.2498590714
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186510/medium.jpg",
-    "x": 9.75,
-    "y": -4.91,
+    "x": 25.18,
+    "y": -12.12,
     "z": 1.5,
-    "xSeed": 16.12,
-    "ySeed": -9.55
+    "xSeed": 32.92,
+    "ySeed": -20.55
   },
   {
     "id": "378465059",
@@ -2886,11 +2886,11 @@
       "lng": -93.2395086075
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186676/medium.jpg",
-    "x": 32.76,
-    "y": -22.21,
+    "x": 47.06,
+    "y": -32.55,
     "z": 1.5,
-    "xSeed": 17.35,
-    "ySeed": -11.13
+    "xSeed": 34.15,
+    "ySeed": -22.13
   },
   {
     "id": "379122053",
@@ -2910,11 +2910,11 @@
       "lng": -93.2457209505
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458185/medium.jpg",
-    "x": 33.84,
-    "y": -13.72,
+    "x": 51.47,
+    "y": -18.39,
     "z": 1.5,
-    "xSeed": 17.82,
-    "ySeed": -9.55
+    "xSeed": 34.62,
+    "ySeed": -20.55
   },
   {
     "id": "379457435",
@@ -2934,11 +2934,11 @@
       "lng": -93.2630187131
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105317/medium.jpg",
-    "x": 13.59,
-    "y": -13.97,
+    "x": 27.42,
+    "y": -16.64,
     "z": 1.5,
-    "xSeed": 16.13,
-    "ySeed": -10.01
+    "xSeed": 32.93,
+    "ySeed": -21.01
   },
   {
     "id": "380036554",
@@ -2958,11 +2958,11 @@
       "lng": -93.2513919405
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227607/medium.jpg",
-    "x": 31.27,
-    "y": -15.46,
+    "x": 43.23,
+    "y": -17.94,
     "z": 1.5,
-    "xSeed": 17.23,
-    "ySeed": -9.88
+    "xSeed": 34.03,
+    "ySeed": -20.88
   },
   {
     "id": "382652565",
@@ -2982,11 +2982,11 @@
       "lng": -93.2449293534
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700280636/medium.jpg",
-    "x": 28.56,
-    "y": -17.78,
+    "x": 46.88,
+    "y": -20.62,
     "z": 1.5,
-    "xSeed": 17.26,
-    "ySeed": -9.93
+    "xSeed": 34.06,
+    "ySeed": -20.93
   },
   {
     "id": "392667714",
@@ -3006,11 +3006,11 @@
       "lng": -93.2426013512
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641887/medium.jpg",
-    "x": 23.51,
-    "y": -15.03,
+    "x": 36.03,
+    "y": -25.2,
     "z": 1.5,
-    "xSeed": 16.94,
-    "ySeed": -10.32
+    "xSeed": 33.74,
+    "ySeed": -21.32
   },
   {
     "id": "392692371",
@@ -3030,11 +3030,11 @@
       "lng": -93.254965013
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719686710/medium.jpg",
-    "x": 4.14,
-    "y": -15.51,
+    "x": 8.65,
+    "y": -18.38,
     "z": 1.5,
-    "xSeed": 15.22,
-    "ySeed": -10.63
+    "xSeed": 32.02,
+    "ySeed": -21.63
   },
   {
     "id": "377252651",
@@ -3054,11 +3054,11 @@
       "lng": -93.0240897192
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689845600/medium.jpg",
-    "x": 12.35,
-    "y": -28.66,
+    "x": 26.49,
+    "y": -38.63,
     "z": 1.5,
-    "xSeed": 15.35,
-    "ySeed": -12.33
+    "xSeed": 32.15,
+    "ySeed": -23.33
   },
   {
     "id": "377580538",
@@ -3078,11 +3078,11 @@
       "lng": -93.2563337819
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690487505/medium.jpg",
-    "x": 12.58,
-    "y": -6.57,
+    "x": 32.78,
+    "y": -13.91,
     "z": 1.5,
-    "xSeed": 17.05,
-    "ySeed": -9.61
+    "xSeed": 33.85,
+    "ySeed": -20.61
   },
   {
     "id": "377598040",
@@ -3102,11 +3102,11 @@
       "lng": -93.3154277985
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690522770/medium.jpg",
-    "x": 11.66,
-    "y": -25.69,
+    "x": 29.47,
+    "y": -32.02,
     "z": 1.5,
-    "xSeed": 16.13,
-    "ySeed": -11.27
+    "xSeed": 32.93,
+    "ySeed": -22.27
   },
   {
     "id": "378200048",
@@ -3126,11 +3126,11 @@
       "lng": -93.3643837744
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691674984/medium.jpg",
-    "x": 19.34,
-    "y": -36.47,
+    "x": 29.67,
+    "y": -43.81,
     "z": 1.5,
-    "xSeed": 15.87,
-    "ySeed": -12.4
+    "xSeed": 32.67,
+    "ySeed": -23.4
   },
   {
     "id": "392667605",
@@ -3150,11 +3150,11 @@
       "lng": -93.2499090812
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641710/medium.jpg",
-    "x": 21.45,
-    "y": -18.2,
+    "x": 37.41,
+    "y": -28.97,
     "z": 1.5,
-    "xSeed": 16.71,
-    "ySeed": -10.76
+    "xSeed": 33.51,
+    "ySeed": -21.76
   },
   {
     "id": "392692388",
@@ -3174,11 +3174,11 @@
       "lng": -93.2460228996
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719686760/medium.jpg",
-    "x": 24.23,
-    "y": -35.19,
+    "x": 35.87,
+    "y": -42.92,
     "z": 1.5,
-    "xSeed": 16.51,
-    "ySeed": -12.12
+    "xSeed": 33.31,
+    "ySeed": -23.12
   },
   {
     "id": "393262158",
@@ -3198,11 +3198,11 @@
       "lng": -93.2345508683
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801941/medium.jpg",
-    "x": 36.49,
-    "y": -16.49,
+    "x": 53.45,
+    "y": -24.99,
     "z": 1.5,
-    "xSeed": 17.76,
-    "ySeed": -10.38
+    "xSeed": 34.56,
+    "ySeed": -21.38
   },
   {
     "id": "377576654",
@@ -3220,11 +3220,11 @@
       "lng": -93.2725698444
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690480762/medium.jpg",
-    "x": 12.04,
-    "y": -20.02,
+    "x": 25.22,
+    "y": -29.59,
     "z": 0.5,
-    "xSeed": 16.12,
-    "ySeed": -11.24
+    "xSeed": 32.92,
+    "ySeed": -22.24
   },
   {
     "id": "378822242",
@@ -3242,11 +3242,11 @@
       "lng": -93.2429404053
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873619/medium.jpg",
-    "x": 1.04,
-    "y": -9.05,
+    "x": 9.1,
+    "y": -9.63,
     "z": 0.5,
-    "xSeed": 15.32,
-    "ySeed": -9.74
+    "xSeed": 32.12,
+    "ySeed": -20.74
   },
   {
     "id": "382589170",
@@ -3264,11 +3264,11 @@
       "lng": -93.2561470353
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700160986/medium.jpg",
-    "x": 27.33,
-    "y": -38.53,
+    "x": 41.87,
+    "y": -48.58,
     "z": 0.5,
-    "xSeed": 16.93,
-    "ySeed": -12.28
+    "xSeed": 33.73,
+    "ySeed": -23.28
   },
   {
     "id": "386002736",
@@ -3286,11 +3286,11 @@
       "lng": -93.2568556544
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714203/medium.jpg",
-    "x": 24.72,
-    "y": -18.28,
+    "x": 45.5,
+    "y": -24.9,
     "z": 0.5,
-    "xSeed": 17.31,
-    "ySeed": -10.36
+    "xSeed": 34.11,
+    "ySeed": -21.36
   },
   {
     "id": "392127928",
@@ -3310,11 +3310,11 @@
       "lng": -93.2703930427
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718581745/medium.jpg",
-    "x": 19.47,
-    "y": -21.42,
+    "x": 32.53,
+    "y": -26.8,
     "z": 1.5,
-    "xSeed": 16.43,
-    "ySeed": -10.75
+    "xSeed": 33.23,
+    "ySeed": -21.75
   },
   {
     "id": "392148504",
@@ -3334,11 +3334,11 @@
       "lng": -93.2510192272
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622745/medium.jpg",
-    "x": 28.71,
-    "y": -24.27,
+    "x": 42.94,
+    "y": -34.69,
     "z": 1.5,
-    "xSeed": 17.14,
-    "ySeed": -11.42
+    "xSeed": 33.94,
+    "ySeed": -22.42
   },
   {
     "id": "380087605",
@@ -3358,11 +3358,11 @@
       "lng": -93.2407076538
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695329386/medium.jpg",
-    "x": 19.74,
-    "y": -15.44,
+    "x": 35.47,
+    "y": -20.34,
     "z": 1.5,
-    "xSeed": 16.91,
-    "ySeed": -10.16
+    "xSeed": 33.71,
+    "ySeed": -21.16
   },
   {
     "id": "377504688",
@@ -3381,11 +3381,11 @@
       "lng": -93.2335659756
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690337780/medium.jpg",
-    "x": 3.64,
-    "y": -7.51,
+    "x": 18.26,
+    "y": -10.13,
     "z": 1,
-    "xSeed": 15.8,
-    "ySeed": -9.43
+    "xSeed": 32.6,
+    "ySeed": -20.43
   },
   {
     "id": "392128913",
@@ -3405,11 +3405,11 @@
       "lng": -93.2563098741
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718583730/medium.jpg",
-    "x": 6.47,
-    "y": -8.94,
+    "x": 20.63,
+    "y": -13.36,
     "z": 1.5,
-    "xSeed": 15.92,
-    "ySeed": -9.74
+    "xSeed": 32.72,
+    "ySeed": -20.74
   },
   {
     "id": "380036504",
@@ -3427,11 +3427,11 @@
       "lng": -93.2536493003
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227517/medium.jpg",
-    "x": 36.14,
-    "y": -33.7,
+    "x": 53.91,
+    "y": -42.22,
     "z": 0.5,
-    "xSeed": 17.85,
-    "ySeed": -12.33
+    "xSeed": 34.65,
+    "ySeed": -23.33
   },
   {
     "id": "392967989",
@@ -3450,11 +3450,11 @@
       "lng": -93.2460450675
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720225666/medium.jpg",
-    "x": 31.48,
-    "y": -35.94,
+    "x": 46.43,
+    "y": -46.17,
     "z": 1,
-    "xSeed": 17.33,
-    "ySeed": -12.15
+    "xSeed": 34.13,
+    "ySeed": -23.15
   },
   {
     "id": "377918550",
@@ -3473,11 +3473,11 @@
       "lng": -93.2394098245
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691143471/medium.jpg",
-    "x": 2.21,
-    "y": -12.23,
+    "x": 12.77,
+    "y": -22.84,
     "z": 1,
-    "xSeed": 15.35,
-    "ySeed": -10.81
+    "xSeed": 32.15,
+    "ySeed": -21.81
   },
   {
     "id": "376744350",
@@ -3496,11 +3496,11 @@
       "lng": -93.2403393407
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688870193/medium.jpg",
-    "x": 0.36,
-    "y": -15.02,
+    "x": 14.79,
+    "y": -26.87,
     "z": 1,
-    "xSeed": 15.22,
-    "ySeed": -11.5
+    "xSeed": 32.02,
+    "ySeed": -22.5
   },
   {
     "id": "377295336",
@@ -3520,11 +3520,11 @@
       "lng": -93.2401076019
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689930895/medium.jpg",
-    "x": 31.06,
-    "y": -31.23,
+    "x": 48.6,
+    "y": -41.87,
     "z": 1.5,
-    "xSeed": 17.63,
-    "ySeed": -12.14
+    "xSeed": 34.43,
+    "ySeed": -23.14
   },
   {
     "id": "379122001",
@@ -3544,11 +3544,11 @@
       "lng": -93.2574076603
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458119/medium.jpg",
-    "x": 20.39,
-    "y": -32.71,
+    "x": 32.94,
+    "y": -47.1,
     "z": 1.5,
-    "xSeed": 15.92,
-    "ySeed": -12.39
+    "xSeed": 32.72,
+    "ySeed": -23.39
   },
   {
     "id": "392534964",
@@ -3568,11 +3568,11 @@
       "lng": -93.2561890636
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641665/medium.jpg",
-    "x": 19.77,
-    "y": -27.58,
+    "x": 29.89,
+    "y": -36.14,
     "z": 1.5,
-    "xSeed": 16.1,
-    "ySeed": -11.9
+    "xSeed": 32.9,
+    "ySeed": -22.9
   },
   {
     "id": "370929183",
@@ -3591,11 +3591,11 @@
       "lng": -92.9366938641
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677682141/medium.jpg",
-    "x": 4.35,
-    "y": -20.32,
+    "x": 21.61,
+    "y": -32.43,
     "z": 1,
-    "xSeed": 15.38,
-    "ySeed": -12.04
+    "xSeed": 32.18,
+    "ySeed": -23.04
   },
   {
     "id": "381483070",
@@ -3614,11 +3614,11 @@
       "lng": -93.2322553891
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698026925/medium.jpg",
-    "x": 23.88,
-    "y": -10.28,
+    "x": 44.05,
+    "y": -13.61,
     "z": 1,
-    "xSeed": 18.15,
-    "ySeed": -5.27
+    "xSeed": 37.55,
+    "ySeed": -10.17
   },
   {
     "id": "314703319",
@@ -3635,11 +3635,11 @@
       "lng": -93.6870761228
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/568425719/medium.jpg",
-    "x": 45.74,
-    "y": -3.82,
+    "x": 62.83,
+    "y": -6.02,
     "z": 0,
-    "xSeed": 20.72,
-    "ySeed": 1.27
+    "xSeed": 40.72,
+    "ySeed": 2.87
   },
   {
     "id": "379512135",
@@ -3656,11 +3656,11 @@
       "lng": -93.2033873783
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210505/medium.jpg",
-    "x": 49.44,
-    "y": -6.78,
+    "x": 66.81,
+    "y": -9.91,
     "z": 0,
-    "xSeed": 21.18,
-    "ySeed": 0.81
+    "xSeed": 41.18,
+    "ySeed": 2.41
   },
   {
     "id": "380036459",
@@ -3679,11 +3679,11 @@
       "lng": -93.2469293615
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227422/medium.jpg",
-    "x": 40.14,
-    "y": 0.83,
+    "x": 64.92,
+    "y": -1.13,
     "z": 1,
-    "xSeed": 20.81,
-    "ySeed": 1.94
+    "xSeed": 40.81,
+    "ySeed": 3.54
   },
   {
     "id": "374460674",
@@ -3703,11 +3703,11 @@
       "lng": -93.2412947861
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684445684/medium.jpg",
-    "x": 25.13,
-    "y": 5.32,
+    "x": 40.14,
+    "y": 2.15,
     "z": 1.5,
-    "xSeed": 19.52,
-    "ySeed": 2.04
+    "xSeed": 39.52,
+    "ySeed": 3.64
   },
   {
     "id": "379779274",
@@ -3727,11 +3727,11 @@
       "lng": -93.2291177324
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694725620/medium.jpg",
-    "x": 22.34,
-    "y": -7.07,
+    "x": 43.26,
+    "y": -4.26,
     "z": 1.5,
-    "xSeed": 19.54,
-    "ySeed": 1.72
+    "xSeed": 39.54,
+    "ySeed": 3.32
   },
   {
     "id": "378588343",
@@ -3749,11 +3749,11 @@
       "lng": -93.2608501713
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692424805/medium.jpg",
-    "x": 16.26,
-    "y": -5.96,
+    "x": 36.26,
+    "y": -6.5,
     "z": 0.5,
-    "xSeed": 19.08,
-    "ySeed": 1.5
+    "xSeed": 39.08,
+    "ySeed": 3.1
   },
   {
     "id": "379512171",
@@ -3771,11 +3771,11 @@
       "lng": -93.2393060906
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210550/medium.jpg",
-    "x": 23.25,
-    "y": -3.91,
+    "x": 47.08,
+    "y": -4.4,
     "z": 0.5,
-    "xSeed": 19.78,
-    "ySeed": 1.6
+    "xSeed": 39.78,
+    "ySeed": 3.2
   },
   {
     "id": "374457728",
@@ -3793,11 +3793,11 @@
       "lng": -93.2388247245
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684440012/medium.jpg",
-    "x": 13.49,
-    "y": 3.26,
+    "x": 22.7,
+    "y": -1.44,
     "z": 0.5,
-    "xSeed": 18.59,
-    "ySeed": 2.04
+    "xSeed": 38.59,
+    "ySeed": 3.64
   },
   {
     "id": "378588323",
@@ -3817,11 +3817,11 @@
       "lng": -93.242708442
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692424770/medium.jpg",
-    "x": 37.38,
-    "y": -0.88,
+    "x": 59.66,
+    "y": -3.12,
     "z": 1.5,
-    "xSeed": 20.55,
-    "ySeed": 1.75
+    "xSeed": 40.55,
+    "ySeed": 3.35
   },
   {
     "id": "377252396",
@@ -3841,11 +3841,11 @@
       "lng": -93.2962418576
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689845008/medium.jpg",
-    "x": 18.08,
-    "y": 10.26,
+    "x": 33.2,
+    "y": 7.52,
     "z": 1.5,
-    "xSeed": 18.78,
-    "ySeed": 2.64
+    "xSeed": 38.78,
+    "ySeed": 4.24
   },
   {
     "id": "377771999",
@@ -3863,11 +3863,11 @@
       "lng": -93.2373069857
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690855516/medium.jpg",
-    "x": 26.56,
-    "y": -11.73,
+    "x": 47.32,
+    "y": -11.16,
     "z": 0.5,
-    "xSeed": 19.69,
-    "ySeed": 0.79
+    "xSeed": 39.69,
+    "ySeed": 2.39
   },
   {
     "id": "378925461",
@@ -3885,11 +3885,11 @@
       "lng": -93.2447816754
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693075369/medium.jpg",
-    "x": 44.59,
-    "y": -7.89,
+    "x": 60.92,
+    "y": -10.67,
     "z": 0.5,
-    "xSeed": 20.75,
-    "ySeed": 1.03
+    "xSeed": 40.75,
+    "ySeed": 2.63
   },
   {
     "id": "378822293",
@@ -3909,11 +3909,11 @@
       "lng": -93.2455476669
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873716/medium.jpg",
-    "x": 33.35,
-    "y": -9.14,
+    "x": 55.6,
+    "y": -4.41,
     "z": 1.5,
-    "xSeed": 20.22,
-    "ySeed": 1.45
+    "xSeed": 40.22,
+    "ySeed": 3.05
   },
   {
     "id": "370717899",
@@ -3933,11 +3933,11 @@
       "lng": -93.1608307199
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677269430/medium.jpg",
-    "x": 42.57,
-    "y": -1.57,
+    "x": 68.53,
+    "y": -4.61,
     "z": 1.5,
-    "xSeed": 20.77,
-    "ySeed": 1.65
+    "xSeed": 40.77,
+    "ySeed": 3.25
   },
   {
     "id": "378822312",
@@ -3957,11 +3957,11 @@
       "lng": -93.2692294833
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873773/medium.jpg",
-    "x": 15.14,
-    "y": -0.69,
+    "x": 28.34,
+    "y": 3.23,
     "z": 1.5,
-    "xSeed": 18.54,
-    "ySeed": 2.52
+    "xSeed": 38.54,
+    "ySeed": 4.12
   },
   {
     "id": "389774018",
@@ -3981,11 +3981,11 @@
       "lng": -122.6062432069
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713996014/medium.jpg",
-    "x": 26.68,
-    "y": -3.47,
+    "x": 49.1,
+    "y": -7.84,
     "z": 1.5,
-    "xSeed": 19.94,
-    "ySeed": 1.44
+    "xSeed": 39.94,
+    "ySeed": 3.04
   },
   {
     "id": "374457253",
@@ -4005,11 +4005,11 @@
       "lng": -93.235786177
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684439254/medium.jpg",
-    "x": 25.69,
-    "y": 2.26,
+    "x": 48.47,
+    "y": 2.19,
     "z": 1.5,
-    "xSeed": 19.86,
-    "ySeed": 1.93
+    "xSeed": 39.86,
+    "ySeed": 3.53
   },
   {
     "id": "375368099",
@@ -4029,11 +4029,11 @@
       "lng": -93.2484509039
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/686206007/medium.jpg",
-    "x": 18.19,
-    "y": -0.58,
+    "x": 36.51,
+    "y": -1.26,
     "z": 1.5,
-    "xSeed": 19.21,
-    "ySeed": 1.71
+    "xSeed": 39.21,
+    "ySeed": 3.31
   },
   {
     "id": "314703380",
@@ -4052,11 +4052,11 @@
       "lng": -93.3689050397
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/568425894/medium.jpg",
-    "x": 27.09,
-    "y": 8.29,
+    "x": 44.48,
+    "y": 11,
     "z": 1,
-    "xSeed": 19.83,
-    "ySeed": 2.71
+    "xSeed": 39.83,
+    "ySeed": 4.31
   },
   {
     "id": "314703894",
@@ -4076,11 +4076,11 @@
       "lng": -93.741892488
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/661714662/medium.jpg",
-    "x": 6.6,
-    "y": -5.35,
+    "x": 26.75,
+    "y": -6.69,
     "z": 1.5,
-    "xSeed": 18.74,
-    "ySeed": 1.15
+    "xSeed": 38.74,
+    "ySeed": 2.75
   },
   {
     "id": "371706597",
@@ -4099,11 +4099,11 @@
       "lng": -93.4991512866
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679151951/medium.jpg",
-    "x": 16.84,
-    "y": -3.35,
+    "x": 30.49,
+    "y": -7.05,
     "z": 1,
-    "xSeed": 19.06,
-    "ySeed": 1.51
+    "xSeed": 39.06,
+    "ySeed": 3.11
   },
   {
     "id": "371602290",
@@ -4123,11 +4123,11 @@
       "lng": -93.1697385914
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679033742/medium.jpg",
-    "x": 4.9,
-    "y": -0.88,
+    "x": 21.27,
+    "y": -4.8,
     "z": 1.5,
-    "xSeed": 18.5,
-    "ySeed": 1.64
+    "xSeed": 38.5,
+    "ySeed": 3.24
   },
   {
     "id": "378091930",
@@ -4147,11 +4147,11 @@
       "lng": -93.2534439625
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691468995/medium.jpg",
-    "x": 38.78,
-    "y": -12.21,
+    "x": 51.65,
+    "y": -12.72,
     "z": 1.5,
-    "xSeed": 20.16,
-    "ySeed": 0.57
+    "xSeed": 40.16,
+    "ySeed": 2.17
   },
   {
     "id": "379457164",
@@ -4171,11 +4171,11 @@
       "lng": -93.306879527
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694104793/medium.jpg",
-    "x": 38.15,
-    "y": -7.61,
+    "x": 53.29,
+    "y": -8.97,
     "z": 1.5,
-    "xSeed": 20.09,
-    "ySeed": 1.45
+    "xSeed": 40.09,
+    "ySeed": 3.05
   },
   {
     "id": "377598022",
@@ -4195,11 +4195,11 @@
       "lng": -93.2870126943
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690522729/medium.jpg",
-    "x": 31.74,
-    "y": -6.2,
+    "x": 51.81,
+    "y": -4.84,
     "z": 1.5,
-    "xSeed": 20.11,
-    "ySeed": 1.47
+    "xSeed": 40.11,
+    "ySeed": 3.07
   },
   {
     "id": "379540244",
@@ -4219,11 +4219,11 @@
       "lng": -93.236250344
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694265079/medium.jpg",
-    "x": 28.61,
-    "y": -5.96,
+    "x": 40.22,
+    "y": -6.58,
     "z": 1.5,
-    "xSeed": 19.33,
-    "ySeed": 1.47
+    "xSeed": 39.33,
+    "ySeed": 3.07
   },
   {
     "id": "377861670",
@@ -4241,11 +4241,11 @@
       "lng": -93.2400310539
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691143442/medium.jpg",
-    "x": 28.05,
-    "y": 5.12,
+    "x": 48.81,
+    "y": 5.78,
     "z": 0.5,
-    "xSeed": 20.25,
-    "ySeed": 2.44
+    "xSeed": 40.25,
+    "ySeed": 4.04
   },
   {
     "id": "380036405",
@@ -4263,11 +4263,11 @@
       "lng": -93.2498359676
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227321/medium.jpg",
-    "x": 34.42,
-    "y": 5.01,
+    "x": 49.99,
+    "y": -1.59,
     "z": 0.5,
-    "xSeed": 20.23,
-    "ySeed": 1.92
+    "xSeed": 40.23,
+    "ySeed": 3.52
   },
   {
     "id": "384995734",
@@ -4287,11 +4287,11 @@
       "lng": -93.2352114745
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/704790889/medium.jpg",
-    "x": 36.17,
-    "y": 8.11,
+    "x": 56.24,
+    "y": 4.6,
     "z": 1.5,
-    "xSeed": 20.64,
-    "ySeed": 2.07
+    "xSeed": 40.64,
+    "ySeed": 3.67
   },
   {
     "id": "370929317",
@@ -4310,11 +4310,11 @@
       "lng": -93.4601012796
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677682361/medium.jpg",
-    "x": 30.3,
-    "y": -9.81,
+    "x": 44.52,
+    "y": -8.03,
     "z": 1,
-    "xSeed": 19.76,
-    "ySeed": 1.5
+    "xSeed": 39.76,
+    "ySeed": 3.1
   },
   {
     "id": "371029123",
@@ -4333,11 +4333,11 @@
       "lng": -93.4250300941
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677874704/medium.jpg",
-    "x": 13.47,
-    "y": -3.45,
+    "x": 36.19,
+    "y": 2.05,
     "z": 1,
-    "xSeed": 18.92,
-    "ySeed": 1.92
+    "xSeed": 38.92,
+    "ySeed": 3.52
   },
   {
     "id": "377884955",
@@ -4356,11 +4356,11 @@
       "lng": -93.2367182217
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691073914/medium.jpg",
-    "x": 3.5,
-    "y": -3.93,
+    "x": 23.16,
+    "y": -7.82,
     "z": 1,
-    "xSeed": 18.49,
-    "ySeed": 1.35
+    "xSeed": 38.49,
+    "ySeed": 2.95
   },
   {
     "id": "377580490",
@@ -4380,11 +4380,11 @@
       "lng": -93.2302188878
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690487443/medium.jpg",
-    "x": 12.55,
-    "y": 0.18,
+    "x": 29.37,
+    "y": -0.21,
     "z": 1.5,
-    "xSeed": 18.73,
-    "ySeed": 2.15
+    "xSeed": 38.73,
+    "ySeed": 3.75
   },
   {
     "id": "379457652",
@@ -4404,11 +4404,11 @@
       "lng": -93.2443827337
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105700/medium.jpg",
-    "x": 46.63,
-    "y": -11.9,
+    "x": 63.32,
+    "y": -14.44,
     "z": 1.5,
-    "xSeed": 21.37,
-    "ySeed": 0.29
+    "xSeed": 41.37,
+    "ySeed": 1.89
   },
   {
     "id": "393262212",
@@ -4428,11 +4428,11 @@
       "lng": -93.2458394319
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720802013/medium.jpg",
-    "x": 31.07,
-    "y": 5.47,
+    "x": 57.27,
+    "y": 0.33,
     "z": 1.5,
-    "xSeed": 20.29,
-    "ySeed": 1.99
+    "xSeed": 40.29,
+    "ySeed": 3.59
   },
   {
     "id": "382011295",
@@ -4452,11 +4452,11 @@
       "lng": -93.2409614041
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699051892/medium.jpg",
-    "x": 19.09,
-    "y": 4.77,
+    "x": 39.79,
+    "y": 5.73,
     "z": 1.5,
-    "xSeed": 18.83,
-    "ySeed": 2.6
+    "xSeed": 38.83,
+    "ySeed": 4.2
   },
   {
     "id": "378425418",
@@ -4476,11 +4476,11 @@
       "lng": -93.2399950896
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692110771/medium.jpg",
-    "x": 27.31,
-    "y": -8.77,
+    "x": 41,
+    "y": -10.29,
     "z": 1.5,
-    "xSeed": 19.35,
-    "ySeed": 1.16
+    "xSeed": 39.35,
+    "ySeed": 2.76
   },
   {
     "id": "379123391",
@@ -4500,11 +4500,11 @@
       "lng": -93.24780213
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693460907/medium.jpg",
-    "x": 17.89,
-    "y": -8.78,
+    "x": 36.97,
+    "y": -10.27,
     "z": 1.5,
-    "xSeed": 18.97,
-    "ySeed": 0.27
+    "xSeed": 38.97,
+    "ySeed": 1.87
   },
   {
     "id": "370717601",
@@ -4524,11 +4524,11 @@
       "lng": -93.2872127842
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677268804/medium.jpg",
-    "x": 10.51,
-    "y": 2.32,
+    "x": 29.5,
+    "y": -3.65,
     "z": 1.5,
-    "xSeed": 18.85,
-    "ySeed": 1.78
+    "xSeed": 38.85,
+    "ySeed": 3.38
   },
   {
     "id": "371706416",
@@ -4548,11 +4548,11 @@
       "lng": -93.3963767046
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679151720/medium.jpg",
-    "x": 35.06,
-    "y": -6.03,
+    "x": 57.53,
+    "y": -8.22,
     "z": 1.5,
-    "xSeed": 20.55,
-    "ySeed": 1.27
+    "xSeed": 40.55,
+    "ySeed": 2.87
   },
   {
     "id": "381483145",
@@ -4572,11 +4572,11 @@
       "lng": -93.2416065875
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698027055/medium.jpg",
-    "x": 16.4,
-    "y": 2.22,
+    "x": 41.95,
+    "y": -0.96,
     "z": 1.5,
-    "xSeed": 19.46,
-    "ySeed": 1.74
+    "xSeed": 39.46,
+    "ySeed": 3.34
   },
   {
     "id": "374136584",
@@ -4595,11 +4595,11 @@
       "lng": -93.222010954
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/683812574/medium.jpg",
-    "x": 28.97,
-    "y": 2.24,
+    "x": 44.11,
+    "y": 2.58,
     "z": 1,
-    "xSeed": 19.79,
-    "ySeed": 1.86
+    "xSeed": 39.79,
+    "ySeed": 3.46
   },
   {
     "id": "379540723",
@@ -4619,11 +4619,11 @@
       "lng": -93.2485911253
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694265963/medium.jpg",
-    "x": 41.43,
-    "y": -9.78,
+    "x": 56.51,
+    "y": -13.23,
     "z": 1.5,
-    "xSeed": 20.85,
-    "ySeed": 0.57
+    "xSeed": 40.85,
+    "ySeed": 2.17
   },
   {
     "id": "378566144",
@@ -4643,11 +4643,11 @@
       "lng": -93.2376280494
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692381925/medium.jpg",
-    "x": 14.62,
-    "y": -8.51,
+    "x": 33.62,
+    "y": -3.99,
     "z": 1.5,
-    "xSeed": 19.02,
-    "ySeed": 1.62
+    "xSeed": 39.02,
+    "ySeed": 3.22
   },
   {
     "id": "389774001",
@@ -4667,11 +4667,11 @@
       "lng": -122.6086218564
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995959/medium.jpg",
-    "x": 19.62,
-    "y": -6.12,
+    "x": 32.91,
+    "y": -9.39,
     "z": 1.5,
-    "xSeed": 18.96,
-    "ySeed": 1.21
+    "xSeed": 38.96,
+    "ySeed": 2.81
   },
   {
     "id": "383366627",
@@ -4688,11 +4688,11 @@
       "lng": -93.2461166344
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701657713/medium.jpg",
-    "x": 20.87,
-    "y": 19.52,
+    "x": 38.58,
+    "y": 28.75,
     "z": 0,
-    "xSeed": 18.46,
-    "ySeed": 8.65
+    "xSeed": 36.76,
+    "ySeed": 16.75
   },
   {
     "id": "378199441",
@@ -4712,11 +4712,11 @@
       "lng": -93.2465599415
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691673658/medium.jpg",
-    "x": 21.99,
-    "y": 26.18,
+    "x": 40.54,
+    "y": 36.36,
     "z": 1.5,
-    "xSeed": 18.59,
-    "ySeed": 9.07
+    "xSeed": 36.89,
+    "ySeed": 17.17
   },
   {
     "id": "382712618",
@@ -4736,11 +4736,11 @@
       "lng": -93.2413698741
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395331/medium.jpg",
-    "x": -10.53,
-    "y": 6.81,
+    "x": 3.47,
+    "y": 8.99,
     "z": 1.5,
-    "xSeed": 16.95,
-    "ySeed": 7.32
+    "xSeed": 35.25,
+    "ySeed": 15.42
   },
   {
     "id": "377580454",
@@ -4760,11 +4760,11 @@
       "lng": -93.2491691572
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690487353/medium.jpg",
-    "x": 35.49,
-    "y": 28.88,
+    "x": 56.04,
+    "y": 37.03,
     "z": 1.5,
-    "xSeed": 19.4,
-    "ySeed": 9.37
+    "xSeed": 37.7,
+    "ySeed": 17.47
   },
   {
     "id": "378438649",
@@ -4784,11 +4784,11 @@
       "lng": -93.235684992
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692135802/medium.jpg",
-    "x": 11.06,
-    "y": 8.88,
+    "x": 28.3,
+    "y": 17.7,
     "z": 1.5,
-    "xSeed": 17.88,
-    "ySeed": 8.1
+    "xSeed": 36.18,
+    "ySeed": 16.2
   },
   {
     "id": "378906893",
@@ -4808,11 +4808,11 @@
       "lng": -93.7118625342
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693038484/medium.jpg",
-    "x": 15.27,
-    "y": 8.7,
+    "x": 33.39,
+    "y": 15.14,
     "z": 1.5,
-    "xSeed": 18.27,
-    "ySeed": 7.66
+    "xSeed": 36.57,
+    "ySeed": 15.76
   },
   {
     "id": "380087197",
@@ -4832,11 +4832,11 @@
       "lng": -93.2427958842
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695328397/medium.jpg",
-    "x": 15.91,
-    "y": 12.37,
+    "x": 31.53,
+    "y": 18.12,
     "z": 1.5,
-    "xSeed": 18.06,
-    "ySeed": 7.99
+    "xSeed": 36.36,
+    "ySeed": 16.09
   },
   {
     "id": "379122105",
@@ -4856,11 +4856,11 @@
       "lng": -93.2631070118
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458327/medium.jpg",
-    "x": 9.1,
-    "y": 19.16,
+    "x": 24.52,
+    "y": 23.17,
     "z": 1.5,
-    "xSeed": 17.72,
-    "ySeed": 8.37
+    "xSeed": 36.02,
+    "ySeed": 16.47
   },
   {
     "id": "388779367",
@@ -4880,11 +4880,11 @@
       "lng": -122.6221158708
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713996107/medium.jpg",
-    "x": 31.62,
-    "y": 27.14,
+    "x": 49.7,
+    "y": 35.52,
     "z": 1.5,
-    "xSeed": 19.14,
-    "ySeed": 9.14
+    "xSeed": 37.44,
+    "ySeed": 17.24
   },
   {
     "id": "389209212",
@@ -4904,11 +4904,11 @@
       "lng": -122.6797026301
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713996088/medium.jpg",
-    "x": 19.63,
-    "y": 2.24,
+    "x": 36.27,
+    "y": 5.77,
     "z": 1.5,
-    "xSeed": 18.46,
-    "ySeed": 7.39
+    "xSeed": 36.76,
+    "ySeed": 15.49
   },
   {
     "id": "389773954",
@@ -4928,11 +4928,11 @@
       "lng": -122.6063627643
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995877/medium.jpg",
-    "x": 27.21,
-    "y": -0.29,
+    "x": 45.97,
+    "y": 8,
     "z": 1.5,
-    "xSeed": 18.85,
-    "ySeed": 7.34
+    "xSeed": 37.15,
+    "ySeed": 15.44
   },
   {
     "id": "389774017",
@@ -4952,11 +4952,11 @@
       "lng": -122.6097305811
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713996008/medium.jpg",
-    "x": 21.28,
-    "y": -0.47,
+    "x": 32.28,
+    "y": 4.23,
     "z": 1.5,
-    "xSeed": 18.22,
-    "ySeed": 6.99
+    "xSeed": 36.52,
+    "ySeed": 15.09
   },
   {
     "id": "371046013",
@@ -4975,11 +4975,11 @@
       "lng": -93.2541572446
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677907418/medium.jpg",
-    "x": 13.95,
-    "y": 32.46,
+    "x": 28.92,
+    "y": 41.96,
     "z": 1,
-    "xSeed": 17.47,
-    "ySeed": 9.3
+    "xSeed": 35.77,
+    "ySeed": 17.4
   },
   {
     "id": "377505930",
@@ -4998,11 +4998,11 @@
       "lng": -93.245131202
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690340164/medium.jpg",
-    "x": 23.29,
-    "y": 35.77,
+    "x": 39.89,
+    "y": 46.58,
     "z": 1,
-    "xSeed": 18.56,
-    "ySeed": 9.3
+    "xSeed": 36.86,
+    "ySeed": 17.4
   },
   {
     "id": "392130402",
@@ -5021,11 +5021,11 @@
       "lng": -93.2585906565
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718586654/medium.jpg",
-    "x": -2.52,
-    "y": 5.8,
+    "x": 11.04,
+    "y": 10.09,
     "z": 1,
-    "xSeed": 17.12,
-    "ySeed": 7.43
+    "xSeed": 35.42,
+    "ySeed": 15.53
   },
   {
     "id": "392148122",
@@ -5044,11 +5044,11 @@
       "lng": -93.2665865029
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622139/medium.jpg",
-    "x": 7.38,
-    "y": 4.05,
+    "x": 23.79,
+    "y": 10.25,
     "z": 1,
-    "xSeed": 17.5,
-    "ySeed": 7.39
+    "xSeed": 35.8,
+    "ySeed": 15.49
   },
   {
     "id": "392148266",
@@ -5067,11 +5067,11 @@
       "lng": -93.2591376537
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622401/medium.jpg",
-    "x": 24.57,
-    "y": 23.91,
+    "x": 41.7,
+    "y": 32.78,
     "z": 1,
-    "xSeed": 18.77,
-    "ySeed": 8.99
+    "xSeed": 37.07,
+    "ySeed": 17.09
   },
   {
     "id": "392148454",
@@ -5090,11 +5090,11 @@
       "lng": -93.2483531931
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622654/medium.jpg",
-    "x": 25.51,
-    "y": 27.51,
+    "x": 44.77,
+    "y": 37.59,
     "z": 1,
-    "xSeed": 19.06,
-    "ySeed": 9.16
+    "xSeed": 37.36,
+    "ySeed": 17.26
   },
   {
     "id": "379122188",
@@ -5114,11 +5114,11 @@
       "lng": -93.2413757909
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458581/medium.jpg",
-    "x": 21.26,
-    "y": 7.76,
+    "x": 41.31,
+    "y": 13.09,
     "z": 1.5,
-    "xSeed": 18.56,
-    "ySeed": 7.62
+    "xSeed": 36.86,
+    "ySeed": 15.72
   },
   {
     "id": "380036487",
@@ -5138,11 +5138,11 @@
       "lng": -93.2362818302
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227462/medium.jpg",
-    "x": 20.13,
-    "y": -3.17,
+    "x": 32.69,
+    "y": 0.55,
     "z": 1.5,
-    "xSeed": 18.23,
-    "ySeed": 6.64
+    "xSeed": 36.53,
+    "ySeed": 14.74
   },
   {
     "id": "382589192",
@@ -5162,11 +5162,11 @@
       "lng": -93.2479695761
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700161035/medium.jpg",
-    "x": 21.36,
-    "y": 22.8,
+    "x": 37.52,
+    "y": 32.05,
     "z": 1.5,
-    "xSeed": 18.23,
-    "ySeed": 8.95
+    "xSeed": 36.53,
+    "ySeed": 17.05
   },
   {
     "id": "384309226",
@@ -5186,11 +5186,11 @@
       "lng": -93.2423740238
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703471220/medium.jpg",
-    "x": 42.37,
-    "y": 10.05,
+    "x": 62.34,
+    "y": 14.31,
     "z": 1.5,
-    "xSeed": 19.52,
-    "ySeed": 7.76
+    "xSeed": 37.82,
+    "ySeed": 15.86
   },
   {
     "id": "386086320",
@@ -5210,11 +5210,11 @@
       "lng": -93.2473955262
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706873758/medium.jpg",
-    "x": 31.1,
-    "y": 14.18,
+    "x": 51.76,
+    "y": 20.39,
     "z": 1.5,
-    "xSeed": 19.07,
-    "ySeed": 8.13
+    "xSeed": 37.37,
+    "ySeed": 16.23
   },
   {
     "id": "378606169",
@@ -5234,11 +5234,11 @@
       "lng": -93.2393901886
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460746/medium.jpg",
-    "x": 17.31,
-    "y": 15.09,
+    "x": 36.22,
+    "y": 22.06,
     "z": 1.5,
-    "xSeed": 18.44,
-    "ySeed": 8.06
+    "xSeed": 36.74,
+    "ySeed": 16.16
   },
   {
     "id": "379122075",
@@ -5258,11 +5258,11 @@
       "lng": -93.2459156702
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458249/medium.jpg",
-    "x": -9.9,
-    "y": 2.11,
+    "x": 4.95,
+    "y": 3.16,
     "z": 1.5,
-    "xSeed": 16.91,
-    "ySeed": 6.83
+    "xSeed": 35.21,
+    "ySeed": 14.93
   },
   {
     "id": "379457314",
@@ -5282,11 +5282,11 @@
       "lng": -93.2501015109
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105078/medium.jpg",
-    "x": 45.22,
-    "y": 1.55,
+    "x": 65.17,
+    "y": 5.97,
     "z": 1.5,
-    "xSeed": 19.62,
-    "ySeed": 6.95
+    "xSeed": 37.92,
+    "ySeed": 15.05
   },
   {
     "id": "379857685",
@@ -5306,11 +5306,11 @@
       "lng": -93.1484699999
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694880750/medium.jpg",
-    "x": 17.24,
-    "y": 40.15,
+    "x": 28.72,
+    "y": 48.02,
     "z": 1.5,
-    "xSeed": 17.56,
-    "ySeed": 9.47
+    "xSeed": 35.86,
+    "ySeed": 17.57
   },
   {
     "id": "380036594",
@@ -5330,11 +5330,11 @@
       "lng": -93.2458804486
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227654/medium.jpg",
-    "x": 14.87,
-    "y": 16.8,
+    "x": 32.11,
+    "y": 21.54,
     "z": 1.5,
-    "xSeed": 18.07,
-    "ySeed": 8.27
+    "xSeed": 36.37,
+    "ySeed": 16.37
   },
   {
     "id": "382712639",
@@ -5354,11 +5354,11 @@
       "lng": -93.2371100841
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395378/medium.jpg",
-    "x": 48.1,
-    "y": 20.6,
+    "x": 68.59,
+    "y": 26.23,
     "z": 1.5,
-    "xSeed": 19.74,
-    "ySeed": 8.5
+    "xSeed": 38.04,
+    "ySeed": 16.6
   },
   {
     "id": "382712445",
@@ -5378,11 +5378,11 @@
       "lng": -93.2472276935
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395071/medium.jpg",
-    "x": 49.46,
-    "y": -0.94,
+    "x": 61.39,
+    "y": 2.41,
     "z": 1.5,
-    "xSeed": 19.57,
-    "ySeed": 6.77
+    "xSeed": 37.87,
+    "ySeed": 14.87
   },
   {
     "id": "382712494",
@@ -5402,11 +5402,11 @@
       "lng": -93.2195272364
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395120/medium.jpg",
-    "x": 7.7,
-    "y": 1,
+    "x": 24.46,
+    "y": 3.17,
     "z": 1.5,
-    "xSeed": 17.95,
-    "ySeed": 6.96
+    "xSeed": 36.25,
+    "ySeed": 15.06
   },
   {
     "id": "382712597",
@@ -5426,11 +5426,11 @@
       "lng": -93.2336315193
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395257/medium.jpg",
-    "x": 27.14,
-    "y": 21.96,
+    "x": 45.83,
+    "y": 29.52,
     "z": 1.5,
-    "xSeed": 18.85,
-    "ySeed": 8.77
+    "xSeed": 37.15,
+    "ySeed": 16.87
   },
   {
     "id": "383778778",
@@ -5450,11 +5450,11 @@
       "lng": -93.2411092537
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/702448421/medium.jpg",
-    "x": 25.58,
-    "y": 14.84,
+    "x": 40.51,
+    "y": 22.15,
     "z": 1.5,
-    "xSeed": 18.58,
-    "ySeed": 8.13
+    "xSeed": 36.88,
+    "ySeed": 16.23
   },
   {
     "id": "386002770",
@@ -5474,11 +5474,11 @@
       "lng": -93.2500413425
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714274/medium.jpg",
-    "x": 45.84,
-    "y": 25.49,
+    "x": 66.64,
+    "y": 31.92,
     "z": 1.5,
-    "xSeed": 19.53,
-    "ySeed": 8.95
+    "xSeed": 37.83,
+    "ySeed": 17.05
   },
   {
     "id": "381787123",
@@ -5498,11 +5498,11 @@
       "lng": -93.2430217432
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698619450/medium.jpg",
-    "x": 40.79,
-    "y": 7.12,
+    "x": 58.75,
+    "y": 10.65,
     "z": 1.5,
-    "xSeed": 19.48,
-    "ySeed": 6.98
+    "xSeed": 37.78,
+    "ySeed": 15.08
   },
   {
     "id": "383366685",
@@ -5522,11 +5522,11 @@
       "lng": -94.4989744715
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701657845/medium.jpg",
-    "x": 22.75,
-    "y": 2.19,
+    "x": 40.91,
+    "y": 9.61,
     "z": 1.5,
-    "xSeed": 18.62,
-    "ySeed": 7.53
+    "xSeed": 36.92,
+    "ySeed": 15.63
   },
   {
     "id": "384309651",
@@ -5546,11 +5546,11 @@
       "lng": -93.2460608452
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472284/medium.jpg",
-    "x": 30.64,
-    "y": -0.31,
+    "x": 43.22,
+    "y": 6.24,
     "z": 1.5,
-    "xSeed": 18.59,
-    "ySeed": 7.35
+    "xSeed": 36.89,
+    "ySeed": 15.45
   },
   {
     "id": "386002800",
@@ -5570,11 +5570,11 @@
       "lng": -93.252839712
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714339/medium.jpg",
-    "x": 46.39,
-    "y": 9.83,
+    "x": 66.16,
+    "y": 11.88,
     "z": 1.5,
-    "xSeed": 19.62,
-    "ySeed": 7.12
+    "xSeed": 37.92,
+    "ySeed": 15.22
   },
   {
     "id": "386002995",
@@ -5594,11 +5594,11 @@
       "lng": -93.2569366694
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714574/medium.jpg",
-    "x": 2.69,
-    "y": 17.99,
+    "x": 16.16,
+    "y": 27.1,
     "z": 1.5,
-    "xSeed": 17.17,
-    "ySeed": 8.76
+    "xSeed": 35.47,
+    "ySeed": 16.86
   },
   {
     "id": "391914070",
@@ -5618,11 +5618,11 @@
       "lng": -93.3197511807
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718166766/medium.jpg",
-    "x": -6.48,
-    "y": 13.66,
+    "x": 5.43,
+    "y": 20.87,
     "z": 1.5,
-    "xSeed": 16.86,
-    "ySeed": 8.18
+    "xSeed": 35.16,
+    "ySeed": 16.28
   },
   {
     "id": "392112195",
@@ -5642,11 +5642,11 @@
       "lng": -93.2432388057
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718552392/medium.jpg",
-    "x": 43.26,
-    "y": 21.45,
+    "x": 63.2,
+    "y": 27.08,
     "z": 1.5,
-    "xSeed": 19.49,
-    "ySeed": 8.64
+    "xSeed": 37.79,
+    "ySeed": 16.74
   },
   {
     "id": "392148418",
@@ -5666,11 +5666,11 @@
       "lng": -93.2461629377
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622617/medium.jpg",
-    "x": 33.67,
-    "y": 36.32,
+    "x": 53,
+    "y": 44.29,
     "z": 1.5,
-    "xSeed": 19.39,
-    "ySeed": 9.5
+    "xSeed": 37.69,
+    "ySeed": 17.6
   },
   {
     "id": "392148480",
@@ -5690,11 +5690,11 @@
       "lng": -93.2578347128
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622700/medium.jpg",
-    "x": 1.94,
-    "y": 0.35,
+    "x": 21.54,
+    "y": 5,
     "z": 1.5,
-    "xSeed": 17.42,
-    "ySeed": 7.07
+    "xSeed": 35.72,
+    "ySeed": 15.17
   },
   {
     "id": "392667662",
@@ -5714,11 +5714,11 @@
       "lng": -93.2374221916
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641795/medium.jpg",
-    "x": 38.13,
-    "y": 5.57,
+    "x": 55.31,
+    "y": 11.35,
     "z": 1.5,
-    "xSeed": 19.28,
-    "ySeed": 7.24
+    "xSeed": 37.58,
+    "ySeed": 15.34
   },
   {
     "id": "392667738",
@@ -5738,11 +5738,11 @@
       "lng": -93.2575204779
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641927/medium.jpg",
-    "x": 37.63,
-    "y": 33.12,
+    "x": 57.7,
+    "y": 41.96,
     "z": 1.5,
-    "xSeed": 19.41,
-    "ySeed": 9.41
+    "xSeed": 37.71,
+    "ySeed": 17.51
   },
   {
     "id": "392667768",
@@ -5762,11 +5762,11 @@
       "lng": -93.2411263363
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641973/medium.jpg",
-    "x": -1.05,
-    "y": 17.74,
+    "x": 11.29,
+    "y": 27.91,
     "z": 1.5,
-    "xSeed": 16.96,
-    "ySeed": 9.16
+    "xSeed": 35.26,
+    "ySeed": 17.26
   },
   {
     "id": "389773968",
@@ -5786,11 +5786,11 @@
       "lng": -122.6032320636
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995897/medium.jpg",
-    "x": 19.44,
-    "y": 13.07,
+    "x": 35.14,
+    "y": 18.83,
     "z": 1.5,
-    "xSeed": 18.46,
-    "ySeed": 8.01
+    "xSeed": 36.76,
+    "ySeed": 16.11
   },
   {
     "id": "390696962",
@@ -5810,11 +5810,11 @@
       "lng": -124.0605062632
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715804595/medium.jpg",
-    "x": 38.76,
-    "y": 10.38,
+    "x": 53.85,
+    "y": 15.29,
     "z": 1.5,
-    "xSeed": 19.22,
-    "ySeed": 7.54
+    "xSeed": 37.52,
+    "ySeed": 15.64
   },
   {
     "id": "377576619",
@@ -5833,11 +5833,11 @@
       "lng": -93.2410437695
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690480688/medium.jpg",
-    "x": 21.28,
-    "y": 10.68,
+    "x": 37.55,
+    "y": 12.39,
     "z": 1,
-    "xSeed": 18.48,
-    "ySeed": 7.62
+    "xSeed": 36.78,
+    "ySeed": 15.72
   },
   {
     "id": "379457681",
@@ -5856,11 +5856,11 @@
       "lng": -93.2425124907
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105763/medium.jpg",
-    "x": 10.47,
-    "y": -1.59,
+    "x": 25.62,
+    "y": 7.1,
     "z": 1,
-    "xSeed": 18,
-    "ySeed": 7.26
+    "xSeed": 36.3,
+    "ySeed": 15.36
   },
   {
     "id": "382589154",
@@ -5879,11 +5879,11 @@
       "lng": -93.2453367376
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700160937/medium.jpg",
-    "x": 5.91,
-    "y": 19.05,
+    "x": 23.83,
+    "y": 27.02,
     "z": 1,
-    "xSeed": 17.61,
-    "ySeed": 8.7
+    "xSeed": 35.91,
+    "ySeed": 16.8
   },
   {
     "id": "377580613",
@@ -5903,11 +5903,11 @@
       "lng": -93.2582715814
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690487646/medium.jpg",
-    "x": 18.21,
-    "y": 7.57,
+    "x": 36.87,
+    "y": 15.64,
     "z": 1.5,
-    "xSeed": 18.5,
-    "ySeed": 7.92
+    "xSeed": 36.8,
+    "ySeed": 16.02
   },
   {
     "id": "378568975",
@@ -5927,11 +5927,11 @@
       "lng": -93.2502214537
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692387171/medium.jpg",
-    "x": 30.24,
-    "y": -3.13,
+    "x": 38.75,
+    "y": -2.66,
     "z": 1.5,
-    "xSeed": 18.55,
-    "ySeed": 6.59
+    "xSeed": 36.85,
+    "ySeed": 14.69
   },
   {
     "id": "379540698",
@@ -5951,11 +5951,11 @@
       "lng": -93.2456001391
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694265912/medium.jpg",
-    "x": 40.77,
-    "y": 13.74,
+    "x": 58.15,
+    "y": 15.01,
     "z": 1.5,
-    "xSeed": 19.41,
-    "ySeed": 7.83
+    "xSeed": 37.71,
+    "ySeed": 15.93
   },
   {
     "id": "380087128",
@@ -5975,11 +5975,11 @@
       "lng": -93.247390056
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695328197/medium.jpg",
-    "x": 26.87,
-    "y": 12.08,
+    "x": 43.7,
+    "y": 20.3,
     "z": 1.5,
-    "xSeed": 18.82,
-    "ySeed": 8
+    "xSeed": 37.12,
+    "ySeed": 16.1
   },
   {
     "id": "382589116",
@@ -5999,11 +5999,11 @@
       "lng": -93.249381907
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700160835/medium.jpg",
-    "x": 22.48,
-    "y": 13.93,
+    "x": 38.89,
+    "y": 19.19,
     "z": 1.5,
-    "xSeed": 18.56,
-    "ySeed": 7.93
+    "xSeed": 36.86,
+    "ySeed": 16.03
   },
   {
     "id": "382652542",
@@ -6023,11 +6023,11 @@
       "lng": -93.2471979919
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700280560/medium.jpg",
-    "x": 24.22,
-    "y": 8.41,
+    "x": 43.78,
+    "y": 16.64,
     "z": 1.5,
-    "xSeed": 18.66,
-    "ySeed": 7.82
+    "xSeed": 36.96,
+    "ySeed": 15.92
   },
   {
     "id": "382712530",
@@ -6047,11 +6047,11 @@
       "lng": -93.2634382824
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395163/medium.jpg",
-    "x": 23.31,
-    "y": 29.8,
+    "x": 40.94,
+    "y": 40.7,
     "z": 1.5,
-    "xSeed": 18.6,
-    "ySeed": 9.23
+    "xSeed": 36.9,
+    "ySeed": 17.33
   },
   {
     "id": "382712563",
@@ -6071,11 +6071,11 @@
       "lng": -93.2570977776
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700395210/medium.jpg",
-    "x": 32.54,
-    "y": 20.47,
+    "x": 50.55,
+    "y": 27.7,
     "z": 1.5,
-    "xSeed": 19.23,
-    "ySeed": 8.58
+    "xSeed": 37.53,
+    "ySeed": 16.68
   },
   {
     "id": "384309605",
@@ -6095,11 +6095,11 @@
       "lng": -93.222535572
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472218/medium.jpg",
-    "x": -0.95,
-    "y": 8.82,
+    "x": 11.52,
+    "y": 15.92,
     "z": 1.5,
-    "xSeed": 16.92,
-    "ySeed": 8.09
+    "xSeed": 35.22,
+    "ySeed": 16.19
   },
   {
     "id": "386002856",
@@ -6119,11 +6119,11 @@
       "lng": -93.2411129336
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714460/medium.jpg",
-    "x": 12.29,
-    "y": 18.41,
+    "x": 30.01,
+    "y": 24.19,
     "z": 1.5,
-    "xSeed": 17.84,
-    "ySeed": 8.49
+    "xSeed": 36.14,
+    "ySeed": 16.59
   },
   {
     "id": "377576726",
@@ -6143,11 +6143,11 @@
       "lng": -93.2426663304
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690480868/medium.jpg",
-    "x": 34.29,
-    "y": 15.34,
+    "x": 55.41,
+    "y": 22.1,
     "z": 1.5,
-    "xSeed": 19.27,
-    "ySeed": 8.18
+    "xSeed": 37.57,
+    "ySeed": 16.28
   },
   {
     "id": "379124132",
@@ -6167,11 +6167,11 @@
       "lng": -93.2412925742
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693462624/medium.jpg",
-    "x": -2.66,
-    "y": 2.28,
+    "x": 13.01,
+    "y": 6.06,
     "z": 1.5,
-    "xSeed": 17.01,
-    "ySeed": 6.94
+    "xSeed": 35.31,
+    "ySeed": 15.04
   },
   {
     "id": "377878120",
@@ -6191,11 +6191,11 @@
       "lng": -93.2450104439
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691143498/medium.jpg",
-    "x": 25.95,
-    "y": 32.47,
+    "x": 44.44,
+    "y": 42.97,
     "z": 1.5,
-    "xSeed": 18.99,
-    "ySeed": 9.34
+    "xSeed": 37.29,
+    "ySeed": 17.44
   },
   {
     "id": "377598056",
@@ -6215,11 +6215,11 @@
       "lng": -93.255944821
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690522817/medium.jpg",
-    "x": 50.64,
-    "y": 12.08,
+    "x": 70.42,
+    "y": 14.76,
     "z": 1.5,
-    "xSeed": 19.7,
-    "ySeed": 7.84
+    "xSeed": 38,
+    "ySeed": 15.94
   },
   {
     "id": "389773914",
@@ -6238,11 +6238,11 @@
       "lng": -122.1007588311
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713995786/medium.jpg",
-    "x": -0.08,
-    "y": 20.82,
+    "x": 18.33,
+    "y": 30.61,
     "z": 1,
-    "xSeed": 17.1,
-    "ySeed": 9.17
+    "xSeed": 35.4,
+    "ySeed": 17.27
   },
   {
     "id": "376712854",
@@ -6261,11 +6261,11 @@
       "lng": -93.2399932832
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688852413/medium.jpg",
-    "x": 7.97,
-    "y": 7.22,
+    "x": 20.61,
+    "y": 9.3,
     "z": 1,
-    "xSeed": 17.46,
-    "ySeed": 7.4
+    "xSeed": 35.76,
+    "ySeed": 15.5
   },
   {
     "id": "392148353",
@@ -6284,11 +6284,11 @@
       "lng": -93.247146997
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622505/medium.jpg",
-    "x": 41.28,
-    "y": 25.63,
+    "x": 62.04,
+    "y": 32.69,
     "z": 1,
-    "xSeed": 19.47,
-    "ySeed": 8.87
+    "xSeed": 37.77,
+    "ySeed": 16.97
   },
   {
     "id": "386424772",
@@ -6308,11 +6308,11 @@
       "lng": -93.2434594173
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/707522209/medium.jpg",
-    "x": 26.35,
-    "y": 18.29,
+    "x": 44.35,
+    "y": 23.87,
     "z": 1.5,
-    "xSeed": 18.82,
-    "ySeed": 8.47
+    "xSeed": 37.12,
+    "ySeed": 16.57
   },
   {
     "id": "371029782",
@@ -6332,11 +6332,11 @@
       "lng": -93.0591160033
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677876047/medium.jpg",
-    "x": 45.16,
-    "y": 5.91,
+    "x": 62.47,
+    "y": 9.4,
     "z": 1.5,
-    "xSeed": 19.62,
-    "ySeed": 7.03
+    "xSeed": 37.92,
+    "ySeed": 15.13
   },
   {
     "id": "386398694",
@@ -6356,11 +6356,11 @@
       "lng": -93.2390409236
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/707470648/medium.jpg",
-    "x": 9.85,
-    "y": -7.71,
+    "x": 25.92,
+    "y": -0.87,
     "z": 1.5,
-    "xSeed": 18.06,
-    "ySeed": 6.65
+    "xSeed": 36.36,
+    "ySeed": 14.75
   },
   {
     "id": "382755348",
@@ -6380,11 +6380,11 @@
       "lng": -93.2573731586
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700478074/medium.jpg",
-    "x": 1.19,
-    "y": 14.93,
+    "x": 13.73,
+    "y": 23.7,
     "z": 1.5,
-    "xSeed": 17.04,
-    "ySeed": 8.49
+    "xSeed": 35.34,
+    "ySeed": 16.59
   },
   {
     "id": "378189283",
@@ -6404,11 +6404,11 @@
       "lng": -93.2438552553
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691674940/medium.jpg",
-    "x": 44.67,
-    "y": 13.54,
+    "x": 65.64,
+    "y": 17.54,
     "z": 1.5,
-    "xSeed": 19.61,
-    "ySeed": 7.97
+    "xSeed": 37.91,
+    "ySeed": 16.07
   },
   {
     "id": "378822600",
@@ -6428,11 +6428,11 @@
       "lng": -93.2487930676
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874318/medium.jpg",
-    "x": 0.63,
-    "y": 3.07,
+    "x": 15.92,
+    "y": 9.8,
     "z": 1.5,
-    "xSeed": 17.23,
-    "ySeed": 7.34
+    "xSeed": 35.53,
+    "ySeed": 15.44
   },
   {
     "id": "379159686",
@@ -6452,11 +6452,11 @@
       "lng": -93.2465751013
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693529287/medium.jpg",
-    "x": 12.01,
-    "y": 21.41,
+    "x": 27.31,
+    "y": 26.24,
     "z": 1.5,
-    "xSeed": 17.69,
-    "ySeed": 8.65
+    "xSeed": 35.99,
+    "ySeed": 16.75
   },
   {
     "id": "386086375",
@@ -6476,11 +6476,11 @@
       "lng": -93.2601980857
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706873868/medium.jpg",
-    "x": 8.5,
-    "y": 10.4,
+    "x": 22.33,
+    "y": 14.24,
     "z": 1.5,
-    "xSeed": 17.45,
-    "ySeed": 7.49
+    "xSeed": 35.75,
+    "ySeed": 15.59
   },
   {
     "id": "372052450",
@@ -6499,11 +6499,11 @@
       "lng": -92.7811661166
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/680487086/medium.jpg",
-    "x": 7.06,
-    "y": 26.01,
+    "x": 16.94,
+    "y": 35.12,
     "z": 1,
-    "xSeed": 17,
-    "ySeed": 9.24
+    "xSeed": 35.3,
+    "ySeed": 17.34
   },
   {
     "id": "374141819",
@@ -6522,11 +6522,11 @@
       "lng": -93.2333577862
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/683823419/medium.jpg",
-    "x": 29.47,
-    "y": 34.54,
+    "x": 48.51,
+    "y": 46.11,
     "z": 1,
-    "xSeed": 19.32,
-    "ySeed": 9.47
+    "xSeed": 37.62,
+    "ySeed": 17.57
   },
   {
     "id": "377251981",
@@ -6544,11 +6544,11 @@
       "lng": -93.2400550531
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689844062/medium.jpg",
-    "x": 35.8,
-    "y": 12.03,
+    "x": 56.02,
+    "y": 18.53,
     "z": 0.5,
-    "xSeed": 19.24,
-    "ySeed": 8.1
+    "xSeed": 37.54,
+    "ySeed": 16.2
   },
   {
     "id": "378822272",
@@ -6566,11 +6566,11 @@
       "lng": -93.2390595572
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692873664/medium.jpg",
-    "x": 18.62,
-    "y": 24.86,
+    "x": 36.04,
+    "y": 35.22,
     "z": 0.5,
-    "xSeed": 18.25,
-    "ySeed": 9.02
+    "xSeed": 36.55,
+    "ySeed": 17.12
   },
   {
     "id": "377581564",
@@ -6590,11 +6590,11 @@
       "lng": -93.2473694806
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690489769/medium.jpg",
-    "x": 7.53,
-    "y": -2.24,
+    "x": 19.33,
+    "y": 0.31,
     "z": 1.5,
-    "xSeed": 17.24,
-    "ySeed": 6.54
+    "xSeed": 35.54,
+    "ySeed": 14.64
   },
   {
     "id": "378606096",
@@ -6614,11 +6614,11 @@
       "lng": -93.273249959
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692460624/medium.jpg",
-    "x": 28.53,
-    "y": 15.77,
+    "x": 48.15,
+    "y": 22.48,
     "z": 1.5,
-    "xSeed": 19.07,
-    "ySeed": 8.15
+    "xSeed": 37.37,
+    "ySeed": 16.25
   },
   {
     "id": "386086912",
@@ -6636,11 +6636,11 @@
       "lng": -93.2399267629
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/707272745/medium.jpg",
-    "x": 13.57,
-    "y": 28.72,
+    "x": 28.12,
+    "y": 37.62,
     "z": 0.5,
-    "xSeed": 17.75,
-    "ySeed": 9.2
+    "xSeed": 36.05,
+    "ySeed": 17.3
   },
   {
     "id": "392667637",
@@ -6658,11 +6658,11 @@
       "lng": -93.2477753588
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641757/medium.jpg",
-    "x": 32.16,
-    "y": 2.72,
+    "x": 48.1,
+    "y": 10.86,
     "z": 0.5,
-    "xSeed": 18.92,
-    "ySeed": 7.4
+    "xSeed": 37.22,
+    "ySeed": 15.5
   },
   {
     "id": "378208986",
@@ -6681,11 +6681,11 @@
       "lng": -93.2413871675
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691691836/medium.jpg",
-    "x": 18.28,
-    "y": 21.55,
+    "x": 34.68,
+    "y": 28.61,
     "z": 1,
-    "xSeed": 18.14,
-    "ySeed": 8.74
+    "xSeed": 36.44,
+    "ySeed": 16.84
   },
   {
     "id": "380036317",
@@ -6704,11 +6704,11 @@
       "lng": -93.2344596007
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227101/medium.jpg",
-    "x": 16,
-    "y": 5.32,
+    "x": 33.42,
+    "y": 11.59,
     "z": 1,
-    "xSeed": 18.47,
-    "ySeed": 7.62
+    "xSeed": 36.77,
+    "ySeed": 15.72
   },
   {
     "id": "381483022",
@@ -6727,11 +6727,11 @@
       "lng": -93.255565947
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698026775/medium.jpg",
-    "x": -7.09,
-    "y": -1.51,
+    "x": 11.95,
+    "y": -2.74,
     "z": 1,
-    "xSeed": 16.96,
-    "ySeed": 6.58
+    "xSeed": 35.26,
+    "ySeed": 14.68
   },
   {
     "id": "382011249",
@@ -6750,11 +6750,11 @@
       "lng": -93.2557228555
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699051783/medium.jpg",
-    "x": 37.62,
-    "y": 14.75,
+    "x": 60.62,
+    "y": 18.58,
     "z": 1,
-    "xSeed": 19.45,
-    "ySeed": 8.15
+    "xSeed": 37.75,
+    "ySeed": 16.25
   },
   {
     "id": "384309726",
@@ -6773,11 +6773,11 @@
       "lng": -93.2533504647
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472398/medium.jpg",
-    "x": 33.75,
-    "y": -2.63,
+    "x": 45.9,
+    "y": -0.15,
     "z": 1,
-    "xSeed": 18.78,
-    "ySeed": 6.97
+    "xSeed": 37.08,
+    "ySeed": 15.07
   },
   {
     "id": "392148233",
@@ -6796,11 +6796,11 @@
       "lng": -93.2300937619
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622350/medium.jpg",
-    "x": 28.09,
-    "y": 25.69,
+    "x": 45.66,
+    "y": 33.64,
     "z": 1,
-    "xSeed": 19.08,
-    "ySeed": 9.08
+    "xSeed": 37.38,
+    "ySeed": 17.18
   },
   {
     "id": "381483039",
@@ -6820,11 +6820,11 @@
       "lng": -93.2555407113
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698026851/medium.jpg",
-    "x": 34.32,
-    "y": 0.53,
+    "x": 53.09,
+    "y": 7.67,
     "z": 1.5,
-    "xSeed": 19.23,
-    "ySeed": 7.12
+    "xSeed": 37.53,
+    "ySeed": 15.22
   },
   {
     "id": "386424751",
@@ -6844,11 +6844,11 @@
       "lng": -93.2345648834
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/707522166/medium.jpg",
-    "x": 9.36,
-    "y": 22.92,
+    "x": 26.65,
+    "y": 30.21,
     "z": 1.5,
-    "xSeed": 17.69,
-    "ySeed": 8.72
+    "xSeed": 35.99,
+    "ySeed": 16.82
   },
   {
     "id": "382031227",
@@ -6868,11 +6868,11 @@
       "lng": -93.2456914358
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699089313/medium.jpg",
-    "x": 10.5,
-    "y": 5.41,
+    "x": 26.55,
+    "y": 12.22,
     "z": 1.5,
-    "xSeed": 17.66,
-    "ySeed": 7.55
+    "xSeed": 35.96,
+    "ySeed": 15.65
   },
   {
     "id": "386002698",
@@ -6892,11 +6892,11 @@
       "lng": -93.2667611009
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714120/medium.jpg",
-    "x": 33.78,
-    "y": 24.23,
+    "x": 53.24,
+    "y": 32.26,
     "z": 1.5,
-    "xSeed": 19.29,
-    "ySeed": 8.81
+    "xSeed": 37.59,
+    "ySeed": 16.91
   },
   {
     "id": "392667695",
@@ -6916,11 +6916,11 @@
       "lng": -93.2406450298
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641844/medium.jpg",
-    "x": 4.78,
-    "y": 6.05,
+    "x": 17.92,
+    "y": 6.61,
     "z": 1.5,
-    "xSeed": 17.23,
-    "ySeed": 7.07
+    "xSeed": 35.53,
+    "ySeed": 15.17
   },
   {
     "id": "382589217",
@@ -6940,11 +6940,11 @@
       "lng": -93.2431196214
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700161085/medium.jpg",
-    "x": 0.41,
-    "y": -2.3,
+    "x": 16.47,
+    "y": -2.9,
     "z": 1.5,
-    "xSeed": 17.11,
-    "ySeed": 6.54
+    "xSeed": 35.41,
+    "ySeed": 14.64
   },
   {
     "id": "389209155",
@@ -6963,11 +6963,11 @@
       "lng": -122.5879139806
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/712902482/medium.jpg",
-    "x": 10.12,
-    "y": 34.04,
+    "x": 20.38,
+    "y": 38.37,
     "z": 1,
-    "xSeed": 17.35,
-    "ySeed": 9.19
+    "xSeed": 35.65,
+    "ySeed": 17.29
   },
   {
     "id": "386086348",
@@ -6987,11 +6987,11 @@
       "lng": -93.2378312724
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706873812/medium.jpg",
-    "x": 35.82,
-    "y": 21.36,
+    "x": 54.57,
+    "y": 27.95,
     "z": 1.5,
-    "xSeed": 19.36,
-    "ySeed": 8.71
+    "xSeed": 37.66,
+    "ySeed": 16.81
   },
   {
     "id": "378098598",
@@ -7011,11 +7011,11 @@
       "lng": -93.1545349049
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691481601/medium.jpg",
-    "x": 17.79,
-    "y": 18.33,
+    "x": 33.68,
+    "y": 25.14,
     "z": 1.5,
-    "xSeed": 18.14,
-    "ySeed": 8.45
+    "xSeed": 36.44,
+    "ySeed": 16.55
   },
   {
     "id": "378428325",
@@ -7035,11 +7035,11 @@
       "lng": -93.2399950896
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692115866/medium.jpg",
-    "x": 18.66,
-    "y": 35.31,
+    "x": 32.69,
+    "y": 45.18,
     "z": 1.5,
-    "xSeed": 17.8,
-    "ySeed": 9.36
+    "xSeed": 36.1,
+    "ySeed": 17.46
   },
   {
     "id": "379122135",
@@ -7059,11 +7059,11 @@
       "lng": -93.2468785604
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458437/medium.jpg",
-    "x": 5.55,
-    "y": 9.4,
+    "x": 16.57,
+    "y": 16.31,
     "z": 1.5,
-    "xSeed": 17.19,
-    "ySeed": 8.06
+    "xSeed": 35.49,
+    "ySeed": 16.16
   },
   {
     "id": "379124094",
@@ -7083,11 +7083,11 @@
       "lng": -93.2431108012
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693462557/medium.jpg",
-    "x": 3.11,
-    "y": 21.83,
+    "x": 20.31,
+    "y": 26.3,
     "z": 1.5,
-    "xSeed": 17.4,
-    "ySeed": 8.82
+    "xSeed": 35.7,
+    "ySeed": 16.92
   },
   {
     "id": "379242072",
@@ -7107,11 +7107,11 @@
       "lng": -93.2523762292
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693690643/medium.jpg",
-    "x": 3.81,
-    "y": 12.28,
+    "x": 16.12,
+    "y": 19.88,
     "z": 1.5,
-    "xSeed": 17.16,
-    "ySeed": 8.1
+    "xSeed": 35.46,
+    "ySeed": 16.2
   },
   {
     "id": "383388901",
@@ -7131,11 +7131,11 @@
       "lng": -93.2377724921
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701702232/medium.jpg",
-    "x": 16.07,
-    "y": 26.9,
+    "x": 32.16,
+    "y": 35.91,
     "z": 1.5,
-    "xSeed": 17.98,
-    "ySeed": 9.12
+    "xSeed": 36.28,
+    "ySeed": 17.22
   },
   {
     "id": "392667316",
@@ -7155,11 +7155,11 @@
       "lng": -93.2432413024
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641153/medium.jpg",
-    "x": 4.77,
-    "y": 15.46,
+    "x": 18.1,
+    "y": 23.12,
     "z": 1.5,
-    "xSeed": 17.25,
-    "ySeed": 8.7
+    "xSeed": 35.55,
+    "ySeed": 16.8
   },
   {
     "id": "393262040",
@@ -7179,11 +7179,11 @@
       "lng": -93.2515414093
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801738/medium.jpg",
-    "x": 29.3,
-    "y": 19.41,
+    "x": 47.08,
+    "y": 26.12,
     "z": 1.5,
-    "xSeed": 19,
-    "ySeed": 8.44
+    "xSeed": 37.3,
+    "ySeed": 16.54
   },
   {
     "id": "377837179",
@@ -7203,11 +7203,11 @@
       "lng": -93.2391644604
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690981377/medium.jpg",
-    "x": 7.05,
-    "y": 13.04,
+    "x": 20.29,
+    "y": 17.67,
     "z": 1.5,
-    "xSeed": 17.27,
-    "ySeed": 8.07
+    "xSeed": 35.57,
+    "ySeed": 16.17
   },
   {
     "id": "378566047",
@@ -7227,11 +7227,11 @@
       "lng": -93.2503847839
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692381808/medium.jpg",
-    "x": 32.68,
-    "y": 31.63,
+    "x": 52.23,
+    "y": 38.91,
     "z": 1.5,
-    "xSeed": 19.35,
-    "ySeed": 9.36
+    "xSeed": 37.65,
+    "ySeed": 17.46
   },
   {
     "id": "383366762",
@@ -7251,11 +7251,11 @@
       "lng": -93.2562909803
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701701915/medium.jpg",
-    "x": 24.21,
-    "y": -0.96,
+    "x": 29.44,
+    "y": 6.99,
     "z": 1.5,
-    "xSeed": 18.18,
-    "ySeed": 7.27
+    "xSeed": 36.48,
+    "ySeed": 15.37
   },
   {
     "id": "383366734",
@@ -7274,11 +7274,11 @@
       "lng": -93.2471437947
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701657953/medium.jpg",
-    "x": 50.35,
-    "y": 7.28,
+    "x": 70.34,
+    "y": 8.97,
     "z": 1,
-    "xSeed": 19.72,
-    "ySeed": 6.97
+    "xSeed": 38.02,
+    "ySeed": 15.07
   },
   {
     "id": "378822511",
@@ -7298,11 +7298,11 @@
       "lng": -93.2621757702
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874169/medium.jpg",
-    "x": -6.58,
-    "y": 5.53,
+    "x": 8.35,
+    "y": 6.4,
     "z": 1.5,
-    "xSeed": 16.95,
-    "ySeed": 7.23
+    "xSeed": 35.25,
+    "ySeed": 15.33
   },
   {
     "id": "379122161",
@@ -7322,11 +7322,11 @@
       "lng": -93.2401331636
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693458515/medium.jpg",
-    "x": 7.84,
-    "y": 16.14,
+    "x": 21.3,
+    "y": 21.46,
     "z": 1.5,
-    "xSeed": 17.66,
-    "ySeed": 8.35
+    "xSeed": 35.96,
+    "ySeed": 16.45
   },
   {
     "id": "381787108",
@@ -7346,11 +7346,11 @@
       "lng": -93.2619484837
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/698619401/medium.jpg",
-    "x": 10.49,
-    "y": 12.67,
+    "x": 24.18,
+    "y": 18.87,
     "z": 1.5,
-    "xSeed": 17.4,
-    "ySeed": 8.07
+    "xSeed": 35.7,
+    "ySeed": 16.17
   },
   {
     "id": "382589118",
@@ -7370,11 +7370,11 @@
       "lng": -93.2397669482
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700160838/medium.jpg",
-    "x": 13.21,
-    "y": 10.85,
+    "x": 30.02,
+    "y": 13.92,
     "z": 1.5,
-    "xSeed": 18.03,
-    "ySeed": 7.8
+    "xSeed": 36.33,
+    "ySeed": 15.9
   },
   {
     "id": "383388812",
@@ -7394,11 +7394,11 @@
       "lng": -93.35950957
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701702037/medium.jpg",
-    "x": 10.81,
-    "y": 15.75,
+    "x": 25.68,
+    "y": 15.55,
     "z": 1.5,
-    "xSeed": 17.92,
-    "ySeed": 7.82
+    "xSeed": 36.22,
+    "ySeed": 15.92
   },
   {
     "id": "379779998",
@@ -7418,11 +7418,11 @@
       "lng": -93.2666785975
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694727018/medium.jpg",
-    "x": 37.3,
-    "y": 25.45,
+    "x": 57.27,
+    "y": 33.05,
     "z": 1.5,
-    "xSeed": 19.47,
-    "ySeed": 9.03
+    "xSeed": 37.77,
+    "ySeed": 17.13
   },
   {
     "id": "382010901",
@@ -7442,11 +7442,11 @@
       "lng": -93.2368195736
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699088734/medium.jpg",
-    "x": -8.47,
-    "y": 10.17,
+    "x": 2.5,
+    "y": 14.99,
     "z": 1.5,
-    "xSeed": 16.81,
-    "ySeed": 8.14
+    "xSeed": 35.11,
+    "ySeed": 16.24
   },
   {
     "id": "386086405",
@@ -7466,11 +7466,11 @@
       "lng": -93.2413413544
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706873933/medium.jpg",
-    "x": 41.92,
-    "y": 3.79,
+    "x": 59.71,
+    "y": 6.26,
     "z": 1.5,
-    "xSeed": 19.49,
-    "ySeed": 6.92
+    "xSeed": 37.79,
+    "ySeed": 15.02
   },
   {
     "id": "378159422",
@@ -7490,11 +7490,11 @@
       "lng": -93.2637305207
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691600104/medium.jpg",
-    "x": -2.74,
-    "y": -1.23,
+    "x": 13.2,
+    "y": 1.86,
     "z": 1.5,
-    "xSeed": 17,
-    "ySeed": 6.85
+    "xSeed": 35.3,
+    "ySeed": 14.95
   },
   {
     "id": "378588301",
@@ -7514,11 +7514,11 @@
       "lng": -93.2133886714
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692424711/medium.jpg",
-    "x": 4.33,
-    "y": 2.81,
+    "x": 17.14,
+    "y": 3.08,
     "z": 1.5,
-    "xSeed": 17.13,
-    "ySeed": 6.87
+    "xSeed": 35.43,
+    "ySeed": 14.97
   },
   {
     "id": "378158847",
@@ -7538,11 +7538,11 @@
       "lng": -93.2367084346
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691598937/medium.jpg",
-    "x": 31.96,
-    "y": 17.4,
+    "x": 51.91,
+    "y": 24.25,
     "z": 1.5,
-    "xSeed": 19.13,
-    "ySeed": 8.33
+    "xSeed": 37.43,
+    "ySeed": 16.43
   },
   {
     "id": "377772775",
@@ -7562,11 +7562,11 @@
       "lng": -93.2633945098
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/690856900/medium.jpg",
-    "x": 48.57,
-    "y": 16.09,
+    "x": 70.05,
+    "y": 20.38,
     "z": 1.5,
-    "xSeed": 19.67,
-    "ySeed": 8.18
+    "xSeed": 37.97,
+    "ySeed": 16.28
   },
   {
     "id": "371293395",
@@ -7585,11 +7585,11 @@
       "lng": -93.520860518
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/678368343/medium.jpg",
-    "x": 2.53,
-    "y": 9.11,
+    "x": 14.07,
+    "y": 13.13,
     "z": 1,
-    "xSeed": 17.12,
-    "ySeed": 7.86
+    "xSeed": 35.42,
+    "ySeed": 15.96
   },
   {
     "id": "389203464",
@@ -7609,11 +7609,11 @@
       "lng": -123.3466300278
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724181/medium.jpg",
-    "x": 23.98,
-    "y": 20.56,
+    "x": 42.37,
+    "y": 29.08,
     "z": 1.5,
-    "xSeed": 18.8,
-    "ySeed": 8.68
+    "xSeed": 37.1,
+    "ySeed": 16.78
   },
   {
     "id": "389769961",
@@ -7632,11 +7632,11 @@
       "lng": -123.4349583022
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/713987616/medium.jpg",
-    "x": 13.18,
-    "y": 6.61,
+    "x": 29.44,
+    "y": 10.32,
     "z": 1,
-    "xSeed": 18.18,
-    "ySeed": 7.64
+    "xSeed": 36.48,
+    "ySeed": 15.74
   },
   {
     "id": "382011374",
@@ -7656,11 +7656,11 @@
       "lng": -93.245000666
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699088967/medium.jpg",
-    "x": 36.34,
-    "y": 18.16,
+    "x": 57.65,
+    "y": 25.16,
     "z": 1.5,
-    "xSeed": 19.4,
-    "ySeed": 8.67
+    "xSeed": 37.7,
+    "ySeed": 16.77
   },
   {
     "id": "382588029",
@@ -7680,11 +7680,11 @@
       "lng": -93.2452225021
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700159282/medium.jpg",
-    "x": 37.8,
-    "y": -3.78,
+    "x": 52.06,
+    "y": 4.19,
     "z": 1.5,
-    "xSeed": 19.39,
-    "ySeed": 6.78
+    "xSeed": 37.69,
+    "ySeed": 14.88
   },
   {
     "id": "383366661",
@@ -7704,11 +7704,11 @@
       "lng": -93.239148489
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701657773/medium.jpg",
-    "x": 19.49,
-    "y": 28.36,
+    "x": 36.79,
+    "y": 38.99,
     "z": 1.5,
-    "xSeed": 18.29,
-    "ySeed": 9.22
+    "xSeed": 36.59,
+    "ySeed": 17.32
   },
   {
     "id": "379457287",
@@ -7728,11 +7728,11 @@
       "lng": -93.2438160764
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105011/medium.jpg",
-    "x": 22.45,
-    "y": 39.99,
+    "x": 35.49,
+    "y": 49.6,
     "z": 1.5,
-    "xSeed": 18.14,
-    "ySeed": 9.46
+    "xSeed": 36.44,
+    "ySeed": 17.56
   },
   {
     "id": "378887199",
@@ -7752,11 +7752,11 @@
       "lng": -93.2413549382
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692999385/medium.jpg",
-    "x": 41.2,
-    "y": -4.89,
+    "x": 53.26,
+    "y": 0.65,
     "z": 1.5,
-    "xSeed": 19.52,
-    "ySeed": 6.54
+    "xSeed": 37.82,
+    "ySeed": 14.64
   },
   {
     "id": "392534931",
@@ -7776,11 +7776,11 @@
       "lng": -93.2466671425
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719383399/medium.jpg",
-    "x": 6.34,
-    "y": 22.33,
+    "x": 22.41,
+    "y": 30.56,
     "z": 1.5,
-    "xSeed": 17.26,
-    "ySeed": 9.06
+    "xSeed": 35.56,
+    "ySeed": 17.16
   },
   {
     "id": "393262059",
@@ -7800,11 +7800,11 @@
       "lng": -93.2407480806
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801798/medium.jpg",
-    "x": 22.23,
-    "y": 5.08,
+    "x": 36.7,
+    "y": 9.3,
     "z": 1.5,
-    "xSeed": 18.41,
-    "ySeed": 7.43
+    "xSeed": 36.71,
+    "ySeed": 15.53
   },
   {
     "id": "392762316",
@@ -7823,11 +7823,11 @@
       "lng": -93.2377667234
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719823059/medium.jpg",
-    "x": 49.35,
-    "y": 3.32,
+    "x": 69.03,
+    "y": 3.37,
     "z": 1,
-    "xSeed": 19.75,
-    "ySeed": 6.61
+    "xSeed": 38.05,
+    "ySeed": 14.71
   },
   {
     "id": "382031139",
@@ -7847,11 +7847,11 @@
       "lng": -93.4336936168
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699089129/medium.jpg",
-    "x": 20.42,
-    "y": 16.36,
+    "x": 37.56,
+    "y": 25.3,
     "z": 1.5,
-    "xSeed": 18.4,
-    "ySeed": 8.26
+    "xSeed": 36.7,
+    "ySeed": 16.36
   },
   {
     "id": "371706956",
@@ -7871,11 +7871,11 @@
       "lng": -93.4032981785
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/679152557/medium.jpg",
-    "x": 23.4,
-    "y": 17.19,
+    "x": 41.35,
+    "y": 25.7,
     "z": 1.5,
-    "xSeed": 18.73,
-    "ySeed": 8.47
+    "xSeed": 37.03,
+    "ySeed": 16.57
   },
   {
     "id": "378822556",
@@ -7895,11 +7895,11 @@
       "lng": -93.2467886626
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874219/medium.jpg",
-    "x": 17.3,
-    "y": 31.01,
+    "x": 32.7,
+    "y": 40.15,
     "z": 1.5,
-    "xSeed": 18.05,
-    "ySeed": 9.23
+    "xSeed": 36.35,
+    "ySeed": 17.33
   },
   {
     "id": "392127035",
@@ -7919,11 +7919,11 @@
       "lng": -93.250648026
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718580204/medium.jpg",
-    "x": 30.32,
-    "y": 23.2,
+    "x": 49.29,
+    "y": 31.35,
     "z": 1.5,
-    "xSeed": 19.25,
-    "ySeed": 8.88
+    "xSeed": 37.55,
+    "ySeed": 16.98
   },
   {
     "id": "392148302",
@@ -7943,11 +7943,11 @@
       "lng": -93.2452898443
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622462/medium.jpg",
-    "x": 29.96,
-    "y": 8.55,
+    "x": 46.46,
+    "y": 14.77,
     "z": 1.5,
-    "xSeed": 18.88,
-    "ySeed": 7.97
+    "xSeed": 37.18,
+    "ySeed": 16.07
   },
   {
     "id": "383462006",
@@ -7967,11 +7967,11 @@
       "lng": -93.2423817688
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701843583/medium.jpg",
-    "x": 12.6,
-    "y": 24.74,
+    "x": 29.26,
+    "y": 33,
     "z": 1.5,
-    "xSeed": 17.62,
-    "ySeed": 8.98
+    "xSeed": 35.92,
+    "ySeed": 17.08
   },
   {
     "id": "383778814",
@@ -7991,11 +7991,11 @@
       "lng": -93.2431125876
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/702448476/medium.jpg",
-    "x": 40.09,
-    "y": 17.79,
+    "x": 60.58,
+    "y": 22.5,
     "z": 1.5,
-    "xSeed": 19.41,
-    "ySeed": 8.3
+    "xSeed": 37.71,
+    "ySeed": 16.4
   },
   {
     "id": "386002674",
@@ -8015,11 +8015,11 @@
       "lng": -93.2277181569
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/706714068/medium.jpg",
-    "x": 27.54,
-    "y": 38.42,
+    "x": 44.06,
+    "y": 48.91,
     "z": 1.5,
-    "xSeed": 19.01,
-    "ySeed": 9.41
+    "xSeed": 37.31,
+    "ySeed": 17.51
   },
   {
     "id": "367896607",
@@ -8037,11 +8037,11 @@
       "lng": -92.967138357
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/671895011/medium.jpg",
-    "x": 29.55,
-    "y": 11.51,
+    "x": 47.12,
+    "y": 18.98,
     "z": 0.5,
-    "xSeed": 18.98,
-    "ySeed": 8.05
+    "xSeed": 37.28,
+    "ySeed": 16.15
   },
   {
     "id": "378464987",
@@ -8059,11 +8059,11 @@
       "lng": -93.2609604095
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186593/medium.jpg",
-    "x": 20.94,
-    "y": 32.26,
+    "x": 36.93,
+    "y": 43.34,
     "z": 0.5,
-    "xSeed": 18.32,
-    "ySeed": 9.27
+    "xSeed": 36.62,
+    "ySeed": 17.37
   },
   {
     "id": "379780099",
@@ -8083,11 +8083,11 @@
       "lng": -93.255105003
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694727244/medium.jpg",
-    "x": 24.21,
-    "y": 11.34,
+    "x": 40.54,
+    "y": 16.36,
     "z": 1.5,
-    "xSeed": 18.61,
-    "ySeed": 7.75
+    "xSeed": 36.91,
+    "ySeed": 15.85
   },
   {
     "id": "392130473",
@@ -8107,11 +8107,11 @@
       "lng": -93.2851823045
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718586836/medium.jpg",
-    "x": -3.3,
-    "y": 11.68,
+    "x": 7.38,
+    "y": 16.91,
     "z": 1.5,
-    "xSeed": 16.91,
-    "ySeed": 8.1
+    "xSeed": 35.21,
+    "ySeed": 16.2
   },
   {
     "id": "392148386",
@@ -8131,11 +8131,11 @@
       "lng": -93.2579790818
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622553/medium.jpg",
-    "x": 1.45,
-    "y": 6,
+    "x": 18.85,
+    "y": 12.94,
     "z": 1.5,
-    "xSeed": 17.26,
-    "ySeed": 7.45
+    "xSeed": 35.56,
+    "ySeed": 15.55
   },
   {
     "id": "372398640",
@@ -8155,11 +8155,11 @@
       "lng": -92.9304702893
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/680487142/medium.jpg",
-    "x": 13.46,
-    "y": 14.05,
+    "x": 27.68,
+    "y": 21.19,
     "z": 1.5,
-    "xSeed": 17.76,
-    "ySeed": 8.29
+    "xSeed": 36.06,
+    "ySeed": 16.39
   },
   {
     "id": "379159724",
@@ -8179,11 +8179,11 @@
       "lng": -93.2412049692
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693529336/medium.jpg",
-    "x": 14.88,
-    "y": 36.26,
+    "x": 24.94,
+    "y": 44.44,
     "z": 1.5,
-    "xSeed": 17.15,
-    "ySeed": 9.48
+    "xSeed": 35.45,
+    "ySeed": 17.58
   },
   {
     "id": "384027371",
@@ -8203,11 +8203,11 @@
       "lng": -93.2420302777
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/702928027/medium.jpg",
-    "x": 40.83,
-    "y": 29.78,
+    "x": 61.64,
+    "y": 37.75,
     "z": 1.5,
-    "xSeed": 19.46,
-    "ySeed": 9.33
+    "xSeed": 37.76,
+    "ySeed": 17.43
   },
   {
     "id": "384309257",
@@ -8227,11 +8227,11 @@
       "lng": -93.2459287511
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472657/medium.jpg",
-    "x": 39.28,
-    "y": 21.61,
+    "x": 59,
+    "y": 29.08,
     "z": 1.5,
-    "xSeed": 19.43,
-    "ySeed": 8.78
+    "xSeed": 37.73,
+    "ySeed": 16.88
   },
   {
     "id": "382425215",
@@ -8251,11 +8251,11 @@
       "lng": -93.2428529561
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699846109/medium.jpg",
-    "x": -2.82,
-    "y": 15.07,
+    "x": 9,
+    "y": 23.99,
     "z": 1.5,
-    "xSeed": 17.04,
-    "ySeed": 8.6
+    "xSeed": 35.34,
+    "ySeed": 16.7
   },
   {
     "id": "386280934",
@@ -8275,11 +8275,11 @@
       "lng": -93.2459686002
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/707249061/medium.jpg",
-    "x": 33.08,
-    "y": 8.36,
+    "x": 50.14,
+    "y": 13.96,
     "z": 1.5,
-    "xSeed": 19.01,
-    "ySeed": 7.68
+    "xSeed": 37.31,
+    "ySeed": 15.78
   },
   {
     "id": "371330823",
@@ -8298,11 +8298,11 @@
       "lng": -93.4820545749
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/678439592/medium.jpg",
-    "x": 32.85,
-    "y": 11.48,
+    "x": 50.35,
+    "y": 17.35,
     "z": 1,
-    "xSeed": 19,
-    "ySeed": 7.78
+    "xSeed": 37.3,
+    "ySeed": 15.88
   },
   {
     "id": "376022477",
@@ -8321,11 +8321,11 @@
       "lng": -93.2392256074
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687605801/medium.jpg",
-    "x": 15.46,
-    "y": 23.43,
+    "x": 32.96,
+    "y": 31.79,
     "z": 1,
-    "xSeed": 18.01,
-    "ySeed": 8.86
+    "xSeed": 36.31,
+    "ySeed": 16.96
   },
   {
     "id": "378464875",
@@ -8345,11 +8345,11 @@
       "lng": -93.2228793413
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186403/medium.jpg",
-    "x": 43.85,
-    "y": 17.36,
+    "x": 65,
+    "y": 22.39,
     "z": 1.5,
-    "xSeed": 19.59,
-    "ySeed": 8.3
+    "xSeed": 37.89,
+    "ySeed": 16.4
   },
   {
     "id": "378578803",
@@ -8369,11 +8369,11 @@
       "lng": -93.2378932809
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692406173/medium.jpg",
-    "x": 28.85,
-    "y": 29.83,
+    "x": 48.17,
+    "y": 40.38,
     "z": 1.5,
-    "xSeed": 19.28,
-    "ySeed": 9.37
+    "xSeed": 37.58,
+    "ySeed": 17.47
   },
   {
     "id": "380036437",
@@ -8393,11 +8393,11 @@
       "lng": -93.2378994689
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227367/medium.jpg",
-    "x": 15.13,
-    "y": 20.25,
+    "x": 30.64,
+    "y": 28.43,
     "z": 1.5,
-    "xSeed": 17.78,
-    "ySeed": 8.67
+    "xSeed": 36.08,
+    "ySeed": 16.77
   },
   {
     "id": "382426169",
@@ -8417,11 +8417,11 @@
       "lng": -93.2402879729
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/700158666/medium.jpg",
-    "x": 10.14,
-    "y": 26.86,
+    "x": 25.44,
+    "y": 34.52,
     "z": 1.5,
-    "xSeed": 17.34,
-    "ySeed": 9.12
+    "xSeed": 35.64,
+    "ySeed": 17.22
   },
   {
     "id": "392111795",
@@ -8441,11 +8441,11 @@
       "lng": -93.2525830504
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718551567/medium.jpg",
-    "x": 0.33,
-    "y": 11.94,
+    "x": 11.62,
+    "y": 20,
     "z": 1.5,
-    "xSeed": 16.99,
-    "ySeed": 8.33
+    "xSeed": 35.29,
+    "ySeed": 16.43
   },
   {
     "id": "392126911",
@@ -8465,11 +8465,11 @@
       "lng": -93.2153837262
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718579984/medium.jpg",
-    "x": 10.45,
-    "y": 30.33,
+    "x": 21.51,
+    "y": 34.42,
     "z": 1.5,
-    "xSeed": 17.19,
-    "ySeed": 9.2
+    "xSeed": 35.49,
+    "ySeed": 17.3
   },
   {
     "id": "392129883",
@@ -8489,11 +8489,11 @@
       "lng": -93.2028194492
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718585497/medium.jpg",
-    "x": 3.81,
-    "y": 25.5,
+    "x": 13.85,
+    "y": 31.61,
     "z": 1.5,
-    "xSeed": 16.87,
-    "ySeed": 9.28
+    "xSeed": 35.17,
+    "ySeed": 17.38
   },
   {
     "id": "392148092",
@@ -8513,11 +8513,11 @@
       "lng": -93.2465235439
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622088/medium.jpg",
-    "x": 36.86,
-    "y": 2.73,
+    "x": 51.66,
+    "y": 10.73,
     "z": 1.5,
-    "xSeed": 19.17,
-    "ySeed": 7.26
+    "xSeed": 37.47,
+    "ySeed": 15.36
   },
   {
     "id": "392148148",
@@ -8537,11 +8537,11 @@
       "lng": -93.2388866697
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622198/medium.jpg",
-    "x": -4.93,
-    "y": 8.7,
+    "x": 7.25,
+    "y": 12.26,
     "z": 1.5,
-    "xSeed": 17.01,
-    "ySeed": 7.57
+    "xSeed": 35.31,
+    "ySeed": 15.67
   },
   {
     "id": "371029595",
@@ -8560,11 +8560,11 @@
       "lng": -93.046619629
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677876007/medium.jpg",
-    "x": -6.09,
-    "y": 1.85,
+    "x": 8.65,
+    "y": 0.4,
     "z": 1,
-    "xSeed": 16.95,
-    "ySeed": 6.67
+    "xSeed": 35.25,
+    "ySeed": 14.77
   },
   {
     "id": "379457627",
@@ -8584,11 +8584,11 @@
       "lng": -93.2483245821
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694105644/medium.jpg",
-    "x": 6.78,
-    "y": 30.1,
+    "x": 23.74,
+    "y": 40.67,
     "z": 1.5,
-    "xSeed": 14.85,
-    "ySeed": 12.03
+    "xSeed": 29.55,
+    "ySeed": 25.63
   },
   {
     "id": "379751660",
@@ -8606,11 +8606,11 @@
       "lng": -93.2401025254
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694697108/medium.jpg",
-    "x": 10.6,
-    "y": 38.45,
+    "x": 18.2,
+    "y": 44.29,
     "z": 0.5,
-    "xSeed": 10.78,
-    "ySeed": 17.14
+    "xSeed": 20.28,
+    "ySeed": 34.74
   },
   {
     "id": "378236151",
@@ -8627,11 +8627,11 @@
       "lng": -93.2473383865
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691747544/medium.jpg",
-    "x": -4.51,
-    "y": 27.4,
+    "x": 6.15,
+    "y": 37.7,
     "z": 0,
-    "xSeed": 4.18,
-    "ySeed": 19.13
+    "xSeed": 7.48,
+    "ySeed": 38.93
   },
   {
     "id": "378476042",
@@ -8648,11 +8648,11 @@
       "lng": -93.2480080789
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692207790/medium.jpg",
-    "x": -9.71,
-    "y": 33.79,
+    "x": -2.87,
+    "y": 50.55,
     "z": 0,
-    "xSeed": 2.24,
-    "ySeed": 20.71
+    "xSeed": 5.54,
+    "ySeed": 40.51
   },
   {
     "id": "388909059",
@@ -8672,11 +8672,11 @@
       "lng": -122.6057932047
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/712342617/medium.jpg",
-    "x": -3.14,
-    "y": 32.33,
+    "x": 6.88,
+    "y": 47.51,
     "z": 1.5,
-    "xSeed": 3.96,
-    "ySeed": 20.05
+    "xSeed": 7.26,
+    "ySeed": 39.85
   },
   {
     "id": "374136370",
@@ -8695,11 +8695,11 @@
       "lng": -93.2379595982
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/683812146/medium.jpg",
-    "x": 2.95,
-    "y": 37.27,
+    "x": 8.09,
+    "y": 52.97,
     "z": 1,
-    "xSeed": 3.78,
-    "ySeed": 20.33
+    "xSeed": 7.08,
+    "ySeed": 40.13
   },
   {
     "id": "390656012",
@@ -8719,11 +8719,11 @@
       "lng": -123.3442744609
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724734/medium.jpg",
-    "x": -11.23,
-    "y": 29.29,
+    "x": -2.6,
+    "y": 43.46,
     "z": 1.5,
-    "xSeed": 2.43,
-    "ySeed": 20.26
+    "xSeed": 5.73,
+    "ySeed": 40.06
   },
   {
     "id": "367574983",
@@ -8743,11 +8743,11 @@
       "lng": -93.4703998188
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/671279879/medium.jpg",
-    "x": -11.29,
-    "y": 13.99,
+    "x": -7.88,
+    "y": 33.64,
     "z": 1.5,
-    "xSeed": 2.07,
-    "ySeed": 18.93
+    "xSeed": 5.37,
+    "ySeed": 38.73
   },
   {
     "id": "383388948",
@@ -8767,11 +8767,11 @@
       "lng": -93.2434280544
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701702292/medium.jpg",
-    "x": -13,
-    "y": 18.79,
+    "x": -6.98,
+    "y": 27.29,
     "z": 1.5,
-    "xSeed": 3.17,
-    "ySeed": 18.91
+    "xSeed": 6.47,
+    "ySeed": 38.71
   },
   {
     "id": "367896538",
@@ -8789,11 +8789,11 @@
       "lng": -92.9045204842
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/671894880/medium.jpg",
-    "x": -3,
-    "y": 23.77,
+    "x": 7.61,
+    "y": 42.67,
     "z": 0.5,
-    "xSeed": 4.16,
-    "ySeed": 19.42
+    "xSeed": 7.46,
+    "ySeed": 39.22
   },
   {
     "id": "380036364",
@@ -8813,11 +8813,11 @@
       "lng": -93.2419012401
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227223/medium.jpg",
-    "x": -12.56,
-    "y": 24.5,
+    "x": -6.21,
+    "y": 38.87,
     "z": 1.5,
-    "xSeed": 2.72,
-    "ySeed": 19.49
+    "xSeed": 6.02,
+    "ySeed": 39.29
   },
   {
     "id": "377860839",
@@ -8835,11 +8835,11 @@
       "lng": -93.2478755901
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691027799/medium.jpg",
-    "x": -5.67,
-    "y": 18.36,
+    "x": -2.44,
+    "y": 24.55,
     "z": 0.5,
-    "xSeed": 3.62,
-    "ySeed": 18.38
+    "xSeed": 6.92,
+    "ySeed": 38.18
   },
   {
     "id": "375944836",
@@ -8859,11 +8859,11 @@
       "lng": -93.2231927396
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687322551/medium.jpg",
-    "x": 2.89,
-    "y": 29.96,
+    "x": 11.28,
+    "y": 38.84,
     "z": 1.5,
-    "xSeed": 4.51,
-    "ySeed": 18.96
+    "xSeed": 7.81,
+    "ySeed": 38.76
   },
   {
     "id": "379779303",
@@ -8883,11 +8883,11 @@
       "lng": -93.2616665191
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694725687/medium.jpg",
-    "x": -1.36,
-    "y": 37.55,
+    "x": 12.21,
+    "y": 49.51,
     "z": 1.5,
-    "xSeed": 4.11,
-    "ySeed": 19.97
+    "xSeed": 7.41,
+    "ySeed": 39.77
   },
   {
     "id": "392111874",
@@ -8907,11 +8907,11 @@
       "lng": -93.2452442629
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718551742/medium.jpg",
-    "x": -5.76,
-    "y": 35.88,
+    "x": 2.44,
+    "y": 51.4,
     "z": 1.5,
-    "xSeed": 3.13,
-    "ySeed": 20.55
+    "xSeed": 6.43,
+    "ySeed": 40.35
   },
   {
     "id": "393262012",
@@ -8931,11 +8931,11 @@
       "lng": -93.2405104374
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801676/medium.jpg",
-    "x": -10.76,
-    "y": 38.84,
+    "x": -8.17,
+    "y": 51.65,
     "z": 1.5,
-    "xSeed": 1.91,
-    "ySeed": 20.7
+    "xSeed": 5.21,
+    "ySeed": 40.5
   },
   {
     "id": "392148568",
@@ -8955,11 +8955,11 @@
       "lng": -93.2524080386
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622796/medium.jpg",
-    "x": -0.87,
-    "y": 29.29,
+    "x": 6.84,
+    "y": 33.07,
     "z": 1.5,
-    "xSeed": 4.27,
-    "ySeed": 18.81
+    "xSeed": 7.57,
+    "ySeed": 38.61
   },
   {
     "id": "375944430",
@@ -8979,11 +8979,11 @@
       "lng": -93.2515638427
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687321879/medium.jpg",
-    "x": 5.09,
-    "y": 41.07,
+    "x": 12.99,
+    "y": 57.6,
     "z": 1.5,
-    "xSeed": 4.42,
-    "ySeed": 21.1
+    "xSeed": 7.72,
+    "ySeed": 40.9
   },
   {
     "id": "382011332",
@@ -9003,11 +9003,11 @@
       "lng": -93.2521065078
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699051958/medium.jpg",
-    "x": -5.25,
-    "y": 41.15,
+    "x": -0.35,
+    "y": 56.95,
     "z": 1.5,
-    "xSeed": 2.63,
-    "ySeed": 21.02
+    "xSeed": 5.93,
+    "ySeed": 40.82
   },
   {
     "id": "383388856",
@@ -9027,11 +9027,11 @@
       "lng": -93.3606210377
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701702167/medium.jpg",
-    "x": -5.75,
-    "y": 21.86,
+    "x": 2.42,
+    "y": 40.64,
     "z": 1.5,
-    "xSeed": 3.83,
-    "ySeed": 19.36
+    "xSeed": 7.13,
+    "ySeed": 39.16
   },
   {
     "id": "380036388",
@@ -9051,11 +9051,11 @@
       "lng": -93.2521960223
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/695227266/medium.jpg",
-    "x": 0.02,
-    "y": 25.63,
+    "x": 2.23,
+    "y": 28.31,
     "z": 1.5,
-    "xSeed": 4.34,
-    "ySeed": 18.33
+    "xSeed": 7.64,
+    "ySeed": 38.13
   },
   {
     "id": "393261986",
@@ -9075,11 +9075,11 @@
       "lng": -93.2518732938
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/720801601/medium.jpg",
-    "x": 9.41,
-    "y": 42.96,
+    "x": 17.09,
+    "y": 54.4,
     "z": 1.5,
-    "xSeed": 4.4,
-    "ySeed": 20.78
+    "xSeed": 7.7,
+    "ySeed": 40.58
   },
   {
     "id": "392692342",
@@ -9099,11 +9099,11 @@
       "lng": -93.2234876257
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719686684/medium.jpg",
-    "x": 0.96,
-    "y": 33.42,
+    "x": 12.62,
+    "y": 44.13,
     "z": 1.5,
-    "xSeed": 4.51,
-    "ySeed": 19.32
+    "xSeed": 7.81,
+    "ySeed": 39.12
   },
   {
     "id": "370449031",
@@ -9123,11 +9123,11 @@
       "lng": -92.9639090954
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/676742005/medium.jpg",
-    "x": 5.64,
-    "y": 34.33,
+    "x": 18.2,
+    "y": 49.78,
     "z": 1.5,
-    "xSeed": 4.77,
-    "ySeed": 19.5
+    "xSeed": 8.07,
+    "ySeed": 39.3
   },
   {
     "id": "378199997",
@@ -9146,11 +9146,11 @@
       "lng": -93.2445096478
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691674900/medium.jpg",
-    "x": 0.13,
-    "y": 42.95,
+    "x": 6.58,
+    "y": 58.39,
     "z": 1,
-    "xSeed": 4.21,
-    "ySeed": 21.14
+    "xSeed": 7.51,
+    "ySeed": 40.94
   },
   {
     "id": "377252747",
@@ -9170,11 +9170,11 @@
       "lng": -93.2415799657
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689845773/medium.jpg",
-    "x": -7,
-    "y": 30.28,
+    "x": 1.78,
+    "y": 45.75,
     "z": 1.5,
-    "xSeed": 3.52,
-    "ySeed": 19.89
+    "xSeed": 6.82,
+    "ySeed": 39.69
   },
   {
     "id": "378464793",
@@ -9194,11 +9194,11 @@
       "lng": -93.2421189879
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692186300/medium.jpg",
-    "x": -9.3,
-    "y": 17.45,
+    "x": -2.9,
+    "y": 31.53,
     "z": 1.5,
-    "xSeed": 3.44,
-    "ySeed": 18.77
+    "xSeed": 6.74,
+    "ySeed": 38.57
   },
   {
     "id": "390655683",
@@ -9218,11 +9218,11 @@
       "lng": -123.355352769
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724218/medium.jpg",
-    "x": -14.88,
-    "y": 33.99,
+    "x": -7.58,
+    "y": 45.23,
     "z": 1.5,
-    "xSeed": 1.85,
-    "ySeed": 20.65
+    "xSeed": 5.15,
+    "ySeed": 40.45
   },
   {
     "id": "379457974",
@@ -9242,11 +9242,11 @@
       "lng": -93.2309752825
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694106968/medium.jpg",
-    "x": -8.19,
-    "y": 25.65,
+    "x": -1.11,
+    "y": 37.22,
     "z": 1.5,
-    "xSeed": 3.31,
-    "ySeed": 19.12
+    "xSeed": 6.61,
+    "ySeed": 38.92
   },
   {
     "id": "382426129",
@@ -9266,11 +9266,11 @@
       "lng": -93.1703954733
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/699847699/medium.jpg",
-    "x": -9.68,
-    "y": 21.79,
+    "x": 1.86,
+    "y": 33.48,
     "z": 1.5,
-    "xSeed": 3.58,
-    "ySeed": 18.64
+    "xSeed": 6.88,
+    "ySeed": 38.44
   },
   {
     "id": "371046961",
@@ -9289,11 +9289,11 @@
       "lng": -93.3372459139
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677909240/medium.jpg",
-    "x": -15.61,
-    "y": 28.34,
+    "x": -13.61,
+    "y": 43.01,
     "z": 1,
-    "xSeed": -3.16,
-    "ySeed": 20.6
+    "xSeed": -6.46,
+    "ySeed": 40.4
   },
   {
     "id": "377252470",
@@ -9313,11 +9313,11 @@
       "lng": -93.2149116164
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/689845199/medium.jpg",
-    "x": -19.89,
-    "y": 28.32,
+    "x": -20.26,
+    "y": 42.39,
     "z": 1.5,
-    "xSeed": -9.05,
-    "ySeed": 17.9
+    "xSeed": -18.55,
+    "ySeed": 35.5
   },
   {
     "id": "378209051",
@@ -9337,11 +9337,11 @@
       "lng": -93.2349313916
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691691969/medium.jpg",
-    "x": -21.67,
-    "y": 22.12,
+    "x": -25.51,
+    "y": 35.94,
     "z": 1.5,
-    "xSeed": -9.62,
-    "ySeed": 17.16
+    "xSeed": -19.12,
+    "ySeed": 34.76
   },
   {
     "id": "374459858",
@@ -9360,11 +9360,11 @@
       "lng": -93.2355874817
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/684444012/medium.jpg",
-    "x": -24.43,
-    "y": 28.16,
+    "x": -26.27,
+    "y": 42.74,
     "z": 1,
-    "xSeed": -10.21,
-    "ySeed": 18.28
+    "xSeed": -19.71,
+    "ySeed": 35.88
   },
   {
     "id": "379512054",
@@ -9383,11 +9383,11 @@
       "lng": -93.3276509156
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210400/medium.jpg",
-    "x": -15.31,
-    "y": 12.82,
+    "x": -17.42,
+    "y": 25.78,
     "z": 1,
-    "xSeed": -8.1,
-    "ySeed": 16.14
+    "xSeed": -17.6,
+    "ySeed": 33.74
   },
   {
     "id": "376694603",
@@ -9407,11 +9407,11 @@
       "lng": -93.2317175565
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688770909/medium.jpg",
-    "x": -17.05,
-    "y": 22.19,
+    "x": -15.69,
+    "y": 33.62,
     "z": 1.5,
-    "xSeed": -8.01,
-    "ySeed": 16.64
+    "xSeed": -17.51,
+    "ySeed": 34.24
   },
   {
     "id": "379511992",
@@ -9431,11 +9431,11 @@
       "lng": -93.2478686805
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210290/medium.jpg",
-    "x": -17.59,
-    "y": 16.96,
+    "x": -20.7,
+    "y": 33.08,
     "z": 1.5,
-    "xSeed": -8.41,
-    "ySeed": 16.72
+    "xSeed": -17.91,
+    "ySeed": 34.32
   },
   {
     "id": "390655560",
@@ -9455,11 +9455,11 @@
       "lng": -124.0615835408
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724023/medium.jpg",
-    "x": -23.09,
-    "y": 11.82,
+    "x": -32.12,
+    "y": 22.28,
     "z": 1.5,
-    "xSeed": -16.15,
-    "ySeed": 12.12
+    "xSeed": -30.85,
+    "ySeed": 25.72
   },
   {
     "id": "390655598",
@@ -9479,11 +9479,11 @@
       "lng": -124.0582213852
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724077/medium.jpg",
-    "x": -28.44,
-    "y": 22.09,
+    "x": -34.41,
+    "y": 33.29,
     "z": 1.5,
-    "xSeed": -15.91,
-    "ySeed": 13.33
+    "xSeed": -30.61,
+    "ySeed": 26.93
   },
   {
     "id": "390655242",
@@ -9503,11 +9503,11 @@
       "lng": -124.0622871876
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715723531/medium.jpg",
-    "x": -18.8,
-    "y": 10.32,
+    "x": -24.93,
+    "y": 20.35,
     "z": 1.5,
-    "xSeed": -15.15,
-    "ySeed": 12.73
+    "xSeed": -29.85,
+    "ySeed": 26.33
   },
   {
     "id": "390655769",
@@ -9527,11 +9527,11 @@
       "lng": -124.057841468
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724473/medium.jpg",
-    "x": -22.29,
-    "y": 16.57,
+    "x": -28.22,
+    "y": 27.39,
     "z": 1.5,
-    "xSeed": -15.26,
-    "ySeed": 13.19
+    "xSeed": -29.96,
+    "ySeed": 26.79
   },
   {
     "id": "390617356",
@@ -9551,11 +9551,11 @@
       "lng": -124.0542628356
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/715724514/medium.jpg",
-    "x": -27.49,
-    "y": 16.78,
+    "x": -37.91,
+    "y": 27.58,
     "z": 1.5,
-    "xSeed": -16.15,
-    "ySeed": 13.16
+    "xSeed": -30.85,
+    "ySeed": 26.76
   },
   {
     "id": "384309746",
@@ -9575,11 +9575,11 @@
       "lng": -93.2514864914
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/703472454/medium.jpg",
-    "x": -30.62,
-    "y": 12.43,
+    "x": -38.61,
+    "y": 17.08,
     "z": 1.5,
-    "xSeed": -19.8,
-    "ySeed": 6.59
+    "xSeed": -38.1,
+    "ySeed": 14.69
   },
   {
     "id": "374136463",
@@ -9597,11 +9597,11 @@
       "lng": -93.2429204362
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/683812416/medium.jpg",
-    "x": -30.33,
-    "y": 6.98,
+    "x": -43.25,
+    "y": 9.78,
     "z": 0.5,
-    "xSeed": -20.07,
-    "ySeed": 2.73
+    "xSeed": -40.07,
+    "ySeed": 4.33
   },
   {
     "id": "376709117",
@@ -9620,11 +9620,11 @@
       "lng": -93.2380631526
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688799271/medium.jpg",
-    "x": -27.87,
-    "y": 2.09,
+    "x": -43.46,
+    "y": 2.32,
     "z": 1,
-    "xSeed": -21.12,
-    "ySeed": 0.28
+    "xSeed": -41.12,
+    "ySeed": 1.88
   },
   {
     "id": "378200118",
@@ -9644,11 +9644,11 @@
       "lng": -93.23868337
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691675094/medium.jpg",
-    "x": -25.17,
-    "y": 6.52,
+    "x": -36.52,
+    "y": 8.05,
     "z": 1.5,
-    "xSeed": -19.98,
-    "ySeed": 2.49
+    "xSeed": -39.98,
+    "ySeed": 4.09
   },
   {
     "id": "378209019",
@@ -9668,11 +9668,11 @@
       "lng": -93.2494160711
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691691895/medium.jpg",
-    "x": -21.37,
-    "y": 4.43,
+    "x": -33.06,
+    "y": 3.42,
     "z": 1.5,
-    "xSeed": -19.64,
-    "ySeed": 1.43
+    "xSeed": -39.64,
+    "ySeed": 3.03
   },
   {
     "id": "379123423",
@@ -9692,11 +9692,11 @@
       "lng": -93.2480878382
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/693460971/medium.jpg",
-    "x": -35.05,
-    "y": 4.37,
+    "x": -49.2,
+    "y": 6.23,
     "z": 1.5,
-    "xSeed": -21.31,
-    "ySeed": 1.55
+    "xSeed": -41.31,
+    "ySeed": 3.15
   },
   {
     "id": "370931953",
@@ -9714,11 +9714,11 @@
       "lng": -92.5384359378
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/677686927/medium.jpg",
-    "x": -34.9,
-    "y": -7.63,
+    "x": -50.4,
+    "y": -11.59,
     "z": 0.5,
-    "xSeed": -20.42,
-    "ySeed": -4.56
+    "xSeed": -39.82,
+    "ySeed": -9.46
   },
   {
     "id": "376022368",
@@ -9736,11 +9736,11 @@
       "lng": -93.2431785604
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687469975/medium.jpg",
-    "x": -28.16,
-    "y": -9.9,
+    "x": -45.02,
+    "y": -15.6,
     "z": 0.5,
-    "xSeed": -19.25,
-    "ySeed": -5.65
+    "xSeed": -38.65,
+    "ySeed": -10.55
   },
   {
     "id": "378822473",
@@ -9758,11 +9758,11 @@
       "lng": -93.2408528767
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692874092/medium.jpg",
-    "x": -20.42,
-    "y": -0.38,
+    "x": -30.36,
+    "y": -4.05,
     "z": 0.5,
-    "xSeed": -18.45,
-    "ySeed": -4.52
+    "xSeed": -37.85,
+    "ySeed": -9.42
   },
   {
     "id": "376666760",
@@ -9781,11 +9781,11 @@
       "lng": -93.2399991423
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/688714548/medium.jpg",
-    "x": -28.98,
-    "y": -4.85,
+    "x": -41.56,
+    "y": -10.15,
     "z": 1,
-    "xSeed": -19.22,
-    "ySeed": -4.99
+    "xSeed": -38.62,
+    "ySeed": -9.89
   },
   {
     "id": "383388786",
@@ -9805,11 +9805,11 @@
       "lng": -93.2431968102
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701701975/medium.jpg",
-    "x": -20,
-    "y": -6.56,
+    "x": -31.13,
+    "y": -15.62,
     "z": 1.5,
-    "xSeed": -18.05,
-    "ySeed": -6.07
+    "xSeed": -37.45,
+    "ySeed": -10.97
   },
   {
     "id": "383425936",
@@ -9829,11 +9829,11 @@
       "lng": -93.2413390623
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/701774540/medium.jpg",
-    "x": -32.87,
-    "y": -13.35,
+    "x": -41.82,
+    "y": -20.33,
     "z": 1.5,
-    "xSeed": -19.27,
-    "ySeed": -5.91
+    "xSeed": -38.67,
+    "ySeed": -10.81
   },
   {
     "id": "392111967",
@@ -9853,11 +9853,11 @@
       "lng": -93.2441957765
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718551959/medium.jpg",
-    "x": -24.13,
-    "y": -6.35,
+    "x": -36.1,
+    "y": -12.18,
     "z": 1.5,
-    "xSeed": -18.75,
-    "ySeed": -4.99
+    "xSeed": -38.15,
+    "ySeed": -9.89
   },
   {
     "id": "392148200",
@@ -9877,11 +9877,11 @@
       "lng": -93.246495764
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718622314/medium.jpg",
-    "x": -17.04,
-    "y": -3.07,
+    "x": -28.39,
+    "y": -9.68,
     "z": 1.5,
-    "xSeed": -18.69,
-    "ySeed": -4.93
+    "xSeed": -38.09,
+    "ySeed": -9.83
   },
   {
     "id": "392111901",
@@ -9901,11 +9901,11 @@
       "lng": -93.2981655779
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/718551825/medium.jpg",
-    "x": -33.45,
-    "y": -1.84,
+    "x": -46.78,
+    "y": -5.84,
     "z": 1.5,
-    "xSeed": -19.93,
-    "ySeed": -4.56
+    "xSeed": -39.33,
+    "ySeed": -9.46
   },
   {
     "id": "392667350",
@@ -9925,11 +9925,11 @@
       "lng": -93.2517158898
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/719641192/medium.jpg",
-    "x": -24.7,
-    "y": -1.7,
+    "x": -37.8,
+    "y": -4.6,
     "z": 1.5,
-    "xSeed": -19.32,
-    "ySeed": -4.26
+    "xSeed": -38.72,
+    "ySeed": -9.16
   },
   {
     "id": "391240673",
@@ -9949,11 +9949,11 @@
       "lng": -124.0631292856
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/716864811/medium.jpg",
-    "x": -22.97,
-    "y": -11.55,
+    "x": -34.77,
+    "y": -23.93,
     "z": 1.5,
-    "xSeed": -15.28,
-    "ySeed": -9.86
+    "xSeed": -32.08,
+    "ySeed": -20.86
   },
   {
     "id": "378159271",
@@ -9973,11 +9973,11 @@
       "lng": -93.2521327327
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/691599746/medium.jpg",
-    "x": -22.77,
-    "y": -16.66,
+    "x": -28.62,
+    "y": -29.53,
     "z": 1.5,
-    "xSeed": -12.04,
-    "ySeed": -16.58
+    "xSeed": -24.34,
+    "ySeed": -32.38
   },
   {
     "id": "378476061",
@@ -9997,11 +9997,11 @@
       "lng": -93.2400482043
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/692207863/medium.jpg",
-    "x": -29.4,
-    "y": -21.53,
+    "x": -34.35,
+    "y": -35.66,
     "z": 1.5,
-    "xSeed": -12.26,
-    "ySeed": -16.62
+    "xSeed": -24.56,
+    "ySeed": -32.42
   },
   {
     "id": "391243734",
@@ -10021,11 +10021,11 @@
       "lng": -124.0539382244
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/716871495/medium.jpg",
-    "x": -27.13,
-    "y": -16.71,
+    "x": -25.15,
+    "y": -24.25,
     "z": 1.5,
-    "xSeed": -12.38,
-    "ySeed": -14.95
+    "xSeed": -24.68,
+    "ySeed": -30.75
   },
   {
     "id": "376022284",
@@ -10043,11 +10043,11 @@
       "lng": -93.2469284666
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/687469807/medium.jpg",
-    "x": -26.62,
-    "y": -25.88,
+    "x": -28.54,
+    "y": -35.45,
     "z": 0.5,
-    "xSeed": -11.38,
-    "ySeed": -16.93
+    "xSeed": -23.68,
+    "ySeed": -32.73
   },
   {
     "id": "379512094",
@@ -10066,10 +10066,10 @@
       "lng": -93.1990584118
     },
     "imageFile": "https://inaturalist-open-data.s3.amazonaws.com/photos/694210454/medium.jpg",
-    "x": -22.01,
-    "y": -21.58,
+    "x": -23.09,
+    "y": -38.66,
     "z": 1,
-    "xSeed": -5.73,
-    "ySeed": -19.1
+    "xSeed": -12.23,
+    "ySeed": -38
   }
 ]

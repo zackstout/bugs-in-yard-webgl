@@ -33,10 +33,10 @@ const ROOT = resolve(__dirname, "..");
 
 // ── Simulation parameters ─────────────────────────────────────────────────────
 
-const ORDER_RING_RADIUS = 20; // must match build-observations.ts
+const ORDER_RING_RADIUS = 40; // must match build-observations.ts
 const REPULSION_STRENGTH = 8; // force magnitude at distance 1
-const REPULSION_CUTOFF = 12; // skip pairs farther apart than this (world units)
-const MIN_DIST = 1.5; // clamp distance to prevent force explosion at close range
+const REPULSION_CUTOFF = 20; // skip pairs farther apart than this (world units)
+const MIN_DIST = 3.0; // clamp distance to prevent force explosion at close range
 const ATTRACTION_K = 0.04; // spring constant pulling obs toward order centroid
 const DAMPING = 0.85; // velocity decay per step (0–1; lower = more damping)
 const DT = 0.1; // time step — keep small relative to max repulsion force
