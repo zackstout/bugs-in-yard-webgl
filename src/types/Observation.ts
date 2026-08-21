@@ -2,7 +2,7 @@ export interface Observation {
   id: string
   commonName: string
   scientificName?: string
-  imageFile: string // filename inside /public/images/
+  imageFile: string // iNaturalist medium URL (Phase 2); local path in Phase 4
   x: number
   y: number
   z: number

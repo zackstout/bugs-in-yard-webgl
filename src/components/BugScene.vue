@@ -1,46 +1,80 @@
 <script setup lang="ts">
-import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { ref, watch, reactive, onMounted, onUnmounted } from 'vue'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { observations } from '../data/observations'
 import type { Observation } from '../types/Observation'
 
+// ─── Navigation stack ─────────────────────────────────────────────────────────
+//
+// Each entry represents one zoom level into a sub-cluster.
+// Examples (from zoom-levels-and-taxonomy-depth.md):
+//
+//   []                                → Atlas
+//   [{ order, 'Coleoptera' }]         → inside Beetles order cluster
+//   [{ order }, { family, 'Coccinellidae' }] → inside Ladybug family cluster
+//   [{ order }, { family }, { specimen, obs }] → Specimen
+//
+// Rules encoded here:
+//   1. Always enter via order first from Atlas.
+//   2. Skip any node with exactly 1 observation (fast path to next level).
+//   3. Escape / background click pops one level.
+
+type NavEntry =
+  | { type: 'order';    key: string }
+  | { type: 'family';   order: string; key: string }
+  | { type: 'specimen'; obs: Observation }
+
 // ─── Reactive UI state ────────────────────────────────────────────────────────
 
-const canvasRef = ref<HTMLCanvasElement | null>(null)
+const canvasRef  = ref<HTMLCanvasElement | null>(null)
 const hoveredObs = ref<Observation | null>(null)
-const focusedObs = ref<Observation | null>(null)
-const mousePos = reactive({ x: 0, y: 0 })
+const navStack   = ref<NavEntry[]>([])
+const mousePos   = reactive({ x: 0, y: 0 })
 
-// Atlas-level label opacity: 1.0 at overview distance, fades to 0 as the
-// camera zooms in. This is the foundation for Phase 3 semantic zoom — the
-// renderer already tracks zoom depth; the threshold logic moves here later.
+// Derived from the stack — avoids passing the stack around everywhere
+const stackTop   = () => navStack.value[navStack.value.length - 1] ?? null
+const focusedObs = () => { const t = stackTop(); return t?.type === 'specimen' ? t.obs : null }
+
+// ─── Label types and opacity ──────────────────────────────────────────────────
+
+// Atlas labels fade as the camera zooms toward a group.
+// Overview z=35; labels are fully visible above z=26, fully gone below z=16.
 const labelOpacity = ref(1)
 
-// ─── Group label definitions (derived from observation data) ──────────────────
-
-// Common names for order-level Atlas labels. These are what the user sees
-// at the outermost zoom level. Scientific order names are used as the key.
-const ORDER_DISPLAY_NAMES: Record<string, string> = {
-  Coleoptera:   'Beetles',
-  Lepidoptera:  'Butterflies & Moths',
-  Hymenoptera:  'Bees & Wasps',
-  Odonata:      'Dragonflies & Damselflies',
-  Hemiptera:    'True Bugs',
-}
-
-interface GroupLabel {
-  id: string
-  name: string
+interface ScreenLabel {
+  id:    string
+  name:  string
   world: THREE.Vector3
-  sx: number
-  sy: number
+  sx:    number
+  sy:    number
 }
 
-// Build one label per order (or 'Unidentified') from the observation data.
-// Label world position is placed above the topmost observation in each group,
-// so it stays clear of the image planes regardless of cluster size.
-function buildGroupLabels(): GroupLabel[] {
+// ─── Order labels (Atlas level, derived from observation data) ─────────────────
+
+const ORDER_DISPLAY_NAMES: Record<string, string> = {
+  Araneae:           'Spiders',
+  Coleoptera:        'Beetles',
+  Decapoda:          'Crabs & Crayfish',
+  Diptera:           'Flies',
+  Ephemeroptera:     'Mayflies',
+  Hemiptera:         'True Bugs',
+  Hymenoptera:       'Bees & Wasps',
+  Isopoda:           'Pill Bugs',
+  Julida:            'Millipedes',
+  Lepidoptera:       'Butterflies & Moths',
+  Lithobiomorpha:    'Centipedes',
+  Neuroptera:        'Lacewings',
+  Nudibranchia:      'Nudibranchs',
+  Odonata:           'Dragonflies & Damselflies',
+  Opiliones:         'Harvestmen',
+  Orthoptera:        'Grasshoppers & Crickets',
+  Pollicipedomorpha: 'Gooseneck Barnacles',
+  Stylommatophora:   'Snails & Slugs',
+  Thysanoptera:      'Thrips',
+}
+
+function buildOrderLabels(): ScreenLabel[] {
   const groups = new Map<string, { xs: number[]; ys: number[] }>()
   for (const obs of observations) {
     const key = obs.order ?? 'Unidentified'
@@ -50,61 +84,135 @@ function buildGroupLabels(): GroupLabel[] {
     g.ys.push(obs.y)
   }
   return [...groups.entries()].map(([key, g]) => {
-    const cx = g.xs.reduce((a, b) => a + b, 0) / g.xs.length
+    const cx   = g.xs.reduce((a, b) => a + b, 0) / g.xs.length
     const maxY = Math.max(...g.ys)
     const name = ORDER_DISPLAY_NAMES[key] ?? key
     return { id: key, name, world: new THREE.Vector3(cx, maxY + 1.8, 0), sx: 0, sy: 0 }
   })
 }
 
-const groupLabels = ref<GroupLabel[]>(buildGroupLabels())
+const orderLabels = ref<ScreenLabel[]>(buildOrderLabels())
+
+// ─── Family labels (Group level, rebuilt when stack top changes to 'order') ───
+
+// Uses ref + watch (not computed) so the render loop can mutate sx/sy on the
+// label objects and trigger Vue reactivity — same pattern as orderLabels.
+
+const familyLabels = ref<ScreenLabel[]>([])
+
+watch(navStack, (stack) => {
+  const top = stack[stack.length - 1] ?? null
+  if (top?.type !== 'order') {
+    familyLabels.value = []
+    return
+  }
+  const order = top.key
+  const groups = new Map<string, { xs: number[]; ys: number[] }>()
+  for (const obs of observations.filter(o => o.order === order)) {
+    const key = obs.family ?? 'Unknown'
+    if (!groups.has(key)) groups.set(key, { xs: [], ys: [] })
+    const g = groups.get(key)!
+    g.xs.push(obs.x)
+    g.ys.push(obs.y)
+  }
+  familyLabels.value = [...groups.entries()].map(([key, g]) => {
+    const cx   = g.xs.reduce((a, b) => a + b, 0) / g.xs.length
+    const maxY = Math.max(...g.ys)
+    return { id: key, name: key, world: new THREE.Vector3(cx, maxY + 1.5, 0), sx: 0, sy: 0 }
+  })
+})
+
+// ─── Data helpers ─────────────────────────────────────────────────────────────
+
+function obsForOrder(order: string): Observation[] {
+  return observations.filter(o => o.order === order)
+}
+
+function obsForFamily(order: string, family: string): Observation[] {
+  return observations.filter(o => o.order === order && o.family === family)
+}
+
+function centroidOf(obs: Observation[]): THREE.Vector3 {
+  return new THREE.Vector3(
+    obs.reduce((s, o) => s + o.x, 0) / obs.length,
+    obs.reduce((s, o) => s + o.y, 0) / obs.length,
+    obs.reduce((s, o) => s + o.z, 0) / obs.length,
+  )
+}
 
 // ─── Three.js objects (not reactive) ──────────────────────────────────────────
 
 let renderer: THREE.WebGLRenderer
-let scene: THREE.Scene
-let camera: THREE.PerspectiveCamera
+let scene:    THREE.Scene
+let camera:   THREE.PerspectiveCamera
 let controls: OrbitControls
-let rafId: number
+let rafId:    number
 
-const meshes = new Map<string, THREE.Mesh>()
+const meshes    = new Map<string, THREE.Mesh>()
 const raycaster = new THREE.Raycaster()
-const pointer = new THREE.Vector2()
+const pointer   = new THREE.Vector2()
 
 // ─── Camera animation ─────────────────────────────────────────────────────────
 
 const OVERVIEW_POS    = new THREE.Vector3(0, 0, 35)
 const OVERVIEW_TARGET = new THREE.Vector3(0, 0,  0)
-const FOCUS_OFFSET    = 8
-const LERP_SPEED      = 0.07
-const LERP_THRESHOLD  = 0.04
+
+// Z offsets from each cluster's centroid. Chosen so each level transition
+// covers a meaningful fraction of the remaining depth:
+//   Atlas z≈35 → Order z≈22 → Family z≈14 → Specimen z≈8
+const ORDER_Z_OFFSET   = 22
+const FAMILY_Z_OFFSET  = 14
+const SPECIMEN_Z_OFFSET = 8
+
+const LERP_SPEED     = 0.07
+const LERP_THRESHOLD = 0.04
 
 let targetPos    = OVERVIEW_POS.clone()
 let targetLookAt = OVERVIEW_TARGET.clone()
 let animating    = false
+
+function cameraForEntry(entry: NavEntry): { pos: THREE.Vector3; lookAt: THREE.Vector3 } {
+  if (entry.type === 'specimen') {
+    const { obs } = entry
+    return {
+      pos:    new THREE.Vector3(obs.x, obs.y, obs.z + SPECIMEN_Z_OFFSET),
+      lookAt: new THREE.Vector3(obs.x, obs.y, obs.z),
+    }
+  }
+  if (entry.type === 'order') {
+    const c = centroidOf(obsForOrder(entry.key))
+    return {
+      pos:    new THREE.Vector3(c.x, c.y, c.z + ORDER_Z_OFFSET),
+      lookAt: c.clone(),
+    }
+  }
+  // family
+  const c = centroidOf(obsForFamily(entry.order, entry.key))
+  return {
+    pos:    new THREE.Vector3(c.x, c.y, c.z + FAMILY_Z_OFFSET),
+    lookAt: c.clone(),
+  }
+}
 
 // ─── Fallback texture ─────────────────────────────────────────────────────────
 
 function makeFallbackTexture(name: string): THREE.Texture {
   const w = 600, h = 400
   const canvas = document.createElement('canvas')
-  canvas.width = w
+  canvas.width  = w
   canvas.height = h
   const ctx = canvas.getContext('2d')!
 
   ctx.fillStyle = '#f0e9d8'
   ctx.fillRect(0, 0, w, h)
-
   ctx.strokeStyle = '#c4aa80'
   ctx.lineWidth = 5
   ctx.strokeRect(12, 12, w - 24, h - 24)
-
   ctx.fillStyle = '#1c1208'
   ctx.font = 'bold 38px Georgia, serif'
-  ctx.textAlign = 'center'
+  ctx.textAlign    = 'center'
   ctx.textBaseline = 'middle'
 
-  // Simple word-wrap
   const words = name.split(' ')
   const lines: string[] = []
   let line = ''
@@ -131,23 +239,18 @@ function makeFallbackTexture(name: string): THREE.Texture {
 function createMesh(obs: Observation): THREE.Mesh {
   const geo = new THREE.PlaneGeometry(3, 2)
   const mat = new THREE.MeshBasicMaterial({
-    map: makeFallbackTexture(obs.commonName),
+    map:  makeFallbackTexture(obs.commonName),
     side: THREE.FrontSide,
   })
   const mesh = new THREE.Mesh(geo, mat)
   mesh.position.set(obs.x, obs.y, obs.z)
   mesh.userData.id = obs.id
 
-  // Swap in the real photo if it exists; silently keep fallback on error
   new THREE.TextureLoader().load(
-    `/images/${obs.imageFile}`,
-    (tex) => {
-      tex.colorSpace = THREE.SRGBColorSpace
-      mat.map = tex
-      mat.needsUpdate = true
-    },
+    obs.imageFile,
+    (tex) => { tex.colorSpace = THREE.SRGBColorSpace; mat.map = tex; mat.needsUpdate = true },
     undefined,
-    () => { /* fallback stays */ },
+    () => {},
   )
 
   return mesh
@@ -157,35 +260,92 @@ function createMesh(obs: Observation): THREE.Mesh {
 
 function setHover(obs: Observation | null) {
   if (hoveredObs.value === obs) return
-
-  if (hoveredObs.value) {
-    meshes.get(hoveredObs.value.id)?.scale.setScalar(1)
-  }
+  if (hoveredObs.value) meshes.get(hoveredObs.value.id)?.scale.setScalar(1)
   hoveredObs.value = obs
-  if (obs) {
-    meshes.get(obs.id)?.scale.setScalar(1.1)
-  }
+  if (obs) meshes.get(obs.id)?.scale.setScalar(1.1)
   document.body.style.cursor = obs ? 'pointer' : 'default'
 }
 
-// ─── Camera focus / return ────────────────────────────────────────────────────
+// ─── Navigation ───────────────────────────────────────────────────────────────
 
-function focusOn(obs: Observation) {
-  setHover(null)
-  focusedObs.value = obs
-  targetLookAt = new THREE.Vector3(obs.x, obs.y, obs.z)
-  targetPos    = new THREE.Vector3(obs.x, obs.y, obs.z + FOCUS_OFFSET)
-  animating = true
+// Observations eligible for hover / click at the current stack level.
+// Restricts picking to the active group — avoids inconsistent stack states
+// from clicking observations that belong to a different branch.
+function eligibleObs(): Observation[] {
+  const top = stackTop()
+  if (!top)                 return observations           // Atlas: all pickable
+  if (top.type === 'order') return obsForOrder(top.key)
+  if (top.type === 'family') return obsForFamily(top.order, top.key)
+  return []                                               // specimen: nothing pickable
+}
+
+function animateTo(pos: THREE.Vector3, lookAt: THREE.Vector3) {
+  targetPos    = pos
+  targetLookAt = lookAt
+  animating    = true
   controls.enabled = false
 }
 
-function returnToOverview() {
+function pushEntry(entry: NavEntry) {
+  navStack.value = [...navStack.value, entry]
   setHover(null)
-  focusedObs.value = null
-  targetPos    = OVERVIEW_POS.clone()
-  targetLookAt = OVERVIEW_TARGET.clone()
-  animating = true
-  controls.enabled = false
+  const { pos, lookAt } = cameraForEntry(entry)
+  animateTo(pos, lookAt)
+}
+
+function popEntry() {
+  const next = navStack.value.slice(0, -1)
+  navStack.value = next
+  setHover(null)
+  if (next.length === 0) {
+    animateTo(OVERVIEW_POS.clone(), OVERVIEW_TARGET.clone())
+  } else {
+    const { pos, lookAt } = cameraForEntry(next[next.length - 1])
+    animateTo(pos, lookAt)
+  }
+}
+
+// Determine what to push when an observation is clicked at the current level.
+function pushNext(obs: Observation) {
+  const top = stackTop()
+
+  if (!top) {
+    // ── Atlas ──────────────────────────────────────────────────────────────────
+    if (!obs.order) {
+      // Unidentified: no order, go straight to specimen
+      pushEntry({ type: 'specimen', obs })
+      return
+    }
+    if (obsForOrder(obs.order).length <= 1) {
+      // Fast path: single-observation order (Case 1 — Odonata)
+      pushEntry({ type: 'specimen', obs })
+    } else {
+      pushEntry({ type: 'order', key: obs.order })
+    }
+    return
+  }
+
+  if (top.type === 'order') {
+    // ── Inside order group ────────────────────────────────────────────────────
+    if (!obs.family) {
+      // No family data — go to specimen
+      pushEntry({ type: 'specimen', obs })
+      return
+    }
+    if (obsForFamily(top.key, obs.family).length <= 1) {
+      // Fast path: single-observation family within this order (e.g. Elateridae)
+      pushEntry({ type: 'specimen', obs })
+    } else {
+      pushEntry({ type: 'family', order: top.key, key: obs.family })
+    }
+    return
+  }
+
+  if (top.type === 'family') {
+    // ── Inside family group — always go to specimen ───────────────────────────
+    pushEntry({ type: 'specimen', obs })
+    return
+  }
 }
 
 // ─── Input handlers ───────────────────────────────────────────────────────────
@@ -202,17 +362,20 @@ function onMouseMove(e: MouseEvent) {
   mousePos.x = e.clientX
   mousePos.y = e.clientY
 
-  if (focusedObs.value) return // no hover picking while focused
+  if (stackTop()?.type === 'specimen') return  // no picking at specimen level
+
+  const eligible = eligibleObs()
+    .map(o => meshes.get(o.id))
+    .filter((m): m is THREE.Mesh => m !== undefined)
 
   pointer.x =  (e.clientX / window.innerWidth)  * 2 - 1
   pointer.y = -(e.clientY / window.innerHeight) * 2 + 1
   raycaster.setFromCamera(pointer, camera)
 
-  const hits = raycaster.intersectObjects([...meshes.values()])
+  const hits = raycaster.intersectObjects(eligible)
   if (hits.length > 0) {
     const id  = hits[0].object.userData.id as string
-    const obs = observations.find(o => o.id === id) ?? null
-    setHover(obs)
+    setHover(observations.find(o => o.id === id) ?? null)
   } else {
     setHover(null)
   }
@@ -221,17 +384,17 @@ function onMouseMove(e: MouseEvent) {
 function onClick(e: MouseEvent) {
   const dx = e.clientX - mouseDownX
   const dy = e.clientY - mouseDownY
-  if (Math.hypot(dx, dy) > 5) return // was a pan, not a click
+  if (Math.hypot(dx, dy) > 5) return  // was a pan, not a click
 
   if (hoveredObs.value) {
-    focusOn(hoveredObs.value)
-  } else if (focusedObs.value) {
-    returnToOverview()
+    pushNext(hoveredObs.value)
+  } else if (navStack.value.length > 0) {
+    popEntry()
   }
 }
 
 function onKeyDown(e: KeyboardEvent) {
-  if (e.key === 'Escape') returnToOverview()
+  if (e.key === 'Escape' && navStack.value.length > 0) popEntry()
 }
 
 function onResize() {
@@ -280,10 +443,10 @@ function init() {
 
 // ─── Render loop ──────────────────────────────────────────────────────────────
 
-function updateGroupLabelPositions() {
+function projectLabels(labels: ScreenLabel[]) {
   const w = window.innerWidth
   const h = window.innerHeight
-  for (const label of groupLabels.value) {
+  for (const label of labels) {
     const p = label.world.clone().project(camera)
     label.sx = (p.x * 0.5 + 0.5) * w
     label.sy = (-p.y * 0.5 + 0.5) * h
@@ -300,17 +463,17 @@ function animate() {
     if (camera.position.distanceTo(targetPos) < LERP_THRESHOLD) {
       camera.position.copy(targetPos)
       controls.target.copy(targetLookAt)
-      animating = false
+      animating        = false
       controls.enabled = true
     }
   }
 
   controls.update()
-  updateGroupLabelPositions()
+  projectLabels(orderLabels.value)
+  projectLabels(familyLabels.value)
 
-  // Atlas labels fade as the camera zooms toward a group.
-  // Overview z=35; labels are fully visible above z=26, fully gone below z=16.
-  // This gives a 10-unit fade window that matches the natural approach distance.
+  // Atlas labels fade as the camera approaches. Overview z=35; fully visible
+  // above z=26, fully gone below z=16.
   const z = camera.position.z
   labelOpacity.value = Math.max(0, Math.min(1, (z - 16) / 10))
 
@@ -342,10 +505,8 @@ onUnmounted(() => {
   <div class="scene">
     <canvas ref="canvasRef" />
 
-    <!-- Hover label -->
-    <!-- Shows the finest taxonomy rank available for this observation.
-         For species-level IDs: scientific name. For family-level: "Family X".
-         For unidentified: no second line. -->
+    <!-- Hover label ────────────────────────────────────────────────────────── -->
+    <!-- Shows the finest taxonomy rank available for this observation. -->
     <Transition name="fade">
       <div
         v-if="hoveredObs"
@@ -368,13 +529,11 @@ onUnmounted(() => {
       </div>
     </Transition>
 
-    <!-- Group labels — Atlas-level order labels.
-         Hidden when focused on a specimen. Fade as camera zooms in toward
-         a group (labelOpacity driven by camera.position.z in the render loop). -->
+    <!-- Order labels (Atlas level) ─────────────────────────────────────────── -->
     <Transition name="fade">
-      <div v-if="!focusedObs" class="group-labels">
+      <div v-if="navStack.length === 0" class="group-labels">
         <div
-          v-for="label in groupLabels"
+          v-for="label in orderLabels"
           :key="label.id"
           class="group-label"
           :style="{ left: label.sx + 'px', top: label.sy + 'px', opacity: labelOpacity }"
@@ -384,11 +543,26 @@ onUnmounted(() => {
       </div>
     </Transition>
 
-    <!-- Bottom hint -->
+    <!-- Family labels (inside an order group) ──────────────────────────────── -->
+    <Transition name="fade">
+      <div v-if="stackTop()?.type === 'order'" class="group-labels">
+        <div
+          v-for="label in familyLabels"
+          :key="label.id"
+          class="group-label family-label"
+          :style="{ left: label.sx + 'px', top: label.sy + 'px' }"
+        >
+          {{ label.name }}
+        </div>
+      </div>
+    </Transition>
+
+    <!-- Bottom hint ─────────────────────────────────────────────────────────── -->
     <div class="hint">
       <Transition name="fade" mode="out-in">
-        <span v-if="!focusedObs" key="overview">Scroll to zoom &nbsp;·&nbsp; Click to focus</span>
-        <span v-else key="focused">Press Escape or click the background to return</span>
+        <span v-if="navStack.length === 0"        key="atlas">    Scroll to zoom &nbsp;·&nbsp; Click to enter a group</span>
+        <span v-else-if="stackTop()?.type !== 'specimen'" key="group">    Click an observation &nbsp;·&nbsp; Escape to go back</span>
+        <span v-else                              key="specimen"> Escape or click background to go back</span>
       </Transition>
     </div>
   </div>
@@ -453,6 +627,13 @@ canvas {
   text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
+}
+
+/* Family labels are slightly smaller and dimmer than order labels */
+.family-label {
+  font-size: 9px;
+  color: rgba(180, 160, 120, 0.35);
+  letter-spacing: 0.14em;
 }
 
 /* ── Hint ────────────────────────────────────────────────────────────────── */
