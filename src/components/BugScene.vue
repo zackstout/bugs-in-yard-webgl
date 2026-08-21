@@ -248,7 +248,14 @@ function createMesh(obs: Observation): THREE.Mesh {
 
   new THREE.TextureLoader().load(
     obs.imageFile,
-    (tex) => { tex.colorSpace = THREE.SRGBColorSpace; mat.map = tex; mat.needsUpdate = true },
+    (tex) => {
+      tex.colorSpace = THREE.SRGBColorSpace
+      const aspect = tex.image.width / tex.image.height
+      mesh.geometry.dispose()
+      mesh.geometry = new THREE.PlaneGeometry(2 * aspect, 2)
+      mat.map = tex
+      mat.needsUpdate = true
+    },
     undefined,
     () => {},
   )
