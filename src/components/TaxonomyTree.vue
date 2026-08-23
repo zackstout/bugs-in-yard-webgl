@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { observations } from "../data/observations";
+import { familyCommonNames } from "../data/commonNames/familyCommonNames";
+import { orderCommonNames } from "../data/commonNames/orderCommonNames";
 import type { Observation } from "../types/Observation";
 
 interface SpeciesNode {
@@ -246,6 +248,7 @@ function groupedLabels(obs: Observation[]): string[] {
       >
         <span class="rank-label">Order</span>
         <span class="taxon-name">{{ orderNode.order }}</span>
+        <span v-if="orderCommonNames[orderNode.order]" class="common-name">{{ orderCommonNames[orderNode.order] }}</span>
 
         <ul>
           <!-- Observations known only to order level -->
@@ -265,6 +268,7 @@ function groupedLabels(obs: Observation[]): string[] {
           >
             <span class="rank-label">Family</span>
             <span class="taxon-name">{{ familyNode.family }}</span>
+            <span v-if="familyCommonNames[familyNode.family]" class="common-name">{{ familyCommonNames[familyNode.family] }}</span>
 
             <ul>
               <!-- Observations known only to family level -->
@@ -494,12 +498,12 @@ function groupedLabels(obs: Observation[]): string[] {
   color: #eabd6b;
   padding: 2rem 2.5rem;
   font-family: "Georgia", serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .tree-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: normal;
   letter-spacing: 0.05em;
   margin: 0 0 0.25rem 0;
@@ -509,7 +513,7 @@ function groupedLabels(obs: Observation[]): string[] {
 .tree-count {
   color: #7a6a4a;
   margin: 0 0 1.5rem 0;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 }
 
 .tree-root {
@@ -536,12 +540,35 @@ ul {
   margin-right: 1rem;
 }
 
+/* Vertical spacing — larger gap for higher-rank groups */
+.node-order {
+  margin-top: 2.5rem;
+}
+
+.node-family {
+  margin-top: 1.6rem;
+}
+
+.node-subfamily {
+  margin-top: 1.1rem;
+}
+
+.node-tribe {
+  margin-top: 0.7rem;
+}
+
+.node-genus {
+  margin-top: 0.4rem;
+}
+
 .rank-label {
-  font-size: 0.7rem;
-  color: #5a4e38;
+  font-size: 0.75rem;
+  color: #9a7e4e;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-right: 0.4rem;
+  letter-spacing: 0.1em;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  opacity: 0.85;
 }
 
 .taxon-name {
@@ -553,6 +580,13 @@ ul {
   font-style: italic;
 }
 
+.common-name {
+  color: #7a8a6a;
+  font-size: 0.9rem;
+  margin-left: 0.6rem;
+  font-style: italic;
+}
+
 .label-unspecified {
   color: #6a5e48;
   font-style: italic;
@@ -560,7 +594,7 @@ ul {
 
 .node-obs {
   color: #8a7a5a;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .node-obs::before {

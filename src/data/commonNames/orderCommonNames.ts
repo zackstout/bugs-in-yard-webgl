@@ -1,0 +1,22 @@
+/** Common names for orders present in the observation data. */
+export const orderCommonNames: Record<string, string> = {
+  Araneae: "Spiders",
+  Coleoptera: "Beetles",
+  Decapoda: "Crabs, Shrimp & Lobsters",
+  Diptera: "True Flies",
+  Ephemeroptera: "Mayflies",
+  Hemiptera: "True Bugs",
+  Hymenoptera: "Bees, Wasps & Ants",
+  Isopoda: "Isopods",
+  Julida: "Millipedes",
+  Lepidoptera: "Butterflies & Moths",
+  Lithobiomorpha: "Stone Centipedes",
+  Neuroptera: "Lacewings & Allies",
+  Nudibranchia: "Nudibranchs",
+  Odonata: "Dragonflies & Damselflies",
+  Opiliones: "Harvestmen",
+  Orthoptera: "Grasshoppers & Crickets",
+  Pollicipedomorpha: "Goose Barnacles",
+  Stylommatophora: "Land Snails & Slugs",
+  Thysanoptera: "Thrips",
+};
