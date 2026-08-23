@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, shallowRef } from "vue";
 import { observations } from "../data/observations";
 import { familyCommonNames } from "../data/commonNames/familyCommonNames";
 import { orderCommonNames } from "../data/commonNames/orderCommonNames";
 import type { Observation } from "../types/Observation";
+
+// ── Node interfaces ───────────────────────────────────────────────────────────
 
 interface SpeciesNode {
   scientificName: string;
@@ -25,15 +27,15 @@ interface TribeNode {
 interface SubfamilyNode {
   subfamily: string;
   tribes: TribeNode[];
-  genera: GenusNode[]; // genera with no tribe
+  genera: GenusNode[];
   unspecified: Observation[];
 }
 
 interface FamilyNode {
   family: string;
   subfamilies: SubfamilyNode[];
-  tribes: TribeNode[]; // tribes with no subfamily
-  genera: GenusNode[]; // genera with no subfamily and no tribe
+  tribes: TribeNode[];
+  genera: GenusNode[];
   unspecified: Observation[];
 }
 
@@ -47,6 +49,8 @@ interface TaxonomyTree {
   orders: OrderNode[];
   unspecified: Observation[];
 }
+
+// ── Internal map types ────────────────────────────────────────────────────────
 
 type GenusMap = Map<
   string,
@@ -134,7 +138,6 @@ const tree = computed<TaxonomyTree>(() => {
       unspecified: [],
     }));
 
-    // Route to the finest available container above genus
     let genusContainer: { genusMap: GenusMap; unspecified: Observation[] };
     if (obs.subfamily) {
       const subfamilyEntry = getOrCreate(
@@ -206,10 +209,154 @@ const tree = computed<TaxonomyTree>(() => {
   return { orders, unspecified: topUnspecified };
 });
 
-const selectedSpecies = ref<SpeciesNode | null>(null);
+// ── Selection ─────────────────────────────────────────────────────────────────
 
-function selectSpecies(node: SpeciesNode) {
-  selectedSpecies.value = node;
+type SelectedNode =
+  | { kind: "order";     node: OrderNode }
+  | { kind: "family";    node: FamilyNode }
+  | { kind: "subfamily"; node: SubfamilyNode }
+  | { kind: "tribe";     node: TribeNode }
+  | { kind: "genus";     node: GenusNode }
+  | { kind: "species";   node: SpeciesNode }
+
+// shallowRef keeps node objects unwrapped so === identity checks work in template.
+const selectedNode = shallowRef<SelectedNode | null>(null);
+
+function selectNode(n: SelectedNode) {
+  selectedNode.value = n;
+}
+
+function isSelected(node: object): boolean {
+  return selectedNode.value?.node === node;
+}
+
+// ── Observation count helpers ─────────────────────────────────────────────────
+
+function genusObsCount(n: GenusNode): number {
+  return n.unspecified.length + n.species.reduce((s, sp) => s + sp.obs.length, 0);
+}
+function tribeObsCount(n: TribeNode): number {
+  return n.unspecified.length + n.genera.reduce((s, g) => s + genusObsCount(g), 0);
+}
+function subfamilyObsCount(n: SubfamilyNode): number {
+  return (
+    n.unspecified.length +
+    n.tribes.reduce((s, t) => s + tribeObsCount(t), 0) +
+    n.genera.reduce((s, g) => s + genusObsCount(g), 0)
+  );
+}
+function familyObsCount(n: FamilyNode): number {
+  return (
+    n.unspecified.length +
+    n.subfamilies.reduce((s, sf) => s + subfamilyObsCount(sf), 0) +
+    n.tribes.reduce((s, t) => s + tribeObsCount(t), 0) +
+    n.genera.reduce((s, g) => s + genusObsCount(g), 0)
+  );
+}
+function orderObsCount(n: OrderNode): number {
+  return n.unspecified.length + n.families.reduce((s, f) => s + familyObsCount(f), 0);
+}
+function selectedObsCount(sel: SelectedNode): number {
+  switch (sel.kind) {
+    case "order":     return orderObsCount(sel.node);
+    case "family":    return familyObsCount(sel.node);
+    case "subfamily": return subfamilyObsCount(sel.node);
+    case "tribe":     return tribeObsCount(sel.node);
+    case "genus":     return genusObsCount(sel.node);
+    case "species":   return sel.node.obs.length;
+  }
+}
+
+// ── Representative image helpers ──────────────────────────────────────────────
+
+function grabImages(obs: Observation[], into: string[], max: number) {
+  for (const o of obs) {
+    if (into.length >= max) return;
+    if (o.imageFile) into.push(o.imageFile);
+  }
+}
+
+function genusImages(n: GenusNode, max: number): string[] {
+  const imgs: string[] = [];
+  grabImages(n.unspecified, imgs, max);
+  for (const sp of n.species) {
+    if (imgs.length >= max) break;
+    grabImages(sp.obs, imgs, max);
+  }
+  return imgs;
+}
+
+function tribeImages(n: TribeNode, max: number): string[] {
+  const imgs: string[] = [];
+  grabImages(n.unspecified, imgs, max);
+  for (const g of n.genera) {
+    if (imgs.length >= max) break;
+    imgs.push(...genusImages(g, max - imgs.length));
+  }
+  return imgs;
+}
+
+function subfamilyImages(n: SubfamilyNode, max: number): string[] {
+  const imgs: string[] = [];
+  grabImages(n.unspecified, imgs, max);
+  for (const t of n.tribes) {
+    if (imgs.length >= max) break;
+    imgs.push(...tribeImages(t, max - imgs.length));
+  }
+  for (const g of n.genera) {
+    if (imgs.length >= max) break;
+    imgs.push(...genusImages(g, max - imgs.length));
+  }
+  return imgs;
+}
+
+function familyImages(n: FamilyNode, max: number): string[] {
+  const imgs: string[] = [];
+  grabImages(n.unspecified, imgs, max);
+  for (const sf of n.subfamilies) {
+    if (imgs.length >= max) break;
+    imgs.push(...subfamilyImages(sf, max - imgs.length));
+  }
+  for (const t of n.tribes) {
+    if (imgs.length >= max) break;
+    imgs.push(...tribeImages(t, max - imgs.length));
+  }
+  for (const g of n.genera) {
+    if (imgs.length >= max) break;
+    imgs.push(...genusImages(g, max - imgs.length));
+  }
+  return imgs;
+}
+
+function orderImages(n: OrderNode, max: number): string[] {
+  const imgs: string[] = [];
+  grabImages(n.unspecified, imgs, max);
+  for (const f of n.families) {
+    if (imgs.length >= max) break;
+    imgs.push(...familyImages(f, max - imgs.length));
+  }
+  return imgs;
+}
+
+// ── Panel header helpers ──────────────────────────────────────────────────────
+
+function panelName(sel: SelectedNode): string {
+  switch (sel.kind) {
+    case "order":     return sel.node.order;
+    case "family":    return sel.node.family;
+    case "subfamily": return sel.node.subfamily;
+    case "tribe":     return sel.node.tribe;
+    case "genus":     return sel.node.genus;
+    case "species":   return sel.node.scientificName;
+  }
+}
+
+function panelRankLabel(sel: SelectedNode): string {
+  const labels: Record<SelectedNode["kind"], string> = {
+    order: "Order", family: "Family", subfamily: "Subfamily",
+    tribe: "Tribe", genus: "Genus", species: "Species",
+  };
+  return labels[sel.kind];
 }
 
 function speciesCommonName(node: SpeciesNode): string | null {
@@ -219,13 +366,95 @@ function speciesCommonName(node: SpeciesNode): string | null {
   return null;
 }
 
+function panelCommonName(sel: SelectedNode): string | null {
+  switch (sel.kind) {
+    case "order":   return orderCommonNames[sel.node.order] ?? null;
+    case "family":  return familyCommonNames[sel.node.family] ?? null;
+    case "species": return speciesCommonName(sel.node);
+    default:        return null;
+  }
+}
+
+// ── Panel children (drill-down) ───────────────────────────────────────────────
+
+interface PanelChild {
+  rankLabel: string;
+  name: string;
+  isSpecies: boolean;
+  commonName: string | null;
+  count: number;
+  images: string[];
+  selection: SelectedNode;
+}
+
+const panelChildren = computed<PanelChild[]>(() => {
+  const sel = selectedNode.value;
+  if (!sel || sel.kind === "species") return [];
+
+  switch (sel.kind) {
+    case "genus":
+      return sel.node.species.map((sp) => ({
+        rankLabel: "Species",
+        name: sp.scientificName,
+        isSpecies: true,
+        commonName: speciesCommonName(sp),
+        count: sp.obs.length,
+        images: sp.obs.filter((o) => o.imageFile).map((o) => o.imageFile).slice(0, 3),
+        selection: { kind: "species" as const, node: sp },
+      }));
+
+    case "tribe":
+      return sel.node.genera.map((g) => ({
+        rankLabel: "Genus",
+        name: g.genus,
+        isSpecies: false,
+        commonName: null,
+        count: genusObsCount(g),
+        images: genusImages(g, 3),
+        selection: { kind: "genus" as const, node: g },
+      }));
+
+    case "subfamily": {
+      const children: PanelChild[] = [];
+      for (const t of sel.node.tribes)
+        children.push({ rankLabel: "Tribe", name: t.tribe, isSpecies: false, commonName: null, count: tribeObsCount(t), images: tribeImages(t, 3), selection: { kind: "tribe" as const, node: t } });
+      for (const g of sel.node.genera)
+        children.push({ rankLabel: "Genus", name: g.genus, isSpecies: false, commonName: null, count: genusObsCount(g), images: genusImages(g, 3), selection: { kind: "genus" as const, node: g } });
+      return children;
+    }
+
+    case "family": {
+      const children: PanelChild[] = [];
+      for (const sf of sel.node.subfamilies)
+        children.push({ rankLabel: "Subfamily", name: sf.subfamily, isSpecies: false, commonName: null, count: subfamilyObsCount(sf), images: subfamilyImages(sf, 3), selection: { kind: "subfamily" as const, node: sf } });
+      for (const t of sel.node.tribes)
+        children.push({ rankLabel: "Tribe", name: t.tribe, isSpecies: false, commonName: null, count: tribeObsCount(t), images: tribeImages(t, 3), selection: { kind: "tribe" as const, node: t } });
+      for (const g of sel.node.genera)
+        children.push({ rankLabel: "Genus", name: g.genus, isSpecies: false, commonName: null, count: genusObsCount(g), images: genusImages(g, 3), selection: { kind: "genus" as const, node: g } });
+      return children;
+    }
+
+    case "order":
+      return sel.node.families.map((f) => ({
+        rankLabel: "Family",
+        name: f.family,
+        isSpecies: false,
+        commonName: familyCommonNames[f.family] ?? null,
+        count: familyObsCount(f),
+        images: familyImages(f, 3),
+        selection: { kind: "family" as const, node: f },
+      }));
+  }
+});
+
+// ── Label helpers ─────────────────────────────────────────────────────────────
+
 function obsLabel(obs: Observation): string {
   const name =
     obs.commonName && obs.commonName !== "Unknown" ? obs.commonName : null;
   return name || obs.scientificName || obs.id;
 }
 
-// Group a list of observations by common name and return "Name (N)" strings.
 function groupedLabels(obs: Observation[]): string[] {
   const counts = new Map<string, number>();
   for (const o of obs) {
@@ -241,289 +470,355 @@ function groupedLabels(obs: Observation[]): string[] {
 <template>
   <div class="tree-layout">
     <div class="tree-view">
-    <h1 class="tree-title">All Samples — Taxonomy Tree</h1>
-    <p class="tree-count">{{ observations.length }} observations</p>
+      <h1 class="tree-title">All Samples — Taxonomy Tree</h1>
+      <p class="tree-count">{{ observations.length }} observations</p>
 
-    <ul class="tree-root">
-      <!-- Observations with no order (higher rank or unknown) -->
-      <li
-        v-for="label in groupedLabels(tree.unspecified)"
-        :key="label"
-        class="node node-obs"
-      >
-        {{ label }}
-      </li>
+      <ul class="tree-root">
+        <!-- Observations with no order -->
+        <li
+          v-for="label in groupedLabels(tree.unspecified)"
+          :key="label"
+          class="node node-obs"
+        >
+          {{ label }}
+        </li>
 
-      <!-- Orders -->
-      <li
-        v-for="orderNode in tree.orders"
-        :key="orderNode.order"
-        class="node node-order"
-      >
-        <span class="rank-label">Order</span>
-        <span class="taxon-name">{{ orderNode.order }}</span>
-        <span v-if="orderCommonNames[orderNode.order]" class="common-name">{{ orderCommonNames[orderNode.order] }}</span>
+        <!-- Orders -->
+        <li
+          v-for="orderNode in tree.orders"
+          :key="orderNode.order"
+          class="node node-order"
+          :class="{ 'node--selected': isSelected(orderNode) }"
+          @click.stop="selectNode({ kind: 'order', node: orderNode })"
+        >
+          <span class="rank-label">Order</span>
+          <span class="taxon-name">{{ orderNode.order }}</span>
+          <span v-if="orderCommonNames[orderNode.order]" class="common-name">{{ orderCommonNames[orderNode.order] }}</span>
 
-        <ul>
-          <!-- Observations known only to order level -->
-          <li
-            v-for="label in groupedLabels(orderNode.unspecified)"
-            :key="label"
-            class="node node-obs"
-          >
-            {{ label }}
-          </li>
+          <ul>
+            <li
+              v-for="label in groupedLabels(orderNode.unspecified)"
+              :key="label"
+              class="node node-obs"
+            >
+              {{ label }}
+            </li>
 
-          <!-- Families -->
-          <li
-            v-for="familyNode in orderNode.families"
-            :key="familyNode.family"
-            class="node node-family"
-          >
-            <span class="rank-label">Family</span>
-            <span class="taxon-name">{{ familyNode.family }}</span>
-            <span v-if="familyCommonNames[familyNode.family]" class="common-name">{{ familyCommonNames[familyNode.family] }}</span>
+            <!-- Families -->
+            <li
+              v-for="familyNode in orderNode.families"
+              :key="familyNode.family"
+              class="node node-family"
+              :class="{ 'node--selected': isSelected(familyNode) }"
+              @click.stop="selectNode({ kind: 'family', node: familyNode })"
+            >
+              <span class="rank-label">Family</span>
+              <span class="taxon-name">{{ familyNode.family }}</span>
+              <span v-if="familyCommonNames[familyNode.family]" class="common-name">{{ familyCommonNames[familyNode.family] }}</span>
 
-            <ul>
-              <!-- Observations known only to family level -->
-              <li
-                v-for="label in groupedLabels(familyNode.unspecified)"
-                :key="label"
-                class="node node-obs"
-              >
-                {{ label }}
-              </li>
+              <ul>
+                <li
+                  v-for="label in groupedLabels(familyNode.unspecified)"
+                  :key="label"
+                  class="node node-obs"
+                >
+                  {{ label }}
+                </li>
 
-              <!-- Subfamilies -->
-              <li
-                v-for="subfamilyNode in familyNode.subfamilies"
-                :key="subfamilyNode.subfamily"
-                class="node node-subfamily"
-              >
-                <span class="rank-label">Subfamily</span>
-                <span class="taxon-name">{{ subfamilyNode.subfamily }}</span>
-                <ul>
-                  <li
-                    v-for="label in groupedLabels(subfamilyNode.unspecified)"
-                    :key="label"
-                    class="node node-obs"
-                  >
-                    {{ label }}
-                  </li>
-                  <li
-                    v-for="tribeNode in subfamilyNode.tribes"
-                    :key="tribeNode.tribe"
-                    class="node node-tribe"
-                  >
-                    <span class="rank-label">Tribe</span>
-                    <span class="taxon-name">{{ tribeNode.tribe }}</span>
-                    <ul>
-                      <li
-                        v-for="label in groupedLabels(tribeNode.unspecified)"
-                        :key="label"
-                        class="node node-obs"
-                      >
-                        {{ label }}
-                      </li>
-                      <li
-                        v-for="genusNode in tribeNode.genera"
-                        :key="genusNode.genus"
-                        class="node node-genus"
-                      >
-                        <span class="rank-label">Genus</span>
-                        <span class="taxon-name">{{ genusNode.genus }}</span>
-                        <ul>
-                          <li
-                            v-for="label in groupedLabels(
-                              genusNode.unspecified,
-                            )"
-                            :key="label"
-                            class="node node-obs"
-                          >
-                            {{ label }}
-                          </li>
-                          <li
-                            v-for="speciesNode in genusNode.species"
-                            :key="speciesNode.scientificName"
-                            class="node node-species"
-                            :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
-                            @click.stop="selectSpecies(speciesNode)"
-                          >
-                            <span class="taxon-name taxon-name--species">{{
-                              speciesNode.scientificName
-                            }}</span>
-                            <ul>
-                              <li
-                                v-for="label in groupedLabels(speciesNode.obs)"
-                                :key="label"
-                                class="node node-obs"
-                              >
-                                {{ label }}
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <!-- Genera directly under subfamily (no tribe) -->
-                  <li
-                    v-for="genusNode in subfamilyNode.genera"
-                    :key="genusNode.genus"
-                    class="node node-genus"
-                  >
-                    <span class="rank-label">Genus</span>
-                    <span class="taxon-name">{{ genusNode.genus }}</span>
-                    <ul>
-                      <li
-                        v-for="label in groupedLabels(genusNode.unspecified)"
-                        :key="label"
-                        class="node node-obs"
-                      >
-                        {{ label }}
-                      </li>
-                      <li
-                        v-for="speciesNode in genusNode.species"
-                        :key="speciesNode.scientificName"
-                        class="node node-species"
-                        :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
-                        @click.stop="selectSpecies(speciesNode)"
-                      >
-                        <span class="taxon-name taxon-name--species">{{
-                          speciesNode.scientificName
-                        }}</span>
-                        <ul>
-                          <li
-                            v-for="label in groupedLabels(speciesNode.obs)"
-                            :key="label"
-                            class="node node-obs"
-                          >
-                            {{ label }}
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                <!-- Subfamilies -->
+                <li
+                  v-for="subfamilyNode in familyNode.subfamilies"
+                  :key="subfamilyNode.subfamily"
+                  class="node node-subfamily"
+                  :class="{ 'node--selected': isSelected(subfamilyNode) }"
+                  @click.stop="selectNode({ kind: 'subfamily', node: subfamilyNode })"
+                >
+                  <span class="rank-label">Subfamily</span>
+                  <span class="taxon-name">{{ subfamilyNode.subfamily }}</span>
 
-              <!-- Tribes directly under family (no subfamily) -->
-              <li
-                v-for="tribeNode in familyNode.tribes"
-                :key="tribeNode.tribe"
-                class="node node-tribe"
-              >
-                <span class="rank-label">Tribe</span>
-                <span class="taxon-name">{{ tribeNode.tribe }}</span>
-                <ul>
-                  <li
-                    v-for="label in groupedLabels(tribeNode.unspecified)"
-                    :key="label"
-                    class="node node-obs"
-                  >
-                    {{ label }}
-                  </li>
-                  <li
-                    v-for="genusNode in tribeNode.genera"
-                    :key="genusNode.genus"
-                    class="node node-genus"
-                  >
-                    <span class="rank-label">Genus</span>
-                    <span class="taxon-name">{{ genusNode.genus }}</span>
-                    <ul>
-                      <li
-                        v-for="label in groupedLabels(genusNode.unspecified)"
-                        :key="label"
-                        class="node node-obs"
-                      >
-                        {{ label }}
-                      </li>
-                      <li
-                        v-for="speciesNode in genusNode.species"
-                        :key="speciesNode.scientificName"
-                        class="node node-species"
-                        :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
-                        @click.stop="selectSpecies(speciesNode)"
-                      >
-                        <span class="taxon-name taxon-name--species">{{
-                          speciesNode.scientificName
-                        }}</span>
-                        <ul>
-                          <li
-                            v-for="label in groupedLabels(speciesNode.obs)"
-                            :key="label"
-                            class="node node-obs"
-                          >
-                            {{ label }}
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                  <ul>
+                    <li
+                      v-for="label in groupedLabels(subfamilyNode.unspecified)"
+                      :key="label"
+                      class="node node-obs"
+                    >
+                      {{ label }}
+                    </li>
 
-              <!-- Genera directly under family (no subfamily, no tribe) -->
-              <li
-                v-for="genusNode in familyNode.genera"
-                :key="genusNode.genus"
-                class="node node-genus"
-              >
-                <span class="rank-label">Genus</span>
-                <span class="taxon-name">{{ genusNode.genus }}</span>
+                    <li
+                      v-for="tribeNode in subfamilyNode.tribes"
+                      :key="tribeNode.tribe"
+                      class="node node-tribe"
+                      :class="{ 'node--selected': isSelected(tribeNode) }"
+                      @click.stop="selectNode({ kind: 'tribe', node: tribeNode })"
+                    >
+                      <span class="rank-label">Tribe</span>
+                      <span class="taxon-name">{{ tribeNode.tribe }}</span>
 
-                <ul>
-                  <li
-                    v-for="label in groupedLabels(genusNode.unspecified)"
-                    :key="label"
-                    class="node node-obs"
-                  >
-                    {{ label }}
-                  </li>
+                      <ul>
+                        <li
+                          v-for="label in groupedLabels(tribeNode.unspecified)"
+                          :key="label"
+                          class="node node-obs"
+                        >
+                          {{ label }}
+                        </li>
 
-                  <li
-                    v-for="speciesNode in genusNode.species"
-                    :key="speciesNode.scientificName"
-                    class="node node-species"
-                    :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
-                    @click.stop="selectSpecies(speciesNode)"
-                  >
-                    <span class="taxon-name taxon-name--species">{{
-                      speciesNode.scientificName
-                    }}</span>
-                    <ul>
-                      <li
-                        v-for="label in groupedLabels(speciesNode.obs)"
-                        :key="label"
-                        class="node node-obs"
-                      >
-                        {{ label }}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+                        <li
+                          v-for="genusNode in tribeNode.genera"
+                          :key="genusNode.genus"
+                          class="node node-genus"
+                          :class="{ 'node--selected': isSelected(genusNode) }"
+                          @click.stop="selectNode({ kind: 'genus', node: genusNode })"
+                        >
+                          <span class="rank-label">Genus</span>
+                          <span class="taxon-name">{{ genusNode.genus }}</span>
+
+                          <ul>
+                            <li
+                              v-for="label in groupedLabels(genusNode.unspecified)"
+                              :key="label"
+                              class="node node-obs"
+                            >
+                              {{ label }}
+                            </li>
+
+                            <li
+                              v-for="speciesNode in genusNode.species"
+                              :key="speciesNode.scientificName"
+                              class="node node-species"
+                              :class="{ 'node--selected': isSelected(speciesNode) }"
+                              @click.stop="selectNode({ kind: 'species', node: speciesNode })"
+                            >
+                              <span class="taxon-name taxon-name--species">{{ speciesNode.scientificName }}</span>
+
+                              <ul>
+                                <li
+                                  v-for="label in groupedLabels(speciesNode.obs)"
+                                  :key="label"
+                                  class="node node-obs"
+                                >
+                                  {{ label }}
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Genera directly under subfamily -->
+                    <li
+                      v-for="genusNode in subfamilyNode.genera"
+                      :key="genusNode.genus"
+                      class="node node-genus"
+                      :class="{ 'node--selected': isSelected(genusNode) }"
+                      @click.stop="selectNode({ kind: 'genus', node: genusNode })"
+                    >
+                      <span class="rank-label">Genus</span>
+                      <span class="taxon-name">{{ genusNode.genus }}</span>
+
+                      <ul>
+                        <li
+                          v-for="label in groupedLabels(genusNode.unspecified)"
+                          :key="label"
+                          class="node node-obs"
+                        >
+                          {{ label }}
+                        </li>
+
+                        <li
+                          v-for="speciesNode in genusNode.species"
+                          :key="speciesNode.scientificName"
+                          class="node node-species"
+                          :class="{ 'node--selected': isSelected(speciesNode) }"
+                          @click.stop="selectNode({ kind: 'species', node: speciesNode })"
+                        >
+                          <span class="taxon-name taxon-name--species">{{ speciesNode.scientificName }}</span>
+
+                          <ul>
+                            <li
+                              v-for="label in groupedLabels(speciesNode.obs)"
+                              :key="label"
+                              class="node node-obs"
+                            >
+                              {{ label }}
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- Tribes directly under family -->
+                <li
+                  v-for="tribeNode in familyNode.tribes"
+                  :key="tribeNode.tribe"
+                  class="node node-tribe"
+                  :class="{ 'node--selected': isSelected(tribeNode) }"
+                  @click.stop="selectNode({ kind: 'tribe', node: tribeNode })"
+                >
+                  <span class="rank-label">Tribe</span>
+                  <span class="taxon-name">{{ tribeNode.tribe }}</span>
+
+                  <ul>
+                    <li
+                      v-for="label in groupedLabels(tribeNode.unspecified)"
+                      :key="label"
+                      class="node node-obs"
+                    >
+                      {{ label }}
+                    </li>
+
+                    <li
+                      v-for="genusNode in tribeNode.genera"
+                      :key="genusNode.genus"
+                      class="node node-genus"
+                      :class="{ 'node--selected': isSelected(genusNode) }"
+                      @click.stop="selectNode({ kind: 'genus', node: genusNode })"
+                    >
+                      <span class="rank-label">Genus</span>
+                      <span class="taxon-name">{{ genusNode.genus }}</span>
+
+                      <ul>
+                        <li
+                          v-for="label in groupedLabels(genusNode.unspecified)"
+                          :key="label"
+                          class="node node-obs"
+                        >
+                          {{ label }}
+                        </li>
+
+                        <li
+                          v-for="speciesNode in genusNode.species"
+                          :key="speciesNode.scientificName"
+                          class="node node-species"
+                          :class="{ 'node--selected': isSelected(speciesNode) }"
+                          @click.stop="selectNode({ kind: 'species', node: speciesNode })"
+                        >
+                          <span class="taxon-name taxon-name--species">{{ speciesNode.scientificName }}</span>
+
+                          <ul>
+                            <li
+                              v-for="label in groupedLabels(speciesNode.obs)"
+                              :key="label"
+                              class="node node-obs"
+                            >
+                              {{ label }}
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- Genera directly under family -->
+                <li
+                  v-for="genusNode in familyNode.genera"
+                  :key="genusNode.genus"
+                  class="node node-genus"
+                  :class="{ 'node--selected': isSelected(genusNode) }"
+                  @click.stop="selectNode({ kind: 'genus', node: genusNode })"
+                >
+                  <span class="rank-label">Genus</span>
+                  <span class="taxon-name">{{ genusNode.genus }}</span>
+
+                  <ul>
+                    <li
+                      v-for="label in groupedLabels(genusNode.unspecified)"
+                      :key="label"
+                      class="node node-obs"
+                    >
+                      {{ label }}
+                    </li>
+
+                    <li
+                      v-for="speciesNode in genusNode.species"
+                      :key="speciesNode.scientificName"
+                      class="node node-species"
+                      :class="{ 'node--selected': isSelected(speciesNode) }"
+                      @click.stop="selectNode({ kind: 'species', node: speciesNode })"
+                    >
+                      <span class="taxon-name taxon-name--species">{{ speciesNode.scientificName }}</span>
+
+                      <ul>
+                        <li
+                          v-for="label in groupedLabels(speciesNode.obs)"
+                          :key="label"
+                          class="node node-obs"
+                        >
+                          {{ label }}
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
     <!-- Side panel -->
-    <div v-if="selectedSpecies" class="side-panel">
-      <button class="side-panel-close" @click="selectedSpecies = null">✕</button>
-      <p class="side-panel-common">{{ speciesCommonName(selectedSpecies) }}</p>
-      <h2 class="side-panel-name">{{ selectedSpecies.scientificName }}</h2>
-      <p class="side-panel-count">{{ selectedSpecies.obs.length }} observation{{ selectedSpecies.obs.length !== 1 ? 's' : '' }}</p>
-      <div class="side-panel-images">
+    <div v-if="selectedNode" class="side-panel">
+      <button class="side-panel-close" @click="selectedNode = null">✕</button>
+
+      <p class="side-panel-rank">{{ panelRankLabel(selectedNode) }}</p>
+      <h2
+        class="side-panel-name"
+        :class="{ 'side-panel-name--italic': selectedNode.kind === 'species' || selectedNode.kind === 'genus' }"
+      >
+        {{ panelName(selectedNode) }}
+      </h2>
+      <p v-if="panelCommonName(selectedNode)" class="side-panel-common">
+        {{ panelCommonName(selectedNode) }}
+      </p>
+      <p class="side-panel-count">
+        {{ selectedObsCount(selectedNode) }}
+        observation{{ selectedObsCount(selectedNode) !== 1 ? "s" : "" }}
+      </p>
+
+      <!-- Species: full image grid -->
+      <div v-if="selectedNode.kind === 'species'" class="side-panel-images">
         <img
-          v-for="obs in selectedSpecies.obs.filter(o => o.imageFile)"
+          v-for="obs in selectedNode.node.obs.filter((o) => o.imageFile)"
           :key="obs.id"
           :src="obs.imageFile"
           :alt="obs.commonName || obs.scientificName || obs.id"
           class="side-panel-img"
         />
+      </div>
+
+      <!-- All other ranks: child cards -->
+      <div v-else class="side-panel-children">
+        <button
+          v-for="child in panelChildren"
+          :key="child.name"
+          class="child-card"
+          @click="selectNode(child.selection)"
+        >
+          <div class="child-card-header">
+            <span class="child-card-rank">{{ child.rankLabel }}</span>
+            <span
+              class="child-card-name"
+              :class="{ 'child-card-name--italic': child.isSpecies }"
+            >{{ child.name }}</span>
+            <span v-if="child.commonName" class="child-card-common">{{ child.commonName }}</span>
+            <span class="child-card-count">{{ child.count }} obs</span>
+          </div>
+          <div v-if="child.images.length" class="child-card-images">
+            <img
+              v-for="(src, i) in child.images"
+              :key="i"
+              :src="src"
+              class="child-card-img"
+              alt=""
+            />
+          </div>
+        </button>
       </div>
     </div>
   </div>
@@ -587,24 +882,33 @@ ul {
 }
 
 /* Vertical spacing — larger gap for higher-rank groups */
-.node-order {
-  margin-top: 2.5rem;
+.node-order    { margin-top: 2.5rem; }
+.node-family   { margin-top: 1.6rem; }
+.node-subfamily{ margin-top: 1.1rem; }
+.node-tribe    { margin-top: 0.7rem; }
+.node-genus    { margin-top: 0.4rem; }
+
+/* All non-obs nodes are clickable */
+.node-order,
+.node-family,
+.node-subfamily,
+.node-tribe,
+.node-genus,
+.node-species {
+  cursor: pointer;
 }
 
-.node-family {
-  margin-top: 1.6rem;
+.node-order:hover    > .taxon-name,
+.node-family:hover   > .taxon-name,
+.node-subfamily:hover > .taxon-name,
+.node-tribe:hover    > .taxon-name,
+.node-genus:hover    > .taxon-name,
+.node-species:hover  > .taxon-name {
+  color: #e8d090;
 }
 
-.node-subfamily {
-  margin-top: 1.1rem;
-}
-
-.node-tribe {
-  margin-top: 0.7rem;
-}
-
-.node-genus {
-  margin-top: 0.4rem;
+.node--selected > .taxon-name {
+  color: #9094e0;
 }
 
 .rank-label {
@@ -641,6 +945,7 @@ ul {
 .node-obs {
   color: #8a7a5a;
   font-size: 1rem;
+  cursor: default;
 }
 
 .node-obs::before {
@@ -649,17 +954,7 @@ ul {
   margin-right: 0.4rem;
 }
 
-.node-species {
-  cursor: pointer;
-}
-
-.node-species:hover .taxon-name {
-  color: #e8d090;
-}
-
-.node-species--selected > .taxon-name {
-  color: #9094e0;
-}
+/* ── Side panel ─────────────────────────────────────────────────────────────── */
 
 .side-panel {
   width: 50vw;
@@ -687,19 +982,31 @@ ul {
   color: #9a7e4e;
 }
 
-.side-panel-common {
-  color: #7a8a6a;
-  font-style: italic;
-  font-size: 0.9rem;
-  margin: 0 0 0.25rem 0;
+.side-panel-rank {
+  font-size: 0.75rem;
+  color: #9a7e4e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.2rem 0;
 }
 
 .side-panel-name {
   color: #c4aa78;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0 0 0.15rem 0;
+}
+
+.side-panel-name--italic {
   font-style: italic;
-  font-size: 1.1rem;
-  font-weight: normal;
-  margin: 0 0 0.2rem 0;
+}
+
+.side-panel-common {
+  color: #7a8a6a;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin: 0 0 0.15rem 0;
 }
 
 .side-panel-count {
@@ -708,6 +1015,7 @@ ul {
   margin: 0 0 1.25rem 0;
 }
 
+/* Species image grid */
 .side-panel-images {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -725,5 +1033,82 @@ ul {
 
 .side-panel-img:hover {
   opacity: 1;
+}
+
+/* Child cards */
+.side-panel-children {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.child-card {
+  background: #131210;
+  border: 1px solid #2a2620;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Georgia", serif;
+  color: #eabd6b;
+  transition: border-color 0.15s;
+}
+
+.child-card:hover {
+  border-color: #4a3e28;
+}
+
+.child-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.child-card-rank {
+  font-size: 0.65rem;
+  color: #9a7e4e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.child-card-name {
+  color: #c4aa78;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.child-card-name--italic {
+  font-style: italic;
+}
+
+.child-card-common {
+  color: #7a8a6a;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.child-card-count {
+  color: #4a3e28;
+  font-size: 0.8rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.child-card-images {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.child-card-img {
+  width: calc(33.333% - 0.25rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  opacity: 0.85;
 }
 </style>
