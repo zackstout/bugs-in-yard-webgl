@@ -50,6 +50,8 @@ const COL = {
   phylum:         'taxon_phylum_name',
   order:          'taxon_order_name',
   family:         'taxon_family_name',
+  subfamily:      'taxon_subfamily_name',
+  tribe:          'taxon_tribe_name',
   genus:          'taxon_genus_name',
   species:        'taxon_species_name',    // full binomial, e.g. "Coccinella septempunctata"
   subspecies:     'taxon_subspecies_name',
@@ -235,8 +237,10 @@ function main() {
     const commonName  = row[COL.commonName]?.trim()  || 'Unknown'
     const sciName     = row[COL.scientificName]?.trim() || ''
     const orderName   = row[COL.order]?.trim()       || ''
-    const familyName  = row[COL.family]?.trim()      || ''
-    const genusName   = row[COL.genus]?.trim()       || ''
+    const familyName    = row[COL.family]?.trim()     || ''
+    const subfamilyName = row[COL.subfamily]?.trim() || ''
+    const tribeName     = row[COL.tribe]?.trim()     || ''
+    const genusName     = row[COL.genus]?.trim()     || ''
     const speciesName = row[COL.species]?.trim()     || ''  // full binomial
     const imageUrl    = row[COL.imageUrl]?.trim()    || ''
     const observedOn  = row[COL.observedOn]?.trim()  || ''
@@ -265,9 +269,11 @@ function main() {
       slug,
       commonName,
       scientificName: sciName  || undefined,
-      order:          orderName  || undefined,
-      family:         familyName || undefined,
-      genus:          genusName  || undefined,
+      order:          orderName     || undefined,
+      family:         familyName    || undefined,
+      subfamily:      subfamilyName || undefined,
+      tribe:          tribeName     || undefined,
+      genus:          genusName     || undefined,
       species:        epithet    || undefined,
       taxonRank,
       observedAt:     observedOn,

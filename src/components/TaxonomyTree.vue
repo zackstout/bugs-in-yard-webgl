@@ -14,9 +14,24 @@ interface GenusNode {
   unspecified: Observation[];
 }
 
+interface TribeNode {
+  tribe: string;
+  genera: GenusNode[];
+  unspecified: Observation[];
+}
+
+interface SubfamilyNode {
+  subfamily: string;
+  tribes: TribeNode[];
+  genera: GenusNode[]; // genera with no tribe
+  unspecified: Observation[];
+}
+
 interface FamilyNode {
   family: string;
-  genera: GenusNode[];
+  subfamilies: SubfamilyNode[];
+  tribes: TribeNode[]; // tribes with no subfamily
+  genera: GenusNode[]; // genera with no subfamily and no tribe
   unspecified: Observation[];
 }
 
@@ -31,25 +46,67 @@ interface TaxonomyTree {
   unspecified: Observation[];
 }
 
+type GenusMap = Map<
+  string,
+  { speciesMap: Map<string, Observation[]>; unspecified: Observation[] }
+>;
+type TribeMap = Map<string, { genusMap: GenusMap; unspecified: Observation[] }>;
+type SubfamilyMap = Map<
+  string,
+  { tribeMap: TribeMap; genusMap: GenusMap; unspecified: Observation[] }
+>;
+type FamilyMap = Map<
+  string,
+  {
+    subfamilyMap: SubfamilyMap;
+    tribeMap: TribeMap;
+    genusMap: GenusMap;
+    unspecified: Observation[];
+  }
+>;
+
+function getOrCreate<K, V>(map: Map<K, V>, key: K, init: () => V): V {
+  if (!map.has(key)) map.set(key, init());
+  return map.get(key)!;
+}
+
+function buildGenusMap(genusMap: GenusMap): GenusNode[] {
+  return Array.from(genusMap.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([genus, { speciesMap, unspecified }]) => ({
+      genus,
+      species: Array.from(speciesMap.entries())
+        .sort(([a], [b]) => a.localeCompare(b))
+        .map(([scientificName, obs]) => ({ scientificName, obs })),
+      unspecified,
+    }));
+}
+
+function buildTribeMap(tribeMap: TribeMap): TribeNode[] {
+  return Array.from(tribeMap.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([tribe, { genusMap, unspecified }]) => ({
+      tribe,
+      genera: buildGenusMap(genusMap),
+      unspecified,
+    }));
+}
+
+function buildSubfamilyMap(subfamilyMap: SubfamilyMap): SubfamilyNode[] {
+  return Array.from(subfamilyMap.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([subfamily, { tribeMap, genusMap, unspecified }]) => ({
+      subfamily,
+      tribes: buildTribeMap(tribeMap),
+      genera: buildGenusMap(genusMap),
+      unspecified,
+    }));
+}
+
 const tree = computed<TaxonomyTree>(() => {
   const orderMap = new Map<
     string,
-    {
-      familyMap: Map<
-        string,
-        {
-          genusMap: Map<
-            string,
-            {
-              speciesMap: Map<string, Observation[]>;
-              unspecified: Observation[];
-            }
-          >;
-          unspecified: Observation[];
-        }
-      >;
-      unspecified: Observation[];
-    }
+    { familyMap: FamilyMap; unspecified: Observation[] }
   >();
   const topUnspecified: Observation[] = [];
 
@@ -59,47 +116,68 @@ const tree = computed<TaxonomyTree>(() => {
       continue;
     }
 
-    if (!orderMap.has(obs.order)) {
-      orderMap.set(obs.order, { familyMap: new Map(), unspecified: [] });
-    }
-    const orderEntry = orderMap.get(obs.order)!;
-
+    const orderEntry = getOrCreate(orderMap, obs.order, () => ({
+      familyMap: new Map(),
+      unspecified: [],
+    }));
     if (!obs.family) {
       orderEntry.unspecified.push(obs);
       continue;
     }
 
-    if (!orderEntry.familyMap.has(obs.family)) {
-      orderEntry.familyMap.set(obs.family, {
+    const familyEntry = getOrCreate(orderEntry.familyMap, obs.family, () => ({
+      subfamilyMap: new Map(),
+      tribeMap: new Map(),
+      genusMap: new Map(),
+      unspecified: [],
+    }));
+
+    // Route to the finest available container above genus
+    let genusContainer: { genusMap: GenusMap; unspecified: Observation[] };
+    if (obs.subfamily) {
+      const subfamilyEntry = getOrCreate(
+        familyEntry.subfamilyMap,
+        obs.subfamily,
+        () => ({
+          tribeMap: new Map(),
+          genusMap: new Map(),
+          unspecified: [],
+        }),
+      );
+      if (obs.tribe) {
+        genusContainer = getOrCreate(
+          subfamilyEntry.tribeMap,
+          obs.tribe,
+          () => ({ genusMap: new Map(), unspecified: [] }),
+        );
+      } else {
+        genusContainer = subfamilyEntry;
+      }
+    } else if (obs.tribe) {
+      genusContainer = getOrCreate(familyEntry.tribeMap, obs.tribe, () => ({
         genusMap: new Map(),
         unspecified: [],
-      });
+      }));
+    } else {
+      genusContainer = familyEntry;
     }
-    const familyEntry = orderEntry.familyMap.get(obs.family)!;
 
     if (!obs.genus) {
-      familyEntry.unspecified.push(obs);
+      genusContainer.unspecified.push(obs);
       continue;
     }
 
-    if (!familyEntry.genusMap.has(obs.genus)) {
-      familyEntry.genusMap.set(obs.genus, {
-        speciesMap: new Map(),
-        unspecified: [],
-      });
-    }
-    const genusEntry = familyEntry.genusMap.get(obs.genus)!;
-
+    const genusEntry = getOrCreate(genusContainer.genusMap, obs.genus, () => ({
+      speciesMap: new Map(),
+      unspecified: [],
+    }));
     if (!obs.species) {
       genusEntry.unspecified.push(obs);
       continue;
     }
 
     const speciesKey = `${obs.genus} ${obs.species}`;
-    if (!genusEntry.speciesMap.has(speciesKey)) {
-      genusEntry.speciesMap.set(speciesKey, []);
-    }
-    genusEntry.speciesMap.get(speciesKey)!.push(obs);
+    getOrCreate(genusEntry.speciesMap, speciesKey, () => []).push(obs);
   }
 
   const orders: OrderNode[] = Array.from(orderMap.entries())
@@ -108,19 +186,18 @@ const tree = computed<TaxonomyTree>(() => {
       order,
       families: Array.from(familyMap.entries())
         .sort(([a], [b]) => a.localeCompare(b))
-        .map(([family, { genusMap, unspecified: famUnspec }]) => ({
-          family,
-          genera: Array.from(genusMap.entries())
-            .sort(([a], [b]) => a.localeCompare(b))
-            .map(([genus, { speciesMap, unspecified: genUnspec }]) => ({
-              genus,
-              species: Array.from(speciesMap.entries())
-                .sort(([a], [b]) => a.localeCompare(b))
-                .map(([scientificName, obs]) => ({ scientificName, obs })),
-              unspecified: genUnspec,
-            })),
-          unspecified: famUnspec,
-        })),
+        .map(
+          ([
+            family,
+            { subfamilyMap, tribeMap, genusMap, unspecified: famUnspec },
+          ]) => ({
+            family,
+            subfamilies: buildSubfamilyMap(subfamilyMap),
+            tribes: buildTribeMap(tribeMap),
+            genera: buildGenusMap(genusMap),
+            unspecified: famUnspec,
+          }),
+        ),
       unspecified,
     }));
 
@@ -128,7 +205,8 @@ const tree = computed<TaxonomyTree>(() => {
 });
 
 function obsLabel(obs: Observation): string {
-  const name = obs.commonName && obs.commonName !== "Unknown" ? obs.commonName : null;
+  const name =
+    obs.commonName && obs.commonName !== "Unknown" ? obs.commonName : null;
   return name || obs.scientificName || obs.id;
 }
 
@@ -198,7 +276,170 @@ function groupedLabels(obs: Observation[]): string[] {
                 {{ label }}
               </li>
 
-              <!-- Genera -->
+              <!-- Subfamilies -->
+              <li
+                v-for="subfamilyNode in familyNode.subfamilies"
+                :key="subfamilyNode.subfamily"
+                class="node node-subfamily"
+              >
+                <span class="rank-label">Subfamily</span>
+                <span class="taxon-name">{{ subfamilyNode.subfamily }}</span>
+                <ul>
+                  <li
+                    v-for="label in groupedLabels(subfamilyNode.unspecified)"
+                    :key="label"
+                    class="node node-obs"
+                  >
+                    {{ label }}
+                  </li>
+                  <li
+                    v-for="tribeNode in subfamilyNode.tribes"
+                    :key="tribeNode.tribe"
+                    class="node node-tribe"
+                  >
+                    <span class="rank-label">Tribe</span>
+                    <span class="taxon-name">{{ tribeNode.tribe }}</span>
+                    <ul>
+                      <li
+                        v-for="label in groupedLabels(tribeNode.unspecified)"
+                        :key="label"
+                        class="node node-obs"
+                      >
+                        {{ label }}
+                      </li>
+                      <li
+                        v-for="genusNode in tribeNode.genera"
+                        :key="genusNode.genus"
+                        class="node node-genus"
+                      >
+                        <span class="rank-label">Genus</span>
+                        <span class="taxon-name">{{ genusNode.genus }}</span>
+                        <ul>
+                          <li
+                            v-for="label in groupedLabels(
+                              genusNode.unspecified,
+                            )"
+                            :key="label"
+                            class="node node-obs"
+                          >
+                            {{ label }}
+                          </li>
+                          <li
+                            v-for="speciesNode in genusNode.species"
+                            :key="speciesNode.scientificName"
+                            class="node node-species"
+                          >
+                            <span class="taxon-name taxon-name--species">{{
+                              speciesNode.scientificName
+                            }}</span>
+                            <ul>
+                              <li
+                                v-for="label in groupedLabels(speciesNode.obs)"
+                                :key="label"
+                                class="node node-obs"
+                              >
+                                {{ label }}
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Genera directly under subfamily (no tribe) -->
+                  <li
+                    v-for="genusNode in subfamilyNode.genera"
+                    :key="genusNode.genus"
+                    class="node node-genus"
+                  >
+                    <span class="rank-label">Genus</span>
+                    <span class="taxon-name">{{ genusNode.genus }}</span>
+                    <ul>
+                      <li
+                        v-for="label in groupedLabels(genusNode.unspecified)"
+                        :key="label"
+                        class="node node-obs"
+                      >
+                        {{ label }}
+                      </li>
+                      <li
+                        v-for="speciesNode in genusNode.species"
+                        :key="speciesNode.scientificName"
+                        class="node node-species"
+                      >
+                        <span class="taxon-name taxon-name--species">{{
+                          speciesNode.scientificName
+                        }}</span>
+                        <ul>
+                          <li
+                            v-for="label in groupedLabels(speciesNode.obs)"
+                            :key="label"
+                            class="node node-obs"
+                          >
+                            {{ label }}
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Tribes directly under family (no subfamily) -->
+              <li
+                v-for="tribeNode in familyNode.tribes"
+                :key="tribeNode.tribe"
+                class="node node-tribe"
+              >
+                <span class="rank-label">Tribe</span>
+                <span class="taxon-name">{{ tribeNode.tribe }}</span>
+                <ul>
+                  <li
+                    v-for="label in groupedLabels(tribeNode.unspecified)"
+                    :key="label"
+                    class="node node-obs"
+                  >
+                    {{ label }}
+                  </li>
+                  <li
+                    v-for="genusNode in tribeNode.genera"
+                    :key="genusNode.genus"
+                    class="node node-genus"
+                  >
+                    <span class="rank-label">Genus</span>
+                    <span class="taxon-name">{{ genusNode.genus }}</span>
+                    <ul>
+                      <li
+                        v-for="label in groupedLabels(genusNode.unspecified)"
+                        :key="label"
+                        class="node node-obs"
+                      >
+                        {{ label }}
+                      </li>
+                      <li
+                        v-for="speciesNode in genusNode.species"
+                        :key="speciesNode.scientificName"
+                        class="node node-species"
+                      >
+                        <span class="taxon-name taxon-name--species">{{
+                          speciesNode.scientificName
+                        }}</span>
+                        <ul>
+                          <li
+                            v-for="label in groupedLabels(speciesNode.obs)"
+                            :key="label"
+                            class="node node-obs"
+                          >
+                            {{ label }}
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Genera directly under family (no subfamily, no tribe) -->
               <li
                 v-for="genusNode in familyNode.genera"
                 :key="genusNode.genus"
@@ -208,7 +449,6 @@ function groupedLabels(obs: Observation[]): string[] {
                 <span class="taxon-name">{{ genusNode.genus }}</span>
 
                 <ul>
-                  <!-- Observations known only to genus level -->
                   <li
                     v-for="label in groupedLabels(genusNode.unspecified)"
                     :key="label"
@@ -217,7 +457,6 @@ function groupedLabels(obs: Observation[]): string[] {
                     {{ label }}
                   </li>
 
-                  <!-- Species -->
                   <li
                     v-for="speciesNode in genusNode.species"
                     :key="speciesNode.scientificName"
