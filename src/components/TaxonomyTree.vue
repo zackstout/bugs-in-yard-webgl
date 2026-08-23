@@ -447,6 +447,20 @@ const panelChildren = computed<PanelChild[]>(() => {
   }
 });
 
+// Images for the fallback case: node has obs but no drillable children.
+// Used when panelChildren is empty (e.g. genus with only unspecified obs).
+const panelFallbackImages = computed<string[]>(() => {
+  const sel = selectedNode.value;
+  if (!sel || sel.kind === "species") return [];
+  switch (sel.kind) {
+    case "genus":     return genusImages(sel.node, 200);
+    case "tribe":     return tribeImages(sel.node, 200);
+    case "subfamily": return subfamilyImages(sel.node, 200);
+    case "family":    return familyImages(sel.node, 200);
+    case "order":     return orderImages(sel.node, 200);
+  }
+});
+
 // ── Label helpers ─────────────────────────────────────────────────────────────
 
 function obsLabel(obs: Observation): string {
@@ -792,8 +806,8 @@ function groupedLabels(obs: Observation[]): string[] {
         />
       </div>
 
-      <!-- All other ranks: child cards -->
-      <div v-else class="side-panel-children">
+      <!-- All other ranks: child cards, or image grid if no drillable children -->
+      <div v-else-if="panelChildren.length > 0" class="side-panel-children">
         <button
           v-for="child in panelChildren"
           :key="child.name"
@@ -819,6 +833,17 @@ function groupedLabels(obs: Observation[]): string[] {
             />
           </div>
         </button>
+      </div>
+
+      <!-- Fallback: no drillable children, show all images from subtree -->
+      <div v-else class="side-panel-images">
+        <img
+          v-for="(src, i) in panelFallbackImages"
+          :key="i"
+          :src="src"
+          class="side-panel-img"
+          alt=""
+        />
       </div>
     </div>
   </div>
