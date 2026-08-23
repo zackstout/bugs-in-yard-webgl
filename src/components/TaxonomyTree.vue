@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { observations } from "../data/observations";
 import { familyCommonNames } from "../data/commonNames/familyCommonNames";
 import { orderCommonNames } from "../data/commonNames/orderCommonNames";
@@ -206,6 +206,19 @@ const tree = computed<TaxonomyTree>(() => {
   return { orders, unspecified: topUnspecified };
 });
 
+const selectedSpecies = ref<SpeciesNode | null>(null);
+
+function selectSpecies(node: SpeciesNode) {
+  selectedSpecies.value = node;
+}
+
+function speciesCommonName(node: SpeciesNode): string | null {
+  for (const o of node.obs) {
+    if (o.commonName && o.commonName !== "Unknown") return o.commonName;
+  }
+  return null;
+}
+
 function obsLabel(obs: Observation): string {
   const name =
     obs.commonName && obs.commonName !== "Unknown" ? obs.commonName : null;
@@ -226,7 +239,8 @@ function groupedLabels(obs: Observation[]): string[] {
 </script>
 
 <template>
-  <div class="tree-view">
+  <div class="tree-layout">
+    <div class="tree-view">
     <h1 class="tree-title">All Samples — Taxonomy Tree</h1>
     <p class="tree-count">{{ observations.length }} observations</p>
 
@@ -332,6 +346,8 @@ function groupedLabels(obs: Observation[]): string[] {
                             v-for="speciesNode in genusNode.species"
                             :key="speciesNode.scientificName"
                             class="node node-species"
+                            :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
+                            @click.stop="selectSpecies(speciesNode)"
                           >
                             <span class="taxon-name taxon-name--species">{{
                               speciesNode.scientificName
@@ -370,6 +386,8 @@ function groupedLabels(obs: Observation[]): string[] {
                         v-for="speciesNode in genusNode.species"
                         :key="speciesNode.scientificName"
                         class="node node-species"
+                        :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
+                        @click.stop="selectSpecies(speciesNode)"
                       >
                         <span class="taxon-name taxon-name--species">{{
                           speciesNode.scientificName
@@ -424,6 +442,8 @@ function groupedLabels(obs: Observation[]): string[] {
                         v-for="speciesNode in genusNode.species"
                         :key="speciesNode.scientificName"
                         class="node node-species"
+                        :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
+                        @click.stop="selectSpecies(speciesNode)"
                       >
                         <span class="taxon-name taxon-name--species">{{
                           speciesNode.scientificName
@@ -465,6 +485,8 @@ function groupedLabels(obs: Observation[]): string[] {
                     v-for="speciesNode in genusNode.species"
                     :key="speciesNode.scientificName"
                     class="node node-species"
+                    :class="{ 'node-species--selected': selectedSpecies === speciesNode }"
+                    @click.stop="selectSpecies(speciesNode)"
                   >
                     <span class="taxon-name taxon-name--species">{{
                       speciesNode.scientificName
@@ -486,20 +508,44 @@ function groupedLabels(obs: Observation[]): string[] {
         </ul>
       </li>
     </ul>
+    </div>
+
+    <!-- Side panel -->
+    <div v-if="selectedSpecies" class="side-panel">
+      <button class="side-panel-close" @click="selectedSpecies = null">✕</button>
+      <p class="side-panel-common">{{ speciesCommonName(selectedSpecies) }}</p>
+      <h2 class="side-panel-name">{{ selectedSpecies.scientificName }}</h2>
+      <p class="side-panel-count">{{ selectedSpecies.obs.length }} observation{{ selectedSpecies.obs.length !== 1 ? 's' : '' }}</p>
+      <div class="side-panel-images">
+        <img
+          v-for="obs in selectedSpecies.obs.filter(o => o.imageFile)"
+          :key="obs.id"
+          :src="obs.imageFile"
+          :alt="obs.commonName || obs.scientificName || obs.id"
+          class="side-panel-img"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.tree-view {
+.tree-layout {
   position: fixed;
   inset: 0;
-  overflow-y: auto;
+  display: flex;
   background: #0d0c0a;
+  font-family: "Georgia", serif;
+}
+
+.tree-view {
+  flex: 1;
+  overflow-y: auto;
   color: #eabd6b;
   padding: 2rem 2.5rem;
-  font-family: "Georgia", serif;
   font-size: 1.05rem;
   line-height: 1.7;
+  min-width: 0;
 }
 
 .tree-title {
@@ -601,5 +647,83 @@ ul {
   content: "–";
   color: #3a3028;
   margin-right: 0.4rem;
+}
+
+.node-species {
+  cursor: pointer;
+}
+
+.node-species:hover .taxon-name {
+  color: #e8d090;
+}
+
+.node-species--selected > .taxon-name {
+  color: #9094e0;
+}
+
+.side-panel {
+  width: 50vw;
+  flex-shrink: 0;
+  border-left: 1px solid #2a2620;
+  overflow-y: auto;
+  padding: 1.5rem 1.25rem;
+  color: #eabd6b;
+  position: relative;
+}
+
+.side-panel-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #5a4e38;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.side-panel-close:hover {
+  color: #9a7e4e;
+}
+
+.side-panel-common {
+  color: #7a8a6a;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.side-panel-name {
+  color: #c4aa78;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0 0 0.2rem 0;
+}
+
+.side-panel-count {
+  color: #5a4e38;
+  font-size: 0.85rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.side-panel-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.side-panel-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+  opacity: 0.9;
+}
+
+.side-panel-img:hover {
+  opacity: 1;
 }
 </style>
